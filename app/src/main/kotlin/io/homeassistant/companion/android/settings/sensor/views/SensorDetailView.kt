@@ -101,15 +101,18 @@ fun SensorDetailView(
     val context = LocalContext.current
     var sensorUpdateTypeInfo by remember { mutableStateOf(false) }
 
+    val basicSensor = viewModel.basicSensor
+    val sensorManager = viewModel.sensorManager
+
     var sensorEnabled by remember { mutableStateOf(false) }
     val showPrivacyHint by viewModel.showPrivacyHint.collectAsState()
 
-    LaunchedEffect(Unit) {
+    LaunchedEffect(viewModel.sensor, basicSensor, sensorManager) {
         sensorEnabled = viewModel.sensor?.sensor?.enabled
             ?: (
-                viewModel.basicSensor != null &&
-                    viewModel.basicSensor.enabledByDefault &&
-                    viewModel.sensorManager?.checkPermission(context, viewModel.basicSensor.id) == true
+                basicSensor != null &&
+                    basicSensor.enabledByDefault &&
+                    sensorManager?.checkPermission(context, basicSensor.id) == true
                 )
     }
 
@@ -152,9 +155,9 @@ fun SensorDetailView(
             )
         },
     ) { contentPadding ->
-        if (sensorUpdateTypeInfo && viewModel.basicSensor != null) {
+        if (sensorUpdateTypeInfo && basicSensor != null) {
             SensorDetailUpdateInfoDialog(
-                basicSensor = viewModel.basicSensor,
+                basicSensor = basicSensor,
                 sensorEnabled = sensorEnabled,
                 userSetting = viewModel.settingUpdateFrequency,
                 onDismiss = { sensorUpdateTypeInfo = false },
@@ -173,10 +176,10 @@ fun SensorDetailView(
             modifier = Modifier.padding(contentPadding),
             contentPadding = safeBottomPaddingValues(applyHorizontal = false),
         ) {
-            if (viewModel.sensorManager != null && viewModel.basicSensor != null) {
+            if (sensorManager != null && basicSensor != null) {
                 item {
                     SensorDetailTopPanel(
-                        basicSensor = viewModel.basicSensor,
+                        basicSensor = basicSensor,
                         dbSensor = viewModel.sensors,
                         sensorsExpanded = viewModel.serversStateExpand.value,
                         serverNames = viewModel.serverNames,
@@ -185,7 +188,7 @@ fun SensorDetailView(
                 }
                 item {
                     Text(
-                        text = stringResource(viewModel.basicSensor.descriptionId),
+                        text = stringResource(basicSensor.descriptionId),
                         modifier = Modifier.padding(all = 16.dp),
                     )
                 }
@@ -209,7 +212,7 @@ fun SensorDetailView(
                     TransparentChip(
                         modifier = Modifier.padding(start = 16.dp, bottom = 40.dp),
                         text = stringResource(
-                            when (viewModel.basicSensor.updateType) {
+                            when (basicSensor.updateType) {
                                 SensorManager.BasicSensor.UpdateType.INTENT ->
                                     commonR.string.sensor_update_type_chip_intent
 
@@ -291,7 +294,7 @@ fun SensorDetailView(
                                         onClick = { isEnabled ->
                                             onToggleSettingSubmitted(
                                                 SensorSetting(
-                                                    viewModel.basicSensor.id,
+                                                    basicSensor.id,
                                                     setting.name,
                                                     isEnabled.toString(),
                                                     SensorSettingType.TOGGLE,

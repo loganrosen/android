@@ -45,7 +45,6 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import timber.log.Timber
 
 @HiltViewModel
@@ -94,17 +93,11 @@ class SensorDetailViewModel @Inject constructor(
     private val _permissionSnackbar = MutableSharedFlow<PermissionSnackbar>()
     var permissionSnackbar = _permissionSnackbar.asSharedFlow()
 
-    val sensorManager: SensorManager? = runBlocking {
-        SensorReceiver.MANAGERS
-            .find {
-                it.getAvailableSensors(getApplication()).any { sensor -> sensor.id == sensorId }
-            }
-    }
+    var sensorManager: SensorManager? by mutableStateOf(null)
+        private set
 
-    val basicSensor: SensorManager.BasicSensor? = runBlocking {
-        sensorManager?.getAvailableSensors(getApplication())
-            ?.find { it.id == sensorId }
-    }
+    var basicSensor: SensorManager.BasicSensor? by mutableStateOf(null)
+        private set
 
     /** A list of all sensors (for each server) with states */
     var sensors by mutableStateOf<List<SensorWithAttributes>>(emptyList())
@@ -160,6 +153,13 @@ class SensorDetailViewModel @Inject constructor(
     init {
         val sensorFlow = sensorDao.getFullFlow(sensorId)
         viewModelScope.launch {
+            sensorManager = SensorReceiver.MANAGERS
+                .find {
+                    it.getAvailableSensors(getApplication()).any { sensor -> sensor.id == sensorId }
+                }
+            basicSensor = sensorManager?.getAvailableSensors(getApplication())
+                ?.find { it.id == sensorId }
+
             serverNames = serverManager.servers().associate { it.id to it.friendlyName }
 
             sensorFlow.collect { map ->
@@ -189,9 +189,11 @@ class SensorDetailViewModel @Inject constructor(
     }
 
     private suspend fun checkSensorEnabled(sensors: List<SensorWithAttributes>) {
-        if (sensorManager != null && basicSensor != null && sensors.isNotEmpty()) {
+        val sm = sensorManager
+        val bs = basicSensor
+        if (sm != null && bs != null && sensors.isNotEmpty()) {
             sensorCheckedEnabled = true
-            val hasPermission = sensorManager.checkPermission(getApplication(), basicSensor.id)
+            val hasPermission = sm.checkPermission(getApplication(), bs.id)
             sensors.forEach { thisSensor ->
                 val enabled = thisSensor.sensor.enabled && hasPermission
                 updateSensorEntity(enabled, thisSensor.sensor.serverId)
@@ -202,38 +204,39 @@ class SensorDetailViewModel @Inject constructor(
     fun setEnabled(isEnabled: Boolean, serverId: Int?) {
         viewModelScope.launch {
             if (isEnabled) {
-                sensorManager?.requiredPermissions(getApplication(), sensorId)?.let { permissions ->
-                    val fineLocation = DisabledLocationHandler.containsLocationPermission(permissions, true)
-                    val coarseLocation = DisabledLocationHandler.containsLocationPermission(permissions, false)
+                val sm = sensorManager ?: return@launch
+                val permissions = sm.requiredPermissions(getApplication(), sensorId) ?: return@launch
 
-                    if ((fineLocation || coarseLocation) &&
-                        !DisabledLocationHandler.isLocationEnabled(getApplication())
-                    ) {
-                        val sensorName = basicSensor?.let {
-                            getApplication<Application>().getString(
-                                basicSensor.name,
-                            )
-                        }.orEmpty()
-                        locationPermissionRequests.value =
-                            LocationPermissionsDialog(block = true, serverId = serverId, sensors = arrayOf(sensorName))
-                        return@launch
-                    } else {
-                        if (!sensorManager.checkPermission(getApplication(), sensorId)) {
-                            if (sensorManager is NetworkSensorManager) {
-                                locationPermissionRequests.value =
-                                    LocationPermissionsDialog(false, serverId, emptyArray(), permissions)
-                            } else if (sensorManager is LastAppSensorManager &&
-                                !sensorManager.checkUsageStatsPermission(getApplication())
-                            ) {
-                                permissionRequests.value = PermissionsDialog(serverId, permissions)
-                            } else {
-                                permissionRequests.value = PermissionsDialog(serverId, permissions)
-                            }
+                val fineLocation = DisabledLocationHandler.containsLocationPermission(permissions, true)
+                val coarseLocation = DisabledLocationHandler.containsLocationPermission(permissions, false)
 
-                            return@launch
+                if ((fineLocation || coarseLocation) &&
+                    !DisabledLocationHandler.isLocationEnabled(getApplication())
+                ) {
+                    val sensorName = basicSensor?.let {
+                        getApplication<Application>().getString(
+                            it.name,
+                        )
+                    }.orEmpty()
+                    locationPermissionRequests.value =
+                        LocationPermissionsDialog(block = true, serverId = serverId, sensors = arrayOf(sensorName))
+                    return@launch
+                } else {
+                    if (!sm.checkPermission(getApplication(), sensorId)) {
+                        if (sm is NetworkSensorManager) {
+                            locationPermissionRequests.value =
+                                LocationPermissionsDialog(false, serverId, emptyArray(), permissions)
+                        } else if (sm is LastAppSensorManager &&
+                            !sm.checkUsageStatsPermission(getApplication())
+                        ) {
+                            permissionRequests.value = PermissionsDialog(serverId, permissions)
+                        } else {
+                            permissionRequests.value = PermissionsDialog(serverId, permissions)
                         }
+
+                        return@launch
                     }
-                } ?: return@launch
+                }
             }
 
             updateSensorEntity(isEnabled, serverId)
