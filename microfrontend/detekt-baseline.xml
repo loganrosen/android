@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>MaxLineLength:MicroFrontend.kt$MicroFrontend$*</ID>
+    <ID>UseCheckOrError:MicroFrontend.kt$MicroFrontend$throw IllegalStateException("Failed to create native MicroFrontend")</ID>
+  </CurrentIssues>
+</SmellBaseline>

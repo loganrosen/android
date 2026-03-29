@@ -1,0 +1,644 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>ComplexCondition:BluetoothSensorManager.kt$BluetoothSensorManager$!isBtOn(context) || !bleTransmitterDevice.transmitRequested || (bleTransmitterDevice.onlyTransmitOnHomeWifiSetting &amp;&amp; !isPermittedOnThisNetwork(context))</ID>
+    <ID>ComplexCondition:BluetoothSensorManager.kt$BluetoothSensorManager$bleTransmitterDevice.transmitRequested &amp;&amp; (!bleTransmitterDevice.transmitting || bleTransmitterDevice.restartRequired) &amp;&amp; (!bleTransmitterDevice.onlyTransmitOnHomeWifiSetting || isPermittedOnThisNetwork(context))</ID>
+    <ID>ComplexCondition:BluetoothSensorManager.kt$BluetoothSensorManager$bleTransmitterDevice.uuid != uuid || bleTransmitterDevice.major != major || bleTransmitterDevice.minor != minor || bleTransmitterDevice.transmitPowerSetting != transmitPower || bleTransmitterDevice.advertiseModeSetting != advertiseMode || bleTransmitterDevice.transmitRequested != transmitActive || bleTransmitterDevice.measuredPowerSetting != measuredPower || priorBluetoothStateEnabled != isBtOn(context) || bleTransmitterDevice.onlyTransmitOnHomeWifiSetting != homeWifiOnly</ID>
+    <ID>ComplexCondition:DatabaseMigration.kt$Migration16to17$( currentSensorId == "zone_background" || currentSensorId == "accurate_location" || currentSensorId == "location_background" ) &amp;&amp; currentSensorSettingName == "Minimum Accuracy"</ID>
+    <ID>ComplexCondition:Entity.kt$friendlyState == state &amp;&amp; canSupportPrecision() &amp;&amp; (options?.sensor?.displayPrecision != null || options?.sensor?.suggestedDisplayPrecision != null)</ID>
+    <ID>ComplexCondition:NotificationManagerExtensions.kt$isGroupSummary &amp;&amp; groupNotifications.size == 1 || !isGroupSummary &amp;&amp; groupNotifications.size == 2</ID>
+    <ID>ComplexCondition:SensorManager.kt$SensorManager$enabled &amp;&amp; !settingEnabled || !enabled &amp;&amp; settingEnabled</ID>
+    <ID>ComplexCondition:SensorReceiverBase.kt$SensorReceiverBase$canBeRegistered &amp;&amp; ( (sensor.registered == null &amp;&amp; (sensor.enabled || supportsDisabledSensors)) || (sensor.enabled != sensor.registered &amp;&amp; supportsDisabledSensors) || (sensor.registered != null &amp;&amp; coreSensorStatus != null &amp;&amp; sensorCoreEnabled == null) )</ID>
+    <ID>ComplexCondition:SensorReceiverBase.kt$SensorReceiverBase$canBeRegistered &amp;&amp; sensor.enabled &amp;&amp; sensor.registered != null &amp;&amp; (sensor.state != sensor.lastSentState || sensor.icon != sensor.lastSentIcon)</ID>
+    <ID>ComplexCondition:SensorReceiverBase.kt$SensorReceiverBase$canBeRegistered &amp;&amp; serverIsReachable &amp;&amp; (sensor.enabled || supportsDisabledSensors) &amp;&amp; (currentAppVersion != sensor.appRegistration || currentHAversion != sensor.coreRegistration)</ID>
+    <ID>ComplexCondition:SensorReceiverBase.kt$SensorReceiverBase$canBeRegistered &amp;&amp; supportsDisabledSensors &amp;&amp; sensorCoreEnabled != null &amp;&amp; sensorCoreEnabled != sensor.registered</ID>
+    <ID>ComplexCondition:TransmitterManager.kt$TransmitterManager$haTransmitter.major.toInt() &lt; 0 || haTransmitter.major.toInt() &gt; 65535 || haTransmitter.minor.toInt() &lt; 0 || haTransmitter.minor.toInt() &gt; 65535 || haTransmitter.measuredPowerSetting &gt;= 0</ID>
+    <ID>ConstructorParameterNaming:Server.kt$Server$@ColumnInfo(name = "_name") val _name: String</ID>
+    <ID>ConstructorParameterNaming:Server.kt$Server$@ColumnInfo(name = "_version") val _version: String? = null</ID>
+    <ID>CyclomaticComplexMethod:AppSensorManagerBase.kt$AppSensorManagerBase$private suspend fun updateImportanceCheck(context: Context)</ID>
+    <ID>CyclomaticComplexMethod:AssistViewModelBase.kt$AssistViewModelBase$protected fun runAssistPipelineInternal( text: String?, pipeline: AssistPipelineResponse?, wakeWordPhrase: String? = null, onEvent: (AssistEvent) -&gt; Unit, )</ID>
+    <ID>CyclomaticComplexMethod:AudioSensorManager.kt$AudioSensorManager$private suspend fun updateAudioState(context: Context, audioManager: AudioManager)</ID>
+    <ID>CyclomaticComplexMethod:BluetoothSensorManager.kt$BluetoothSensorManager$private suspend fun updateBLESensor(context: Context)</ID>
+    <ID>CyclomaticComplexMethod:DatabaseMigration.kt$Migration16to17$@SuppressLint("Range") override fun migrate(db: SupportSQLiteDatabase)</ID>
+    <ID>CyclomaticComplexMethod:DatabaseMigration.kt$Migration37to38$fun onPostMigrate(db: SupportSQLiteDatabase)</ID>
+    <ID>CyclomaticComplexMethod:DeviceCommands.kt$private fun checkCommandFormat(data: Map&lt;String, String&gt;): Boolean</ID>
+    <ID>CyclomaticComplexMethod:DeviceCommands.kt$suspend fun commandBleTransmitter(context: Context, data: Map&lt;String, String&gt;, sensorDao: SensorDao): Boolean</ID>
+    <ID>CyclomaticComplexMethod:Entity.kt$fun Entity.friendlyState( context: Context, options: EntityRegistryOptions? = null, appendUnitOfMeasurement: Boolean = false, ): String</ID>
+    <ID>CyclomaticComplexMethod:Entity.kt$fun Entity.getIcon(context: Context): IIcon</ID>
+    <ID>CyclomaticComplexMethod:Entity.kt$fun Entity.isActive()</ID>
+    <ID>CyclomaticComplexMethod:Entity.kt$private fun binarySensorIcon(state: String?, entity: Entity): IIcon</ID>
+    <ID>CyclomaticComplexMethod:Entity.kt$private fun coverIcon(state: String?, entity: Entity): IIcon</ID>
+    <ID>CyclomaticComplexMethod:Entity.kt$private fun sensorIcon(state: String?, entity: Entity): IIcon</ID>
+    <ID>CyclomaticComplexMethod:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$override suspend fun registerSensor(sensorRegistration: SensorRegistration&lt;Any&gt;)</ID>
+    <ID>CyclomaticComplexMethod:NetworkSensorManager.kt$NetworkSensorManager$@SuppressLint("MissingPermission") private suspend fun updateNetworkType(context: Context)</ID>
+    <ID>CyclomaticComplexMethod:NotificationManagerExtensions.kt$fun cancelNotificationGroupIfNeeded( notificationManager: NotificationManager, tag: String?, id: Int, cancel: (String, Int) -&gt; Unit, ): Boolean</ID>
+    <ID>CyclomaticComplexMethod:RegisterDeviceRequest.kt$RegisterDeviceRequestSerializer$override fun deserialize(decoder: Decoder): RegisterDeviceRequest</ID>
+    <ID>CyclomaticComplexMethod:SensorManager.kt$SensorManager$suspend fun onSensorUpdated( context: Context, basicSensor: BasicSensor, state: Any, mdiIcon: String, attributes: Map&lt;String, Any?&gt;, forceUpdate: Boolean = false, )</ID>
+    <ID>CyclomaticComplexMethod:SensorReceiverBase.kt$SensorReceiverBase$override fun onReceive(context: Context, intent: Intent)</ID>
+    <ID>CyclomaticComplexMethod:SensorReceiverBase.kt$SensorReceiverBase$private suspend fun syncSensorsWithServer( context: Context, serverManager: ServerManager, server: Server, sensorDao: SensorDao, ): Boolean</ID>
+    <ID>CyclomaticComplexMethod:SensorRequest.kt$SensorRegistrationRequestSerializer$@OptIn(ExperimentalSerializationApi::class) override fun deserialize(decoder: Decoder): SensorRegistrationRequest</ID>
+    <ID>CyclomaticComplexMethod:SensorWithAttributes.kt$SensorWithAttributes$fun toSensorRegistration(basicSensor: SensorManager.BasicSensor): SensorRegistration&lt;Any&gt;</ID>
+    <ID>CyclomaticComplexMethod:WebSocketCoreImpl.kt$WebSocketCoreImpl$private suspend fun handleEvent(response: EventSocketResponse)</ID>
+    <ID>EmptyFunctionBlock:AssistViewModelBaseTest.kt$AssistViewModelBaseTest.&lt;no name provided&gt;${}</ID>
+    <ID>EmptyFunctionBlock:BroadcastReceiverExtTest.kt$BroadcastReceiverExtTest.&lt;no name provided&gt;${}</ID>
+    <ID>ExplicitItLambdaParameter:LastUpdateManager.kt$LastUpdateManager${ index, it -&gt; it.copy(name = "$INTENT_SETTING_PREFIX${index + 1}:") }</ID>
+    <ID>ForbiddenComment:WebSocketRepositoryImpl.kt$WebSocketRepositoryImpl$// TODO: Send default locale of device with request.</ID>
+    <ID>FunctionNaming:HABanner.kt$@Composable fun HABanner(modifier: Modifier = Modifier, content: @Composable RowScope.() -&gt; Unit)</ID>
+    <ID>FunctionNaming:HABanner.kt$@Composable fun HAHint(text: String, modifier: Modifier = Modifier, onClose: (() -&gt; Unit)? = null)</ID>
+    <ID>FunctionNaming:HABanner.kt$@PreviewLightDark @Composable private fun HAHintPreview()</ID>
+    <ID>FunctionNaming:HAButtons.kt$@Composable fun HAAccentButton( text: String, onClick: () -&gt; Unit, modifier: Modifier = Modifier, variant: ButtonVariant = ButtonVariant.PRIMARY, enabled: Boolean = true, size: ButtonSize = ButtonSize.MEDIUM, textOverflow: TextOverflow = TextOverflow.Clip, maxLines: Int = Int.MAX_VALUE, prefix: @Composable (BoxScope.() -&gt; Unit)? = null, suffix: @Composable (BoxScope.() -&gt; Unit)? = null, )</ID>
+    <ID>FunctionNaming:HAButtons.kt$@Composable fun HAFilledButton( text: String, onClick: () -&gt; Unit, modifier: Modifier = Modifier, variant: ButtonVariant = ButtonVariant.PRIMARY, enabled: Boolean = true, size: ButtonSize = ButtonSize.MEDIUM, textOverflow: TextOverflow = TextOverflow.Clip, maxLines: Int = Int.MAX_VALUE, prefix: @Composable (BoxScope.() -&gt; Unit)? = null, suffix: @Composable (BoxScope.() -&gt; Unit)? = null, )</ID>
+    <ID>FunctionNaming:HAButtons.kt$@Composable fun HAIconButton( icon: ImageVector, onClick: () -&gt; Unit, contentDescription: String?, modifier: Modifier = Modifier, variant: ButtonVariant = ButtonVariant.PRIMARY, enabled: Boolean = true, )</ID>
+    <ID>FunctionNaming:HAButtons.kt$@Composable fun HAPlainButton( text: String, onClick: () -&gt; Unit, modifier: Modifier = Modifier, variant: ButtonVariant = ButtonVariant.PRIMARY, enabled: Boolean = true, size: ButtonSize = ButtonSize.MEDIUM, textOverflow: TextOverflow = TextOverflow.Clip, maxLines: Int = Int.MAX_VALUE, prefix: @Composable (BoxScope.() -&gt; Unit)? = null, suffix: @Composable (BoxScope.() -&gt; Unit)? = null, )</ID>
+    <ID>FunctionNaming:HAButtons.kt$@Composable private fun HABaseButton( text: String, onClick: () -&gt; Unit, colors: HAButtonColors, size: ButtonSize, enabled: Boolean, textOverflow: TextOverflow, maxLines: Int, prefix: @Composable (BoxScope.() -&gt; Unit)?, suffix: @Composable (BoxScope.() -&gt; Unit)?, modifier: Modifier = Modifier, )</ID>
+    <ID>FunctionNaming:HAButtons.kt$@Composable private fun RippleConfigurationLocalProvider(rippleColor: Color, content: @Composable () -&gt; Unit)</ID>
+    <ID>FunctionNaming:HAButtons.kt$@Composable private fun RowScope.ButtonContent( text: String, prefix: @Composable (BoxScope.() -&gt; Unit)?, suffix: @Composable (BoxScope.() -&gt; Unit)?, textOverflow: TextOverflow, maxLines: Int, )</ID>
+    <ID>FunctionNaming:HAButtons.kt$@Composable private fun RowScope.ButtonDecorator(type: ButtonDecoratorType, content: @Composable (BoxScope.() -&gt; Unit)?)</ID>
+    <ID>FunctionNaming:HADetails.kt$@Composable fun HADetails( title: String, modifier: Modifier = Modifier, defaultExpanded: Boolean = false, content: @Composable ColumnScope.() -&gt; Unit, )</ID>
+    <ID>FunctionNaming:HADetails.kt$@Composable private fun ExpandableSectionTitle(isExpanded: Boolean, title: String, modifier: Modifier = Modifier)</ID>
+    <ID>FunctionNaming:HADetails.kt$@PreviewLightDark @Composable private fun HADetailsPreview_close()</ID>
+    <ID>FunctionNaming:HADetails.kt$@PreviewLightDark @Composable private fun HADetailsPreview_open()</ID>
+    <ID>FunctionNaming:HADropdownMenu.kt$@Composable @VisibleForTesting internal fun &lt;T&gt; HADropdownMenuInternal( @SuppressLint("ComposeUnstableCollections") items: List&lt;HADropdownItem&lt;T&gt;&gt;, selectedKey: T?, onItemSelected: (T) -&gt; Unit, modifier: Modifier = Modifier, label: String? = null, placeholder: String? = null, enabled: Boolean = true, initiallyExpanded: Boolean = false, )</ID>
+    <ID>FunctionNaming:HADropdownMenu.kt$@Composable fun &lt;T&gt; HADropdownMenu( @SuppressLint("ComposeUnstableCollections") items: List&lt;HADropdownItem&lt;T&gt;&gt;, selectedKey: T?, onItemSelected: (T) -&gt; Unit, modifier: Modifier = Modifier, label: String? = null, placeholder: String? = null, enabled: Boolean = true, )</ID>
+    <ID>FunctionNaming:HADropdownMenu.kt$@Composable private fun &lt;T&gt; DropdownPopupMenu( @SuppressLint("ComposeUnstableCollections") items: List&lt;HADropdownItem&lt;T&gt;&gt;, selectedKey: T?, expanded: Boolean, onItemSelected: (T) -&gt; Unit, onDismissRequest: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>FunctionNaming:HADropdownMenu.kt$@Composable private fun DropdownField( selectedLabel: String?, label: String?, placeholder: String?, enabled: Boolean, expanded: Boolean, onClick: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>FunctionNaming:HADropdownMenu.kt$@Preview @Composable private fun HADropdownMenuCollapsedPreview()</ID>
+    <ID>FunctionNaming:HADropdownMenu.kt$@Preview @Composable private fun HADropdownMenuDisabledPreview()</ID>
+    <ID>FunctionNaming:HADropdownMenu.kt$@Preview @Composable private fun HADropdownMenuNoLabelPreview()</ID>
+    <ID>FunctionNaming:HADropdownMenu.kt$@Preview @Composable private fun HADropdownMenuSelectedPreview()</ID>
+    <ID>FunctionNaming:HAHorizontalDivider.kt$@Composable fun HAHorizontalDivider(modifier: Modifier = Modifier)</ID>
+    <ID>FunctionNaming:HALabel.kt$@Composable fun HALabel( text: String, modifier: Modifier = Modifier, variant: LabelVariant = LabelVariant.PRIMARY, size: LabelSize = LabelSize.MEDIUM, )</ID>
+    <ID>FunctionNaming:HALabel.kt$@PreviewLightDark @Composable private fun HALabelPreview()</ID>
+    <ID>FunctionNaming:HAModalBottomSheet.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun HAModalBottomSheet( bottomSheetState: SheetState, modifier: Modifier = Modifier, onDismissRequest: () -&gt; Unit = {}, content: @Composable ColumnScope.() -&gt; Unit, )</ID>
+    <ID>FunctionNaming:HAProgress.kt$@Composable fun HALoading(modifier: Modifier = Modifier, strokeWidth: Dp = ProgressIndicatorDefaults.CircularStrokeWidth)</ID>
+    <ID>FunctionNaming:HAProgress.kt$@Composable fun HAProgress( progress: () -&gt; Float, modifier: Modifier = Modifier, strokeWidth: Dp = ProgressIndicatorDefaults.CircularStrokeWidth, )</ID>
+    <ID>FunctionNaming:HARadioGroup.kt$@Composable fun &lt;T&gt; HARadioGroup( @SuppressLint("ComposeUnstableCollections") options: List&lt;RadioOption&lt;T&gt;&gt;, onSelect: (RadioOption&lt;T&gt;) -&gt; Unit, modifier: Modifier = Modifier, selectedOption: RadioOption&lt;T&gt;? = null, spaceBy: Dp = HADimens.SPACE6, )</ID>
+    <ID>FunctionNaming:HARadioGroup.kt$@Composable fun &lt;T&gt; HARadioGroup( @SuppressLint("ComposeUnstableCollections") options: List&lt;RadioOption&lt;T&gt;&gt;, onSelect: (RadioOption&lt;T&gt;) -&gt; Unit, modifier: Modifier = Modifier, selectionKey: T? = null, spaceBy: Dp = HADimens.SPACE6, )</ID>
+    <ID>FunctionNaming:HARadioGroup.kt$@Composable private fun HARadioButton( headline: String, onSelect: () -&gt; Unit, isSelected: Boolean, enabled: Boolean, modifier: Modifier = Modifier, secondary: String? = null, )</ID>
+    <ID>FunctionNaming:HASettingsCard.kt$@Composable fun HASettingsCard(modifier: Modifier = Modifier, content: @Composable () -&gt; Unit)</ID>
+    <ID>FunctionNaming:HASettingsCard.kt$@PreviewLightDark @Composable private fun HASettingsCardPreview()</ID>
+    <ID>FunctionNaming:HASwitch.kt$@Composable fun HASwitch( checked: Boolean, onCheckedChange: (Boolean) -&gt; Unit, modifier: Modifier = Modifier, enabled: Boolean = true, )</ID>
+    <ID>FunctionNaming:HATextField.kt$@Composable fun HATextField( value: String, onValueChange: (String) -&gt; Unit, modifier: Modifier = Modifier, enabled: Boolean = true, isError: Boolean = false, label: @Composable (() -&gt; Unit)? = null, placeholder: @Composable (() -&gt; Unit)? = null, supportingText: @Composable (() -&gt; Unit)? = null, trailingIcon: @Composable (() -&gt; Unit)? = null, leadingIcon: @Composable (() -&gt; Unit)? = null, keyboardOptions: KeyboardOptions = KeyboardOptions.Default, keyboardActions: KeyboardActions = KeyboardActions.Default, maxLines: Int = Int.MAX_VALUE, singleLine: Boolean = maxLines == 1, visualTransformation: VisualTransformation = VisualTransformation.None, )</ID>
+    <ID>FunctionNaming:HATheme.kt$@Composable fun HATheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -&gt; Unit)</ID>
+    <ID>FunctionNaming:HATheme.kt$@Composable fun HAThemeForPreview(modifier: Modifier = Modifier, content: @Composable BoxScope.() -&gt; Unit)</ID>
+    <ID>FunctionNaming:HATopBar.kt$@Composable fun HATopBar( modifier: Modifier = Modifier, title: @Composable () -&gt; Unit = {}, onHelpClick: (suspend () -&gt; Unit)? = null, onBackClick: (() -&gt; Unit)? = null, onCloseClick: (() -&gt; Unit)? = null, )</ID>
+    <ID>FunctionNaming:HATopBar.kt$@Composable fun HATopBarPlaceholder(modifier: Modifier = Modifier)</ID>
+    <ID>FunctionNaming:HATopBar.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun HATopBar( modifier: Modifier = Modifier, title: @Composable () -&gt; Unit = {}, navigationIcon: (@Composable () -&gt; Unit)? = null, actions: (@Composable () -&gt; Unit)? = null, )</ID>
+    <ID>ImplicitDefaultLocale:SensorReceiverBase.kt$SensorReceiverBase$String.format( "Sensor(s) %s corresponding to received event %s are disabled, skipping sensors update", sensors.toString(), intent.action, )</ID>
+    <ID>ImplicitDefaultLocale:StorageSensorManager.kt$StorageSensorManager$String.format("%,d", sizeLong)</ID>
+    <ID>InstanceOfCheckForException:SensorReceiverBase.kt$SensorReceiverBase$e is IntegrationException</ID>
+    <ID>LargeClass:JsonUtilTest.kt$JsonUtilTest</ID>
+    <ID>LargeClass:WebSocketCoreImpl.kt$WebSocketCoreImpl : WebSocketListenerWebSocketCore</ID>
+    <ID>LargeClass:WebSocketCoreImplTest.kt$WebSocketCoreImplTest</ID>
+    <ID>LongMethod:AssistViewModelBase.kt$AssistViewModelBase$protected fun runAssistPipelineInternal( text: String?, pipeline: AssistPipelineResponse?, wakeWordPhrase: String? = null, onEvent: (AssistEvent) -&gt; Unit, )</ID>
+    <ID>LongMethod:BluetoothSensorManager.kt$BluetoothSensorManager$private suspend fun updateBLEDevice(context: Context)</ID>
+    <ID>LongMethod:BluetoothSensorManager.kt$BluetoothSensorManager$private suspend fun updateBeaconMonitoringDevice(context: Context)</ID>
+    <ID>LongMethod:DatabaseMigration.kt$Migration16to17$@SuppressLint("Range") override fun migrate(db: SupportSQLiteDatabase)</ID>
+    <ID>LongMethod:DatabaseMigration.kt$Migration37to38$fun onPostMigrate(db: SupportSQLiteDatabase)</ID>
+    <ID>LongMethod:DatabaseMigration.kt$Migration40to41$@SuppressLint("Range") override fun migrate(db: SupportSQLiteDatabase)</ID>
+    <ID>LongMethod:DeviceCommands.kt$suspend fun commandBleTransmitter(context: Context, data: Map&lt;String, String&gt;, sensorDao: SensorDao): Boolean</ID>
+    <ID>LongMethod:DisabledLocationHandler.kt$DisabledLocationHandler$@SuppressLint("QueryPermissionsNeeded") fun showLocationDisabledWarnDialog( context: Context, settings: Array&lt;String&gt;, showAsNotification: Boolean = false, withDisableOption: Boolean = false, callback: (() -&gt; Unit)? = null, )</ID>
+    <ID>LongMethod:Entity.kt$fun Entity.friendlyState( context: Context, options: EntityRegistryOptions? = null, appendUnitOfMeasurement: Boolean = false, ): String</ID>
+    <ID>LongMethod:Entity.kt$fun Entity.getIcon(context: Context): IIcon</ID>
+    <ID>LongMethod:Entity.kt$private fun sensorIcon(state: String?, entity: Entity): IIcon</ID>
+    <ID>LongMethod:HARadioGroup.kt$@Composable private fun HARadioButton( headline: String, onSelect: () -&gt; Unit, isSelected: Boolean, enabled: Boolean, modifier: Modifier = Modifier, secondary: String? = null, )</ID>
+    <ID>LongMethod:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$override suspend fun registerSensor(sensorRegistration: SensorRegistration&lt;Any&gt;)</ID>
+    <ID>LongMethod:NotificationManagerExtensions.kt$fun cancelNotificationGroupIfNeeded( notificationManager: NotificationManager, tag: String?, id: Int, cancel: (String, Int) -&gt; Unit, ): Boolean</ID>
+    <ID>LongMethod:SensorManager.kt$SensorManager$suspend fun onSensorUpdated( context: Context, basicSensor: BasicSensor, state: Any, mdiIcon: String, attributes: Map&lt;String, Any?&gt;, forceUpdate: Boolean = false, )</ID>
+    <ID>LongMethod:SensorReceiverBase.kt$SensorReceiverBase$override fun onReceive(context: Context, intent: Intent)</ID>
+    <ID>LongMethod:SensorReceiverBase.kt$SensorReceiverBase$private suspend fun syncSensorsWithServer( context: Context, serverManager: ServerManager, server: Server, sensorDao: SensorDao, ): Boolean</ID>
+    <ID>LongMethod:WebSocketCoreImpl.kt$WebSocketCoreImpl$private suspend fun handleEvent(response: EventSocketResponse)</ID>
+    <ID>LongParameterList:HAButtons.kt$( icon: ImageVector, onClick: () -&gt; Unit, contentDescription: String?, modifier: Modifier = Modifier, variant: ButtonVariant = ButtonVariant.PRIMARY, enabled: Boolean = true, )</ID>
+    <ID>LongParameterList:HAButtons.kt$( text: String, onClick: () -&gt; Unit, colors: HAButtonColors, size: ButtonSize, enabled: Boolean, textOverflow: TextOverflow, maxLines: Int, prefix: @Composable (BoxScope.() -&gt; Unit)?, suffix: @Composable (BoxScope.() -&gt; Unit)?, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:HAButtons.kt$( text: String, onClick: () -&gt; Unit, modifier: Modifier = Modifier, variant: ButtonVariant = ButtonVariant.PRIMARY, enabled: Boolean = true, size: ButtonSize = ButtonSize.MEDIUM, textOverflow: TextOverflow = TextOverflow.Clip, maxLines: Int = Int.MAX_VALUE, prefix: @Composable (BoxScope.() -&gt; Unit)? = null, suffix: @Composable (BoxScope.() -&gt; Unit)? = null, )</ID>
+    <ID>LongParameterList:HAColors.kt$HAColorScheme$( val colorFillPrimaryLoudResting: Color, val colorFillPrimaryNormalResting: Color, val colorFillPrimaryQuietResting: Color, val colorFillPrimaryLoudHover: Color, val colorFillPrimaryNormalHover: Color, val colorFillPrimaryQuietHover: Color, val colorFillPrimaryNormalActive: Color, val colorOnPrimaryLoud: Color, val colorOnPrimaryNormal: Color, val colorOnPrimaryQuiet: Color, val colorFillNeutralLoudResting: Color, val colorFillNeutralNormalResting: Color, val colorFillNeutralQuietResting: Color, val colorFillNeutralLoudHover: Color, val colorFillNeutralNormalHover: Color, val colorFillNeutralQuietHover: Color, val colorOnNeutralLoud: Color, val colorOnNeutralNormal: Color, val colorOnNeutralQuiet: Color, val colorFillDangerLoudResting: Color, val colorFillDangerNormalResting: Color, val colorFillDangerQuietResting: Color, val colorFillDangerLoudHover: Color, val colorFillDangerNormalHover: Color, val colorFillDangerQuietHover: Color, val colorOnDangerLoud: Color, val colorOnDangerNormal: Color, val colorOnDangerQuiet: Color, val colorFillWarningLoudResting: Color, val colorFillWarningNormalResting: Color, val colorFillWarningQuietResting: Color, val colorFillWarningLoudHover: Color, val colorFillWarningNormalHover: Color, val colorFillWarningQuietHover: Color, val colorOnWarningLoud: Color, val colorOnWarningNormal: Color, val colorOnWarningQuiet: Color, val colorFillSuccessLoudResting: Color, val colorFillSuccessNormalResting: Color, val colorFillSuccessQuietResting: Color, val colorFillSuccessLoudHover: Color, val colorFillSuccessNormalHover: Color, val colorFillSuccessQuietHover: Color, val colorOnSuccessLoud: Color, val colorOnSuccessNormal: Color, val colorOnSuccessQuiet: Color, val colorFillDisabledLoudResting: Color, val colorFillDisabledNormalResting: Color, val colorFillDisabledQuietResting: Color, val colorOnDisabledLoud: Color, val colorOnDisabledNormal: Color, val colorOnDisabledQuiet: Color, val colorSurfaceDefault: Color, val colorSurfaceLow: Color, val colorTextPrimary: Color, val colorTextSecondary: Color, val colorTextDisabled: Color, val colorTextLink: Color, val colorBorderPrimaryNormal: Color, val colorBorderPrimaryLoud: Color, val colorBorderNeutralQuiet: Color, val colorBorderNeutralNormal: Color, val colorBorderDangerNormal: Color, val colorBorderWarningNormal: Color, val colorBorderSuccessNormal: Color, val colorOverlayModal: Color, )</ID>
+    <ID>LongParameterList:HADropdownMenu.kt$( @SuppressLint("ComposeUnstableCollections") items: List&lt;HADropdownItem&lt;T&gt;&gt;, selectedKey: T?, expanded: Boolean, onItemSelected: (T) -&gt; Unit, onDismissRequest: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:HADropdownMenu.kt$( @SuppressLint("ComposeUnstableCollections") items: List&lt;HADropdownItem&lt;T&gt;&gt;, selectedKey: T?, onItemSelected: (T) -&gt; Unit, modifier: Modifier = Modifier, label: String? = null, placeholder: String? = null, enabled: Boolean = true, )</ID>
+    <ID>LongParameterList:HADropdownMenu.kt$( @SuppressLint("ComposeUnstableCollections") items: List&lt;HADropdownItem&lt;T&gt;&gt;, selectedKey: T?, onItemSelected: (T) -&gt; Unit, modifier: Modifier = Modifier, label: String? = null, placeholder: String? = null, enabled: Boolean = true, initiallyExpanded: Boolean = false, )</ID>
+    <ID>LongParameterList:HADropdownMenu.kt$( selectedLabel: String?, label: String?, placeholder: String?, enabled: Boolean, expanded: Boolean, onClick: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:HARadioGroup.kt$( headline: String, onSelect: () -&gt; Unit, isSelected: Boolean, enabled: Boolean, modifier: Modifier = Modifier, secondary: String? = null, )</ID>
+    <ID>LongParameterList:HATextField.kt$( value: String, onValueChange: (String) -&gt; Unit, modifier: Modifier = Modifier, enabled: Boolean = true, isError: Boolean = false, label: @Composable (() -&gt; Unit)? = null, placeholder: @Composable (() -&gt; Unit)? = null, supportingText: @Composable (() -&gt; Unit)? = null, trailingIcon: @Composable (() -&gt; Unit)? = null, leadingIcon: @Composable (() -&gt; Unit)? = null, keyboardOptions: KeyboardOptions = KeyboardOptions.Default, keyboardActions: KeyboardActions = KeyboardActions.Default, maxLines: Int = Int.MAX_VALUE, singleLine: Boolean = maxLines == 1, visualTransformation: VisualTransformation = VisualTransformation.None, )</ID>
+    <ID>LongParameterList:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$( private val integrationService: IntegrationService, private val serverManager: ServerManager, @Assisted private val serverId: Int, @NamedIntegrationStorage private val localStorage: LocalStorage, @NamedManufacturer private val manufacturer: String, @NamedModel private val model: String, @NamedOsVersion private val osVersion: String, @NamedDeviceId private val deviceId: String, )</ID>
+    <ID>LongParameterList:NotificationFunctions.kt$( context: Context, builder: NotificationCompat.Builder, data: Map&lt;String, String&gt;, messageId: Int, group: String?, groupId: Int, databaseId: Long?, )</ID>
+    <ID>LongParameterList:SensorManager.kt$SensorManager$( context: Context, basicSensor: BasicSensor, state: Any, mdiIcon: String, attributes: Map&lt;String, Any?&gt;, forceUpdate: Boolean = false, )</ID>
+    <ID>LongParameterList:SensorManager.kt$SensorManager$( context: Context, sensor: BasicSensor, settingName: String, settingType: SensorSettingType, default: String, enabled: Boolean = true, entries: List&lt;String&gt; = arrayListOf(), )</ID>
+    <ID>LongParameterList:ServerConnectionStateProviderImpl.kt$ServerConnectionStateProviderImpl$( @param:ApplicationContext private val context: Context, private val serverManager: ServerManager, private val serverDao: ServerDao, private val wifiHelper: WifiHelper, private val networkHelper: NetworkHelper, private val networkChangeObserver: NetworkChangeObserver, @Assisted private val serverId: Int, )</ID>
+    <ID>LongParameterList:ServerConnectionStateProviderImplTest.kt$ServerConnectionStateProviderImplTest$( externalUrl: String = "https://external.example.com", internalUrl: String? = null, cloudUrl: String? = null, cloudhookUrl: String? = null, webhookId: String? = null, useCloud: Boolean = false, internalSsids: List&lt;String&gt; = emptyList(), internalEthernet: Boolean? = null, internalVpn: Boolean? = null, prioritizeInternal: Boolean = false, allowInsecureConnection: Boolean? = null, )</ID>
+    <ID>LongParameterList:ServerManagerImpl.kt$ServerManagerImpl$( private val authenticationRepositoryFactory: AuthenticationRepositoryFactory, private val integrationRepositoryFactory: IntegrationRepositoryFactory, private val webSocketRepositoryFactory: WebSocketRepositoryFactory, private val serverConnectionStateProviderFactory: ServerConnectionStateProviderFactory, private val prefsRepository: PrefsRepository, private val serverDao: ServerDao, private val sensorDao: SensorDao, private val settingsDao: SettingsDao, @NamedSessionStorage private val localStorage: LocalStorage, )</ID>
+    <ID>MagicNumber:AppSensorManagerBase.kt$AppSensorManagerBase$3</ID>
+    <ID>MagicNumber:AppSensorManagerBase.kt$AppSensorManagerBase$4</ID>
+    <ID>MagicNumber:AuthenticationRepositoryImpl.kt$AuthenticationRepositoryImpl$2022</ID>
+    <ID>MagicNumber:AuthenticationRepositoryImpl.kt$AuthenticationRepositoryImpl$400</ID>
+    <ID>MagicNumber:AuthenticationRepositoryImpl.kt$AuthenticationRepositoryImpl$9</ID>
+    <ID>MagicNumber:BatterySensorManager.kt$BatterySensorManager$10</ID>
+    <ID>MagicNumber:BatterySensorManager.kt$BatterySensorManager$100</ID>
+    <ID>MagicNumber:BatterySensorManager.kt$BatterySensorManager$100.0f</ID>
+    <ID>MagicNumber:BatterySensorManager.kt$BatterySensorManager$10f</ID>
+    <ID>MagicNumber:BatterySensorManager.kt$BatterySensorManager$60000f</ID>
+    <ID>MagicNumber:BatterySensorManager.kt$BatterySensorManager$9</ID>
+    <ID>MagicNumber:CompressedEntity.kt$CompressedEntityState$1000</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$10</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$11</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$12</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$13</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$14</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$15</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$16</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$17</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$18</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$19</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$20</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$21</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$22</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$23</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$24</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$3</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$4</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$5</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$6</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$7</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$8</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$9</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$MIGRATION6to7$6</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$MIGRATION6to7$7</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$Migration16to17$16</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$Migration16to17$17</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$Migration37to38$37</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$Migration37to38$38</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$Migration40to41$40</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$Migration40to41$41</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$Migration9to10$10</ID>
+    <ID>MagicNumber:DatabaseMigration.kt$Migration9to10$9</ID>
+    <ID>MagicNumber:Entity.kt$0.01f</ID>
+    <ID>MagicNumber:Entity.kt$0.1f</ID>
+    <ID>MagicNumber:Entity.kt$10</ID>
+    <ID>MagicNumber:Entity.kt$100</ID>
+    <ID>MagicNumber:Entity.kt$100f</ID>
+    <ID>MagicNumber:Entity.kt$20</ID>
+    <ID>MagicNumber:Entity.kt$255f</ID>
+    <ID>MagicNumber:Entity.kt$30</ID>
+    <ID>MagicNumber:Entity.kt$40</ID>
+    <ID>MagicNumber:Entity.kt$5</ID>
+    <ID>MagicNumber:Entity.kt$50</ID>
+    <ID>MagicNumber:Entity.kt$60</ID>
+    <ID>MagicNumber:Entity.kt$70</ID>
+    <ID>MagicNumber:Entity.kt$80</ID>
+    <ID>MagicNumber:Entity.kt$90</ID>
+    <ID>MagicNumber:ExoPlayerExt.kt$30000</ID>
+    <ID>MagicNumber:ExoPlayerExt.kt$7</ID>
+    <ID>MagicNumber:ExoPlayerExt.kt$8.0f</ID>
+    <ID>MagicNumber:HAColors.kt$HABrandColors$0xFF18BCF2</ID>
+    <ID>MagicNumber:HAColors.kt$HABrandColors$0xFFF2F4F9</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF000000</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF000F35</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF00151B</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF001721</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF001A4E</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF002129</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF00222F</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF002D77</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF002E3E</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF003844</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF003D51</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF003F9C</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF004156</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF004E67</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF0053C0</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF006787</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF007093</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF0071EC</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF00883C</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF009AC7</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF00A3C0</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF00A4D4</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF00AC49</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF014C5B</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF026274</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF031608</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF036730</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF052310</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF078098</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF0A3A1D</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF0A5027</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF0D0A3A</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF141414</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF181255</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF18BCF2</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF1E0532</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF1FBCF1</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF202020</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF220C00</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF28041A</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF280700</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF292381</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF2A040B</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF2D0B48</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF2FBEDC</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF331600</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF363636</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF37C8FD</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF3933A7</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF3B0F00</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF3C0828</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF3E0913</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF3E96FF</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF491870</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF4945CB</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF4A4A4A</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF532600</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF5DC36F</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF5E1342</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF5E1C00</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF5E5E5E</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF612692</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF6163F2</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF631323</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF6EB3FF</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF6F3601</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF7936B3</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF7A7A7A</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF7BD4FB</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF7D1E58</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF7E2900</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF7FD6EC</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF808AFF</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF8A132C</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF8C4602</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF93DA98</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF989898</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF9951DB</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF9D3800</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF9DA9FF</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF9E2A6C</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFF9FCEFF</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFB1B1B1</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFB30532</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFB45F04</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFB678F5</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFB9E6FC</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFBCC7FF</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFC2F2C1</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFC5ECF7</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFC84382</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFC94E00</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFCA99FF</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFCCCCCC</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFD1E8FF</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFDA7E00</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFDC3146</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFDDBDFF</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFDFF3FC</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFDFe5FF</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFE3F6FB</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFE3F9E3</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFE66BA3</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFE6E6E6</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFE8F3FF</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFEEDFFF</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFEF9D00</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFEFF9FE</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFF0F2FF</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFF3676C</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFF36D00</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFF3F3F3</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFF78DBF</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFF7F0FF</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFAC22B</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFCB5D8</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFD8F90</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFEDDF0</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFEF3CD</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFEFFF9</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFF9342</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFFB8B6</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFFBB89</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFFDEDC</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFFE0C8</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFFE495</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFFF0E4</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFFF0EF</ID>
+    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFFFFFF</ID>
+    <ID>MagicNumber:HADropdownMenu.kt$3</ID>
+    <ID>MagicNumber:HARipple.kt$0.5f</ID>
+    <ID>MagicNumber:HomeAssistantVersion.kt$HomeAssistantVersion.Companion$3</ID>
+    <ID>MagicNumber:IBeaconMonitor.kt$IBeaconMonitor$0.5</ID>
+    <ID>MagicNumber:IBeaconMonitor.kt$IBeaconMonitor$100</ID>
+    <ID>MagicNumber:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$10</ID>
+    <ID>MagicNumber:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$1000</ID>
+    <ID>MagicNumber:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$11</ID>
+    <ID>MagicNumber:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$12</ID>
+    <ID>MagicNumber:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$2021</ID>
+    <ID>MagicNumber:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$2022</ID>
+    <ID>MagicNumber:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$2023</ID>
+    <ID>MagicNumber:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$2024</ID>
+    <ID>MagicNumber:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$4</ID>
+    <ID>MagicNumber:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$5</ID>
+    <ID>MagicNumber:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$6</ID>
+    <ID>MagicNumber:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$86400000</ID>
+    <ID>MagicNumber:IntervalToString.kt$60</ID>
+    <ID>MagicNumber:LastRebootSensorManager.kt$LastRebootSensorManager$60000</ID>
+    <ID>MagicNumber:MonitoringManager.kt$MonitoringManager$1100</ID>
+    <ID>MagicNumber:MonitoringManager.kt$MonitoringManager$444</ID>
+    <ID>MagicNumber:MonitoringManager.kt$MonitoringManager$500</ID>
+    <ID>MagicNumber:NetworkSensorManager.kt$NetworkSensorManager$0xFF</ID>
+    <ID>MagicNumber:NetworkSensorManager.kt$NetworkSensorManager$16</ID>
+    <ID>MagicNumber:NetworkSensorManager.kt$NetworkSensorManager$24</ID>
+    <ID>MagicNumber:NetworkSensorManager.kt$NetworkSensorManager$4</ID>
+    <ID>MagicNumber:NetworkSensorManager.kt$NetworkSensorManager$8</ID>
+    <ID>MagicNumber:PrefsRepositoryImpl.kt$PrefsRepositoryImpl$100</ID>
+    <ID>MagicNumber:ProximitySensorManager.kt$ProximitySensorManager$5</ID>
+    <ID>MagicNumber:RegisterDeviceRequest.kt$RegisterDeviceRequestSerializer$10</ID>
+    <ID>MagicNumber:RegisterDeviceRequest.kt$RegisterDeviceRequestSerializer$3</ID>
+    <ID>MagicNumber:RegisterDeviceRequest.kt$RegisterDeviceRequestSerializer$4</ID>
+    <ID>MagicNumber:RegisterDeviceRequest.kt$RegisterDeviceRequestSerializer$5</ID>
+    <ID>MagicNumber:RegisterDeviceRequest.kt$RegisterDeviceRequestSerializer$6</ID>
+    <ID>MagicNumber:RegisterDeviceRequest.kt$RegisterDeviceRequestSerializer$7</ID>
+    <ID>MagicNumber:RegisterDeviceRequest.kt$RegisterDeviceRequestSerializer$8</ID>
+    <ID>MagicNumber:RegisterDeviceRequest.kt$RegisterDeviceRequestSerializer$9</ID>
+    <ID>MagicNumber:SensorReceiverBase.kt$SensorReceiverBase$2022</ID>
+    <ID>MagicNumber:SensorReceiverBase.kt$SensorReceiverBase$5000L</ID>
+    <ID>MagicNumber:SensorReceiverBase.kt$SensorReceiverBase$6</ID>
+    <ID>MagicNumber:SensorRequest.kt$SensorRegistrationRequestSerializer$10</ID>
+    <ID>MagicNumber:SensorRequest.kt$SensorRegistrationRequestSerializer$3</ID>
+    <ID>MagicNumber:SensorRequest.kt$SensorRegistrationRequestSerializer$4</ID>
+    <ID>MagicNumber:SensorRequest.kt$SensorRegistrationRequestSerializer$5</ID>
+    <ID>MagicNumber:SensorRequest.kt$SensorRegistrationRequestSerializer$6</ID>
+    <ID>MagicNumber:SensorRequest.kt$SensorRegistrationRequestSerializer$7</ID>
+    <ID>MagicNumber:SensorRequest.kt$SensorRegistrationRequestSerializer$8</ID>
+    <ID>MagicNumber:SensorRequest.kt$SensorRegistrationRequestSerializer$9</ID>
+    <ID>MagicNumber:SensorWorkerBase.kt$SensorWorkerBase$2022</ID>
+    <ID>MagicNumber:SensorWorkerBase.kt$SensorWorkerBase$6</ID>
+    <ID>MagicNumber:ServerSessionInfo.kt$ServerSessionInfo$1000</ID>
+    <ID>MagicNumber:StorageSensorManager.kt$StorageSensorManager$1024</ID>
+    <ID>MagicNumber:ThreadDatasetTlvResponse.kt$ThreadDatasetTlvResponse$16</ID>
+    <ID>MagicNumber:TrafficStatsManager.kt$TrafficStatsManager$3</ID>
+    <ID>MagicNumber:TransmitterManager.kt$TransmitterManager$65535</ID>
+    <ID>MagicNumber:UpdateLocationRequest.kt$UpdateLocationRequestSerializer$3</ID>
+    <ID>MagicNumber:UpdateLocationRequest.kt$UpdateLocationRequestSerializer$4</ID>
+    <ID>MagicNumber:UpdateLocationRequest.kt$UpdateLocationRequestSerializer$5</ID>
+    <ID>MagicNumber:UpdateLocationRequest.kt$UpdateLocationRequestSerializer$6</ID>
+    <ID>MagicNumber:UrlUtil.kt$443</ID>
+    <ID>MagicNumber:UrlUtil.kt$80</ID>
+    <ID>MagicNumber:VoiceAudioRecorder.kt$0xFF</ID>
+    <ID>MagicNumber:VoiceAudioRecorder.kt$4</ID>
+    <ID>MagicNumber:VoiceAudioRecorder.kt$8</ID>
+    <ID>MagicNumber:WebSocketCoreImpl.kt$WebSocketCoreImpl$1001</ID>
+    <ID>MagicNumber:WebSocketCoreImpl.kt$WebSocketCoreImpl$2022</ID>
+    <ID>MagicNumber:WebSocketCoreImpl.kt$WebSocketCoreImpl$9</ID>
+    <ID>MagicNumber:WebSocketRepositoryImpl.kt$WebSocketRepositoryImpl$2024</ID>
+    <ID>MatchingDeclarationName:DeviceCommands.kt$DeviceCommandData</ID>
+    <ID>MatchingDeclarationName:HARadioGroup.kt$RadioOption&lt;T&gt;</ID>
+    <ID>MatchingDeclarationName:NotificationFunctions.kt$NotificationData</ID>
+    <ID>MaxLineLength:AppVersion.kt$AppVersion$"Invalid app version: $value you should use `from` static function instead or follow this pattern \"BuildConfig.VERSION_NAME (BuildConfig.VERSION_CODE)\""</ID>
+    <ID>MaxLineLength:AppVersion.kt$AppVersion$*</ID>
+    <ID>MaxLineLength:AssistAudioFocusImplTest.kt$AssistAudioFocusImplTest$every { AudioManagerCompat.abandonAudioFocusRequest(any(), any()) } returns AudioManager.AUDIOFOCUS_REQUEST_GRANTED</ID>
+    <ID>MaxLineLength:AssistViewModelBaseTest.kt$AssistViewModelBaseTest$fun</ID>
+    <ID>MaxLineLength:AudioSensorManagerTest.kt$AudioSensorManagerTest$assertEquals("Expected lastSentIcon to be preserved (no force update)", AudioSensorManager.volMusic.statelessIcon, lastSentIcon)</ID>
+    <ID>MaxLineLength:AudioSensorManagerTest.kt$AudioSensorManagerTest$coEvery { sensorDao.get(AudioSensorManager.volMusic.id) } returns listOf(volumeMusicSensor, volumeMusicSensorServer2)</ID>
+    <ID>MaxLineLength:AudioSensorManagerTest.kt$AudioSensorManagerTest$fun</ID>
+    <ID>MaxLineLength:AudioUrlPlayerTest.kt$AudioUrlPlayerTest$every { AudioManagerCompat.abandonAudioFocusRequest(any(), any()) } returns AudioManager.AUDIOFOCUS_REQUEST_GRANTED</ID>
+    <ID>MaxLineLength:AudioUrlPlayerTest.kt$AudioUrlPlayerTest$every { AudioManagerCompat.requestAudioFocus(any(), capture(focusRequestSlot)) } returns AudioManager.AUDIOFOCUS_REQUEST_GRANTED</ID>
+    <ID>MaxLineLength:AudioUrlPlayerTest.kt$AudioUrlPlayerTest$fun</ID>
+    <ID>MaxLineLength:BluetoothSensorManager.kt$BluetoothSensorManager$// transmit when BT is on, if we are not already transmitting, or details have changed, and we're permitted on this wifi network</ID>
+    <ID>MaxLineLength:BroadcastReceiverExtTest.kt$BroadcastReceiverExtTest$fun</ID>
+    <ID>MaxLineLength:BroadcastReceiverExtTest.kt$BroadcastReceiverExtTest$val scope = CoroutineScope(coroutineContext + SupervisorJob() + CoroutineExceptionHandler { _, throwable -&gt; caughtException = throwable })</ID>
+    <ID>MaxLineLength:CompressedEntityTest.kt$CompressedEntityTest$assertEquals(CompressedEntityState(state = JsonPrimitive(state), lastChanged = lastChanged, lastUpdated = lastUpdated), kotlinJsonMapper.decodeFromString&lt;CompressedEntityState&gt;(rawData))</ID>
+    <ID>MaxLineLength:CompressedEntityTest.kt$CompressedEntityTest$val expected = CompressedEntityState(state = JsonPrimitive(state), attributes = attributes, lastChanged = lastChanged, lastUpdated = lastUpdated)</ID>
+    <ID>MaxLineLength:CompressedEntityTest.kt$CompressedEntityTest$val rawData = """{"s":"$state","lc":$lastChanged,"lu":$lastUpdated,"a":{"friendly_name":"${attributes["friendly_name"]}","icon":"${attributes["icon"]}"}}"""</ID>
+    <ID>MaxLineLength:ConnectivityCheckRepositoryImplTest.kt$ConnectivityCheckRepositoryImplTest$coEvery { checker.dns("example.com") } returns ConnectivityCheckResult.Success(commonR.string.connection_check_dns, "192.0.2.1")</ID>
+    <ID>MaxLineLength:ConnectivityCheckRepositoryImplTest.kt$ConnectivityCheckRepositoryImplTest$coEvery { checker.dns("example.com") } returns ConnectivityCheckResult.Success(commonR.string.connection_check_dns, ipAddresses)</ID>
+    <ID>MaxLineLength:ConnectivityCheckRepositoryImplTest.kt$ConnectivityCheckRepositoryImplTest$coEvery { checker.homeAssistant(testUrl) } returns ConnectivityCheckResult.Success(commonR.string.connection_check_home_assistant_success)</ID>
+    <ID>MaxLineLength:ConnectivityCheckRepositoryImplTest.kt$ConnectivityCheckRepositoryImplTest$coEvery { checker.port("example.com", 443) } returns ConnectivityCheckResult.Success(commonR.string.connection_check_port, "443")</ID>
+    <ID>MaxLineLength:ConnectivityCheckRepositoryImplTest.kt$ConnectivityCheckRepositoryImplTest$coEvery { checker.port("example.com", 8123) } returns ConnectivityCheckResult.Success(commonR.string.connection_check_port, "8123")</ID>
+    <ID>MaxLineLength:ConnectivityCheckRepositoryImplTest.kt$ConnectivityCheckRepositoryImplTest$coEvery { checker.server(testUrl) } returns ConnectivityCheckResult.Success(commonR.string.connection_check_server_success)</ID>
+    <ID>MaxLineLength:ConnectivityCheckRepositoryImplTest.kt$ConnectivityCheckRepositoryImplTest$coEvery { checker.tls(testUrl) } returns ConnectivityCheckResult.Success(commonR.string.connection_check_tls_success)</ID>
+    <ID>MaxLineLength:ConnectivityCheckRepositoryImplTest.kt$ConnectivityCheckRepositoryImplTest$fun</ID>
+    <ID>MaxLineLength:ConnectivityCheckRepositoryImplTest.kt$ConnectivityCheckRepositoryImplTest$val haInProgressState = states.firstOrNull { it.homeAssistantVerification is ConnectivityCheckResult.InProgress }</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$&lt;no name provided&gt;$"CREATE TABLE IF NOT EXISTS `button_widgets` (`id` INTEGER NOT NULL, `icon_id` INTEGER NOT NULL, `domain` TEXT NOT NULL, `service` TEXT NOT NULL, `service_data` TEXT NOT NULL, `label` TEXT, PRIMARY KEY(`id`))"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$&lt;no name provided&gt;$"CREATE TABLE IF NOT EXISTS `camera_widgets` (`id` INTEGER NOT NULL, `entityId` TEXT NOT NULL, PRIMARY KEY(`id`))"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$&lt;no name provided&gt;$"CREATE TABLE IF NOT EXISTS `mediaplayctrls_widgets` (`id` INTEGER NOT NULL, `entityId` TEXT NOT NULL, `label` TEXT, `showSkip` INTEGER NOT NULL, `showSeek` INTEGER NOT NULL, PRIMARY KEY(`id`))"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$&lt;no name provided&gt;$"CREATE TABLE IF NOT EXISTS `notification_history` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `received` INTEGER NOT NULL, `message` TEXT NOT NULL, `data` TEXT NOT NULL)"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$&lt;no name provided&gt;$"CREATE TABLE IF NOT EXISTS `qs_tiles` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `tileId` TEXT NOT NULL, `icon_id` INTEGER, `entityId` TEXT NOT NULL, `label` TEXT NOT NULL, `subtitle` TEXT)"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$&lt;no name provided&gt;$"CREATE TABLE IF NOT EXISTS `sensor_settings` (`sensor_id` TEXT NOT NULL, `name` TEXT NOT NULL, `value` TEXT NOT NULL, `value_type` TEXT NOT NULL DEFAULT 'string', PRIMARY KEY(`sensor_id`, `name`))"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$&lt;no name provided&gt;$"CREATE TABLE IF NOT EXISTS `sensors` (`unique_id` TEXT NOT NULL, `enabled` INTEGER NOT NULL, `registered` INTEGER NOT NULL, `state` TEXT NOT NULL, PRIMARY KEY(`unique_id`))"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$&lt;no name provided&gt;$"CREATE TABLE IF NOT EXISTS `settings` (`id` INTEGER NOT NULL, `websocketSetting` TEXT NOT NULL, PRIMARY KEY(`id`))"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$&lt;no name provided&gt;$"CREATE TABLE IF NOT EXISTS `static_widget` (`id` INTEGER NOT NULL, `entity_id` TEXT NOT NULL, `attribute_id` TEXT, `label` TEXT, PRIMARY KEY(`id`))"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$&lt;no name provided&gt;$"CREATE TABLE IF NOT EXISTS `static_widget` (`id` INTEGER NOT NULL, `entity_id` TEXT NOT NULL, `attribute_ids` TEXT, `label` TEXT, `text_size` FLOAT NOT NULL DEFAULT '30', `state_separator` TEXT NOT NULL DEFAULT '', `attribute_separator` TEXT NOT NULL DEFAULT '', PRIMARY KEY(`id`))"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$&lt;no name provided&gt;$"CREATE TABLE IF NOT EXISTS `template_widgets` (`id` INTEGER NOT NULL, `template` TEXT NOT NULL, PRIMARY KEY(`id`))"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$MIGRATION6to7$"CREATE TABLE IF NOT EXISTS `sensor_attributes` (`sensor_id` TEXT NOT NULL, `name` TEXT NOT NULL, `value` TEXT NOT NULL, PRIMARY KEY(`sensor_id`, `name`))"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$MIGRATION6to7$"CREATE TABLE IF NOT EXISTS `sensors` (`id` TEXT NOT NULL, `enabled` INTEGER NOT NULL, `registered` INTEGER NOT NULL, `state` TEXT NOT NULL, `state_type` TEXT NOT NULL, `type` TEXT NOT NULL, `icon` TEXT NOT NULL, `name` TEXT NOT NULL, `device_class` TEXT, `unit_of_measurement` TEXT, PRIMARY KEY(`id`))"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$Migration16to17$"CREATE TABLE IF NOT EXISTS `sensor_settings` (`sensor_id` TEXT NOT NULL, `name` TEXT NOT NULL, `value` TEXT NOT NULL, `value_type` TEXT NOT NULL DEFAULT 'string', `entries` TEXT NOT NULL, `enabled` INTEGER NOT NULL DEFAULT '1', PRIMARY KEY(`sensor_id`, `name`))"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$Migration37to38$"CREATE TABLE IF NOT EXISTS `_new_sensors` (`id` TEXT NOT NULL, `server_id` INTEGER NOT NULL DEFAULT 0, `enabled` INTEGER NOT NULL, `registered` INTEGER DEFAULT NULL, `state` TEXT NOT NULL, `last_sent_state` TEXT DEFAULT NULL, `last_sent_icon` TEXT DEFAULT NULL, `state_type` TEXT NOT NULL, `type` TEXT NOT NULL, `icon` TEXT NOT NULL, `name` TEXT NOT NULL, `device_class` TEXT, `unit_of_measurement` TEXT, `state_class` TEXT, `entity_category` TEXT, `core_registration` TEXT, `app_registration` TEXT, PRIMARY KEY(`id`, `server_id`))"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$Migration37to38$"CREATE TABLE IF NOT EXISTS `servers` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `_name` TEXT NOT NULL, `name_override` TEXT, `_version` TEXT, `list_order` INTEGER NOT NULL, `device_name` TEXT, `external_url` TEXT NOT NULL, `internal_url` TEXT, `cloud_url` TEXT, `webhook_id` TEXT, `secret` TEXT, `cloudhook_url` TEXT, `use_cloud` INTEGER NOT NULL, `internal_ssids` TEXT NOT NULL, `prioritize_internal` INTEGER NOT NULL, `access_token` TEXT, `refresh_token` TEXT, `token_expiration` INTEGER, `token_type` TEXT, `install_id` TEXT)"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$Migration37to38$"INSERT INTO `_new_sensors` (`id`,`enabled`,`registered`,`state`,`last_sent_state`,`last_sent_icon`,`state_type`,`type`,`icon`,`name`,`device_class`,`unit_of_measurement`,`state_class`,`entity_category`,`core_registration`,`app_registration`) SELECT `id`,`enabled`,`registered`,`state`,`last_sent_state`,`last_sent_icon`,`state_type`,`type`,`icon`,`name`,`device_class`,`unit_of_measurement`,`state_class`,`entity_category`,`core_registration`,`app_registration` FROM `sensors`"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$Migration37to38$"SELECT * FROM `sensor_settings` WHERE `sensor_id` = 'location_background' AND `name` = 'location_ham_only_enter_zone'"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$Migration37to38$"WHERE `sensor_id` = 'location_background' AND `name` = 'location_ham_only_enter_zone'"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$Migration40to41$"CREATE TABLE IF NOT EXISTS `button_widgets` (`id` INTEGER NOT NULL, `server_id` INTEGER NOT NULL DEFAULT 0, `icon_name` TEXT NOT NULL, `domain` TEXT NOT NULL, `service` TEXT NOT NULL, `service_data` TEXT NOT NULL, `label` TEXT, `background_type` TEXT NOT NULL DEFAULT 'DAYNIGHT', `text_color` TEXT, `require_authentication` INTEGER NOT NULL DEFAULT 0, PRIMARY KEY(`id`))"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$Migration40to41$"CREATE TABLE IF NOT EXISTS `qs_tiles` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `tile_id` TEXT NOT NULL, `added` INTEGER NOT NULL DEFAULT 1, `server_id` INTEGER NOT NULL DEFAULT 0, `icon_name` TEXT, `entity_id` TEXT NOT NULL, `label` TEXT NOT NULL, `subtitle` TEXT, `should_vibrate` INTEGER NOT NULL DEFAULT 0, `auth_required` INTEGER NOT NULL DEFAULT 0)"</ID>
+    <ID>MaxLineLength:DatabaseMigration.kt$Migration9to10$"CREATE TABLE IF NOT EXISTS `sensors` (`id` TEXT NOT NULL, `enabled` INTEGER NOT NULL, `registered` INTEGER NOT NULL, `state` TEXT NOT NULL, `last_sent_state` TEXT NOT NULL, `state_type` TEXT NOT NULL, `type` TEXT NOT NULL, `icon` TEXT NOT NULL, `name` TEXT NOT NULL, `device_class` TEXT, `unit_of_measurement` TEXT, PRIMARY KEY(`id`))"</ID>
+    <ID>MaxLineLength:DefaultAssistAudioStrategyTest.kt$DefaultAssistAudioStrategyTest$every { AudioManagerCompat.abandonAudioFocusRequest(any(), any()) } returns AudioManager.AUDIOFOCUS_REQUEST_GRANTED</ID>
+    <ID>MaxLineLength:Entity.kt$"Entity $entityId has non-String state attribute: ${attributeState::class.simpleName}. Please open an issue on the relevant integration."</ID>
+    <ID>MaxLineLength:FailFast.kt$FailFast$*</ID>
+    <ID>MaxLineLength:FailFast.kt$FailFastHandler$*</ID>
+    <ID>MaxLineLength:FlowUtilTest.kt$FlowUtilTest$fun</ID>
+    <ID>MaxLineLength:HADetails.kt$*</ID>
+    <ID>MaxLineLength:HAProgress.kt$*</ID>
+    <ID>MaxLineLength:HATextField.kt$*</ID>
+    <ID>MaxLineLength:IBeaconMonitor.kt$IBeaconMonitor$// beacon seen, make sure skippedUpdated=0, even if requireUpdate stays false (and beacons list is not replaced)</ID>
+    <ID>MaxLineLength:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$"isAppLocked(): $appLocked. (LockEnabled: $lockEnabled, appActive: $appActive, expireMillis: $sessionExpireMillis, currentMillis: $currentMillis)"</ID>
+    <ID>MaxLineLength:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$// We check if the result is a JsonPrimitive instead of a simple global toString to avoid rendering " around the string</ID>
+    <ID>MaxLineLength:IntegrationRepositoryImplTest.kt$IntegrationRepositoryImplTest$coEvery { integrationService.getTemplate(any(), any()) } returns JsonObject(mapOf("template" to JsonArray(expectedResult.map { JsonPrimitive(it) })))</ID>
+    <ID>MaxLineLength:IntegrationRepositoryImplTest.kt$IntegrationRepositoryImplTest$coEvery { integrationService.getTemplate(any(), any()) } returns JsonObject(mapOf("template" to JsonPrimitive(expectedResult)))</ID>
+    <ID>MaxLineLength:IntegrationRepositoryImplTest.kt$IntegrationRepositoryImplTest$fun</ID>
+    <ID>MaxLineLength:IntegrationRepositoryImplTest.kt$IntegrationRepositoryImplTest$repository = IntegrationRepositoryImpl(integrationService, serverManager, serverID, localStorage, "", "", "", "")</ID>
+    <ID>MaxLineLength:IntegrationRequestTest.kt$IntegrationRequestTest$"""{"type":"register_sensor","data":{"unique_id":"42","state":null,"type":"test","icon":"test","attributes":{}}}"""</ID>
+    <ID>MaxLineLength:IntegrationRequestTest.kt$IntegrationRequestTest$kotlinJsonMapper.encodeToString&lt;IntegrationRequest&gt;(CallServiceIntegrationRequest(ActionRequest(domain = "domain", service = "service", serviceData = emptyMap())))</ID>
+    <ID>MaxLineLength:IntegrationRequestTest.kt$IntegrationRequestTest$kotlinJsonMapper.encodeToString&lt;IntegrationRequest&gt;(FireEventIntegrationRequest(FireEventRequest("type", emptyMap())))</ID>
+    <ID>MaxLineLength:IntegrationRequestTest.kt$IntegrationRequestTest$kotlinJsonMapper.encodeToString&lt;IntegrationRequest&gt;(RegisterDeviceIntegrationRequest(RegisterDeviceRequest()))</ID>
+    <ID>MaxLineLength:IntegrationRequestTest.kt$IntegrationRequestTest$kotlinJsonMapper.encodeToString&lt;IntegrationRequest&gt;(RegisterSensorIntegrationRequest(SensorRegistrationRequest(uniqueId = "42", state = null, type = "test", icon = "test", attributes = emptyMap())))</ID>
+    <ID>MaxLineLength:IntegrationRequestTest.kt$IntegrationRequestTest$kotlinJsonMapper.encodeToString&lt;IntegrationRequest&gt;(UpdateLocationIntegrationRequest(UpdateLocationRequest()))</ID>
+    <ID>MaxLineLength:JsonUtil.kt$// explicitNulls = true // default is to print null values in the JSON send if you don't want this behavior you need a custom serializer</ID>
+    <ID>MaxLineLength:JsonUtilTest.kt$JsonUtilTest$"""{"key1":"value1","key2":true,"key3":1,"key4":9223372036854775807,"key5":1.0,"key6":null,"key7":[1,2,3],"key8":{"subkey1":"value1","subkey2":1,"subkey3":true},"key9":1.0,"key10":[4,5,6],"key11":{"str_value":"hello","int_value":1},"key12":1}""".trimIndent()</ID>
+    <ID>MaxLineLength:JsonUtilTest.kt$JsonUtilTest$assertEquals(""""2018-08-17T13:46:59.83836"""", kotlinJsonMapper.encodeToString(LocalDateTimeSerializer(), dateTime))</ID>
+    <ID>MaxLineLength:JsonUtilTest.kt$JsonUtilTest$fun</ID>
+    <ID>MaxLineLength:NetworkCapabilitiesChecker.kt$NetworkCapabilitiesChecker$*</ID>
+    <ID>MaxLineLength:NetworkChangeObserverImplTest.kt$NetworkChangeObserverImplTest$connectivityManager.registerNetworkCallback(any&lt;NetworkRequest&gt;(), any&lt;ConnectivityManager.NetworkCallback&gt;())</ID>
+    <ID>MaxLineLength:NetworkChangeObserverImplTest.kt$NetworkChangeObserverImplTest$verify { connectivityManager.registerNetworkCallback(any&lt;NetworkRequest&gt;(), any&lt;ConnectivityManager.NetworkCallback&gt;()) }</ID>
+    <ID>MaxLineLength:NetworkStatusMonitorImplTest.kt$NetworkStatusMonitorImplTest$coEvery { connectionStateProvider.getExternalUrl() } returns URL("http://192.168.1.100:8123")</ID>
+    <ID>MaxLineLength:NetworkStatusMonitorImplTest.kt$NetworkStatusMonitorImplTest$fun</ID>
+    <ID>MaxLineLength:NotificationManagerExtensions.kt$"Notification is inside of group \"$group\", but is the last one in the group. Try to cancel the group notification...."</ID>
+    <ID>MaxLineLength:NotificationManagerExtensions.kt$"Notification is the group summary \"$group\" with no notifications inside. Try to cancel this group summary notification..."</ID>
+    <ID>MaxLineLength:NotificationManagerExtensions.kt$// This group can't be canceled, but it will be canceled by canceling the last notification inside of the group</ID>
+    <ID>MaxLineLength:PrefsRepositoryImplTest.kt$PrefsRepositoryImplTest$fun</ID>
+    <ID>MaxLineLength:RegisterDeviceRequestTest.kt$RegisterDeviceRequestTest$"""{"app_id":"1","app_name":"2","app_version":"3 (3)","device_name":"4","manufacturer":"5","model":"6","os_name":"7","os_version":"8","supports_encryption":true,"app_data":{"1":"2","2":1,"3":"token"},"device_id":"3"}"""</ID>
+    <ID>MaxLineLength:RegisterDeviceRequestTest.kt$RegisterDeviceRequestTest$kotlinJsonMapper.decodeFromString&lt;RegisterDeviceRequest&gt;("""{"app_id":"1","app_name":"2","app_version":"3 (3)","device_name":"4","manufacturer":"5","model":"6","os_name":"7","os_version":"8","supports_encryption":true,"app_data":{"1":"2","2":1},"device_id":"3"}""")</ID>
+    <ID>MaxLineLength:ResyncRegistrationWorkerTest.kt$ResyncRegistrationWorkerTest$fun</ID>
+    <ID>MaxLineLength:SensorDao.kt$SensorDao$"SELECT * FROM sensors LEFT JOIN sensor_attributes ON sensors.id = sensor_attributes.sensor_id WHERE sensors.id = :id AND sensors.server_id = :serverId"</ID>
+    <ID>MaxLineLength:SensorDao.kt$SensorDao$"SELECT * FROM sensors LEFT JOIN sensor_attributes ON sensors.id = sensor_attributes.sensor_id WHERE sensors.id = :id"</ID>
+    <ID>MaxLineLength:SensorDao.kt$SensorDao$"UPDATE sensors SET last_sent_state = :state, last_sent_icon = :icon WHERE id = :sensorId AND server_id = :serverId"</ID>
+    <ID>MaxLineLength:SensorManagerTest.kt$SensorManagerTest$fun</ID>
+    <ID>MaxLineLength:SensorReceiverBase.kt$SensorReceiverBase$"Server can't be reached, skipping other registrations for sensors due to version change"</ID>
+    <ID>MaxLineLength:SensorRegistrationRequestTest.kt$SensorRegistrationRequestTest$"""{"unique_id":"1","state":"2","type":"3","icon":"4","attributes":{"1":"2","2":1},"device_class":null,"entity_category":null}"""</ID>
+    <ID>MaxLineLength:SensorRegistrationRequestTest.kt$SensorRegistrationRequestTest$"""{"unique_id":"1","state":"2","type":"3","icon":"4","attributes":{"1":"2","2":1},"name":"5","device_class":"6","unit_of_measurement":"7","state_class":"8","entity_category":"9","disabled":true}"""</ID>
+    <ID>MaxLineLength:SensorRegistrationRequestTest.kt$SensorRegistrationRequestTest$kotlinJsonMapper.decodeFromString&lt;SensorRegistrationRequest&gt;("""{"unique_id":"1","state":"2","type":"3","icon":"4","attributes":{"1":"2","2":1},"device_class":null,"entity_category":null}""")</ID>
+    <ID>MaxLineLength:SensorRegistrationRequestTest.kt$SensorRegistrationRequestTest$kotlinJsonMapper.decodeFromString&lt;SensorRegistrationRequest&gt;("""{"unique_id":"1","state":"2","type":"3","icon":"4","attributes":{"1":"2","2":1},"name":"5","device_class":"6","unit_of_measurement":"7","state_class":"8","entity_category":"9","disabled":true}""")</ID>
+    <ID>MaxLineLength:SensorRegistrationRequestTest.kt$SensorRegistrationRequestTest$kotlinJsonMapper.decodeFromString&lt;SensorRegistrationRequest&gt;("""{"unique_id":"1","state":"2","type":"3","icon":"4","attributes":{"1":"2","2":1}}""")</ID>
+    <ID>MaxLineLength:ServerConnectionInfoTest.kt$ServerConnectionInfoTest.HasHomeNetworkSetup$fun</ID>
+    <ID>MaxLineLength:ServerConnectionStateProviderImplTest.kt$ServerConnectionStateProviderImplTest.CanSafelySendCredentials$fun</ID>
+    <ID>MaxLineLength:ServerConnectionStateProviderImplTest.kt$ServerConnectionStateProviderImplTest.GetApiUrls$fun</ID>
+    <ID>MaxLineLength:ServerConnectionStateProviderImplTest.kt$ServerConnectionStateProviderImplTest.GetExternalUrl$fun</ID>
+    <ID>MaxLineLength:ServerConnectionStateProviderImplTest.kt$ServerConnectionStateProviderImplTest.IsInternal$fun</ID>
+    <ID>MaxLineLength:ServerConnectionStateProviderImplTest.kt$ServerConnectionStateProviderImplTest.UrlFlow$fun</ID>
+    <ID>MaxLineLength:ServerManagerImplTest.kt$ServerManagerImplTest.AuthenticationRepositoryTest$fun</ID>
+    <ID>MaxLineLength:ServerManagerImplTest.kt$ServerManagerImplTest.ConnectionStateProviderTest$fun</ID>
+    <ID>MaxLineLength:ServerManagerImplTest.kt$ServerManagerImplTest.GetServerByIdTest$fun</ID>
+    <ID>MaxLineLength:ServerManagerImplTest.kt$ServerManagerImplTest.IntegrationRepositoryTest$fun</ID>
+    <ID>MaxLineLength:ServerRegistrationRepositoryTest.kt$ServerRegistrationRepositoryTest$fun</ID>
+    <ID>MaxLineLength:ServerRegistrationRepositoryTest.kt$ServerRegistrationRepositoryTest$private var repository: ServerRegistrationRepository = ServerRegistrationRepository(authenticationService, installIdProvider)</ID>
+    <ID>MaxLineLength:SocketResponseTest.kt$SocketResponseTest$kotlinJsonMapper.decodeFromString&lt;SocketResponse&gt;("""{"type":"auth_required"}""") is AuthRequiredSocketResponse</ID>
+    <ID>MaxLineLength:SocketResponseTest.kt$SocketResponseTest$val response: SocketResponse = kotlinJsonMapper.decodeFromString("""{ "type":"super_type","key1":1,"key2": null}""")</ID>
+    <ID>MaxLineLength:TextToSpeechClient.kt$TextToSpeechClient$*</ID>
+    <ID>MaxLineLength:TodoWidgetEntityTest.kt$TodoWidgetEntityTest$fun</ID>
+    <ID>MaxLineLength:TodoWidgetEntityTest.kt$TodoWidgetEntityTest$latestUpdateData = TodoWidgetEntity.LastUpdateData("HA2", listOf(TodoWidgetEntity.TodoItem("345678", "what's up?", "complete")))</ID>
+    <ID>MaxLineLength:UpdateLocationRequestTest.kt$UpdateLocationRequestTest$"""{"gps":[1.0,2.0],"gps_accuracy":0,"location_name":"Test Location","speed":1,"altitude":2,"course":3,"vertical_accuracy":4}"""</ID>
+    <ID>MaxLineLength:UpdateLocationRequestTest.kt$UpdateLocationRequestTest$kotlinJsonMapper.decodeFromString&lt;UpdateLocationRequest&gt;("""{"gps":[1.0,2.0],"gps_accuracy":0,"location_name":"Test Location","speed":1,"altitude":2,"course":3,"vertical_accuracy":4}""")</ID>
+    <ID>MaxLineLength:UrlUtilTest.kt$UrlUtilTest$fun</ID>
+    <ID>MaxLineLength:VoiceAudioRecorder.kt$"AudioRecord at ${VOICE_SAMPLE_RATE}Hz failed to initialize current state ${recorder.state}, falling back to ${FALLBACK_SAMPLE_RATE}Hz"</ID>
+    <ID>MaxLineLength:VoiceAudioRecorderTest.kt$VoiceAudioRecorderTest.Audio recording lifecycle$fun</ID>
+    <ID>MaxLineLength:WearPrefsRepositoryImplTest.kt$WearPrefsRepositoryImplTest$assertEquals("""{"1":{"template":"template","refresh_interval":10},"2":{"template":"template2","refresh_interval":20}}""".trimIndent(), slot.captured)</ID>
+    <ID>MaxLineLength:WearPrefsRepositoryImplTest.kt$WearPrefsRepositoryImplTest$coEvery { localStorage.getString(PREF_TILE_TEMPLATES) } returns """{"1":{"template":"template","refresh_interval":10},"2":{"template":"template2","refresh_interval":20}}""".trimIndent()</ID>
+    <ID>MaxLineLength:WebSocketCore.kt$WebSocketCore$*</ID>
+    <ID>MaxLineLength:WebSocketCoreImpl.kt$WebSocketCoreImpl$*</ID>
+    <ID>MaxLineLength:WebSocketCoreImpl.kt$WebSocketCoreImpl$// Null is acceptable because a message could still arrive after unsubscribe like run-end in Assist pipeline</ID>
+    <ID>MaxLineLength:WebSocketCoreImpl.kt$WebSocketCoreImpl$// TODO https://github.com/home-assistant/android/issues/5259 handle re-connection gracefully or terminates the flows</ID>
+    <ID>MaxLineLength:WebSocketCoreImplTest.kt$WebSocketCoreImplTest$"""{"id":2, "type":"event", "event":{"event_type":"state_changed", "time_fired":"2016-11-26T01:37:24.265429+00:00", "data": {"entity_id":"light.bed_light"}}}"""</ID>
+    <ID>MaxLineLength:WebSocketCoreImplTest.kt$WebSocketCoreImplTest$// (reconnection itself is tested in `Given an Active subscription When disconnection occurs Then it re-sends a request to get events`)</ID>
+    <ID>MaxLineLength:WebSocketCoreImplTest.kt$WebSocketCoreImplTest$// we are injecting a background scope to properly control it within the tests, the scope will close itself at the end of the test</ID>
+    <ID>MaxLineLength:WebSocketCoreImplTest.kt$WebSocketCoreImplTest$assertEquals(expectedData.plus("type" to expectedType), (this as ActiveMessage.Subscription).request.message)</ID>
+    <ID>MaxLineLength:WebSocketCoreImplTest.kt$WebSocketCoreImplTest$assertNotEquals((1..50).toList(), values, "Values should not be in sequential order - async execution should shuffle them")</ID>
+    <ID>MaxLineLength:WebSocketCoreImplTest.kt$WebSocketCoreImplTest$assertTrue(subscriptionExistedDuringUnsubscribe, "Subscription should exist in activeMessages when unsubscribe is sent")</ID>
+    <ID>MaxLineLength:WebSocketCoreImplTest.kt$WebSocketCoreImplTest$coVerify { mockConnection.send(match&lt;String&gt; { it.contains("unsubscribe_events") &amp;&amp; it.contains(""""id":2""") }) }</ID>
+    <ID>MaxLineLength:WebSocketCoreImplTest.kt$WebSocketCoreImplTest$fun</ID>
+    <ID>MaxLineLength:WebSocketCoreImplTest.kt$WebSocketCoreImplTest$val expectedMessageSent = kotlinJsonMapper.encodeToString&lt;Map&lt;String, Any&gt;&gt;(MapAnySerializer, request.plus("id" to 2))</ID>
+    <ID>MaxLineLength:WebSocketCoreImplTest.kt$WebSocketCoreImplTest$webSocketListener.onMessage(mockConnection, """{"id":2, "type":"event", "event":{"event_type":"state_changed", "time_fired":"2016-11-26T01:37:24.265429+00:00", "data": {"entity_id":"light.bathroom"}}}""")</ID>
+    <ID>MaxLineLength:WebSocketCoreImplTest.kt$WebSocketCoreImplTest$webSocketListener.onMessage(mockConnection, """{"id":2, "type":"event", "event":{"event_type":"state_changed", "time_fired":"2016-11-26T01:37:24.265429+00:00", "data": {"entity_id":"light.bed_light"}}}""")</ID>
+    <ID>MaxLineLength:WebSocketCoreImplTest.kt$WebSocketCoreImplTest$webSocketListener.onMessage(mockConnection, """{"id":2, "type":"event", "event":{"event_type":"state_changed", "time_fired":"2016-11-26T01:37:28.265429+00:00", "data": {"entity_id":"light.kitchen"}}}""")</ID>
+    <ID>MaxLineLength:WebSocketCoreImplTest.kt$WebSocketCoreImplTest$webSocketListener.onMessage(mockConnection, """{"id":4, "type":"event", "event":{"event_type":"state_changed", "time_fired":"2016-11-26T01:37:24.265429+00:00", "data": {"entity_id":"light.bathroom"}}}""")</ID>
+    <ID>MaxLineLength:WebSocketCoreImplTest.kt$WebSocketCoreImplTest$webSocketListener.onMessage(mockConnection, """{"id":42, "type":"event", "event":{"event_type":"state_changed", "time_fired":"2016-11-26T01:37:24.265429+00:00", "data": {"entity_id":"light.bed_light"}}}""")</ID>
+    <ID>NestedBlockDepth:AppSensorManagerBase.kt$AppSensorManagerBase$private suspend fun updateImportanceCheck(context: Context)</ID>
+    <ID>NestedBlockDepth:BluetoothUtils.kt$BluetoothUtils$@SuppressLint("MissingPermission") fun getBluetoothDevices(context: Context): List&lt;BluetoothDevice&gt;</ID>
+    <ID>NestedBlockDepth:DatabaseMigration.kt$&lt;no name provided&gt;$@SuppressLint("Range") override fun migrate(db: SupportSQLiteDatabase)</ID>
+    <ID>NestedBlockDepth:DatabaseMigration.kt$Migration37to38$fun onPostMigrate(db: SupportSQLiteDatabase)</ID>
+    <ID>NestedBlockDepth:Entity.kt$fun Entity.getIcon(context: Context): IIcon</ID>
+    <ID>NestedBlockDepth:Entity.kt$private fun sensorIcon(state: String?, entity: Entity): IIcon</ID>
+    <ID>NestedBlockDepth:ExoPlayerExt.kt$@OptIn(UnstableApi::class) private fun buildHttpEngineFactory(context: Context): DataSource.Factory?</ID>
+    <ID>NestedBlockDepth:KeyChainRepositoryImpl.kt$KeyChainRepositoryImpl$@Synchronized private fun doLoad(context: Context)</ID>
+    <ID>NestedBlockDepth:KeyStoreRepositoryImpl.kt$KeyStoreRepositoryImpl$@Synchronized private fun doLoad()</ID>
+    <ID>NestedBlockDepth:NetworkSensorManager.kt$NetworkSensorManager$private suspend fun updateWifiIPSensor(context: Context)</ID>
+    <ID>NestedBlockDepth:NextAlarmManager.kt$NextAlarmManager$private suspend fun updateNextAlarm(context: Context)</ID>
+    <ID>NestedBlockDepth:NotificationManagerExtensions.kt$fun cancelNotificationGroupIfNeeded( notificationManager: NotificationManager, tag: String?, id: Int, cancel: (String, Int) -&gt; Unit, ): Boolean</ID>
+    <ID>NestedBlockDepth:PhoneStateSensorManager.kt$PhoneStateSensorManager$@SuppressLint("MissingPermission") private suspend fun updateSimSensor(context: Context, slotIndex: Int)</ID>
+    <ID>NestedBlockDepth:SensorReceiverBase.kt$SensorReceiverBase$private suspend fun syncSensorsWithServer( context: Context, serverManager: ServerManager, server: Server, sensorDao: SensorDao, ): Boolean</ID>
+    <ID>NestedBlockDepth:StorageSensorManager.kt$StorageSensorManager.Companion$private fun getExternalStoragePathIfAvailable(context: Context): File?</ID>
+    <ID>ReturnCount:AssistViewModelBase.kt$AssistViewModelBase$private fun handleError(data: AssistPipelineError?, onEvent: (AssistEvent) -&gt; Unit): Boolean</ID>
+    <ID>ReturnCount:AudioSensorManager.kt$AudioSensorManager$private suspend fun areAttributesOfSensorAlreadyForcedAtRuntimeOrMatching( context: Context, sensor: SensorManager.BasicSensor, currentMin: Int, currentMax: Int, ): Boolean</ID>
+    <ID>ReturnCount:Entity.kt$fun Entity.getFanSteps(): Int?</ID>
+    <ID>ReturnCount:Entity.kt$fun calculateNumStep(percentageStep: Double): Int</ID>
+    <ID>ReturnCount:NetworkCapabilitiesChecker.kt$NetworkCapabilitiesChecker$private fun fallbackHasTransport(transport: Int): Boolean</ID>
+    <ID>ReturnCount:NotificationFunctions.kt$@RequiresApi(Build.VERSION_CODES.N) fun handleImportance(data: Map&lt;String, String&gt;): Int</ID>
+    <ID>ReturnCount:RegistriesDataHandler.kt$RegistriesDataHandler$fun getAreaForEntity( entityId: String, areaRegistry: List&lt;AreaRegistryResponse&gt;?, deviceRegistry: List&lt;DeviceRegistryResponse&gt;?, entityRegistry: List&lt;EntityRegistryResponse&gt;?, ): AreaRegistryResponse?</ID>
+    <ID>ReturnCount:ServerConnectionStateProviderImpl.kt$ServerConnectionStateProviderImpl$override suspend fun canSafelySendCredentials(url: String): Boolean</ID>
+    <ID>ReturnCount:ServerConnectionStateProviderImpl.kt$ServerConnectionStateProviderImpl$override suspend fun isInternal(requiresUrl: Boolean): Boolean</ID>
+    <ID>ReturnCount:SuspendLazy.kt$SuspendLazy$suspend fun get(): T</ID>
+    <ID>ReturnCount:WebSocketCoreImpl.kt$WebSocketCoreImpl$private suspend fun attemptWebSocketConnection(url: URL): ConnectionAttemptResult</ID>
+    <ID>ReturnCount:WebSocketCoreImpl.kt$WebSocketCoreImpl$private suspend fun handleEvent(response: EventSocketResponse)</ID>
+    <ID>ReturnCount:WebSocketCoreImpl.kt$WebSocketCoreImpl$private suspend fun sendMessage(command: Command.WithAnswer): RawMessageSocketResponse?</ID>
+    <ID>SerialVersionUIDInSerializableClass:NotificationItem.kt$NotificationItem : Serializable</ID>
+    <ID>SpreadOperator:DatabaseModule.kt$DatabaseModule$(*migrationPath(context))</ID>
+    <ID>SwallowedException:Entity.kt$e: Exception</ID>
+    <ID>SwallowedException:HomeAssistantApis.kt$HomeAssistantApis$e: Exception</ID>
+    <ID>SwallowedException:NetworkSensorManager.kt$NetworkSensorManager$e: NoSuchMethodException</ID>
+    <ID>SwallowedException:ServerManagerImplTest.kt$ServerManagerImplTest.AuthenticationRepositoryTest$e: IllegalStateException</ID>
+    <ID>SwallowedException:ServerManagerImplTest.kt$ServerManagerImplTest.ConnectionStateProviderTest$e: IllegalStateException</ID>
+    <ID>SwallowedException:ServerManagerImplTest.kt$ServerManagerImplTest.IntegrationRepositoryTest$e: IllegalStateException</ID>
+    <ID>SwallowedException:ServerManagerImplTest.kt$ServerManagerImplTest.WebSocketRepositoryTest$e: IllegalStateException</ID>
+    <ID>SwallowedException:TransmitterManager.kt$TransmitterManager$e: IllegalArgumentException</ID>
+    <ID>SwallowedException:UrlUtil.kt$UrlUtil$e: IllegalArgumentException</ID>
+    <ID>SwallowedException:UrlUtil.kt$e: UnknownHostException</ID>
+    <ID>ThrowsCount:ServerConnectionStateProvider.kt$suspend fun &lt;T&gt; tryOnUrls(urls: List&lt;HttpUrl&gt;, requestName: String, action: suspend (HttpUrl) -&gt; T): T</ID>
+    <ID>TooGenericExceptionCaught:AppSensorManagerBase.kt$AppSensorManagerBase$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:AssistAudioFocus.kt$AssistAudioFocusImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:AssistViewModelBase.kt$AssistViewModelBase$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:AudioUrlPlayer.kt$AudioUrlPlayer$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:AudioUrlPlayer.kt$AudioUrlPlayer$e: RuntimeException</ID>
+    <ID>TooGenericExceptionCaught:BluetoothUtils.kt$BluetoothUtils$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:DatabaseMigration.kt$&lt;no name provided&gt;$exception: Exception</ID>
+    <ID>TooGenericExceptionCaught:DatabaseMigration.kt$MIGRATION6to7$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:DatabaseMigration.kt$Migration16to17$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:DatabaseMigration.kt$Migration40to41$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:DatabaseMigration.kt$Migration9to10$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:DefaultConnectivityChecker.kt$DefaultConnectivityChecker$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:DisplaySensorManager.kt$DisplaySensorManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:Entity.kt$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:FailFast.kt$FailFast$e: Throwable</ID>
+    <ID>TooGenericExceptionCaught:HomeAssistantApis.kt$HomeAssistantApis$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:KeyChainRepositoryImpl.kt$KeyChainRepositoryImpl$t: Throwable</ID>
+    <ID>TooGenericExceptionCaught:KeyStoreRepositoryImpl.kt$KeyStoreRepositoryImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:LastRebootSensorManager.kt$LastRebootSensorManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NetworkStatusMonitor.kt$NetworkStatusMonitorImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NextAlarmManager.kt$NextAlarmManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NotificationDeleteReceiver.kt$NotificationDeleteReceiver$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NotificationFunctions.kt$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:PhoneStateSensorManager.kt$PhoneStateSensorManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ResyncRegistrationWorker.kt$ResyncRegistrationWorker$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:SensorReceiverBase.kt$SensorReceiverBase$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ServerConnectionStateProvider.kt$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:TrafficStatsManager.kt$TrafficStatsManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:UrlUtil.kt$UrlUtil$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:WebSocketCoreImpl.kt$WebSocketCoreImpl$e: Exception</ID>
+    <ID>TooManyFunctions:AppDatabase.kt$AppDatabase : RoomDatabase</ID>
+    <ID>TooManyFunctions:AppSensorManagerBase.kt$AppSensorManagerBase : SensorManager</ID>
+    <ID>TooManyFunctions:AssistViewModelBase.kt$AssistViewModelBase : AndroidViewModel</ID>
+    <ID>TooManyFunctions:AudioSensorManager.kt$AudioSensorManager : SensorManager</ID>
+    <ID>TooManyFunctions:AuthenticationRepository.kt$AuthenticationRepository</ID>
+    <ID>TooManyFunctions:AuthenticationRepositoryImpl.kt$AuthenticationRepositoryImpl : AuthenticationRepository</ID>
+    <ID>TooManyFunctions:BatterySensorManager.kt$BatterySensorManager : SensorManager</ID>
+    <ID>TooManyFunctions:BluetoothSensorManager.kt$BluetoothSensorManager : SensorManager</ID>
+    <ID>TooManyFunctions:DataModule.kt$DataModule$Companion</ID>
+    <ID>TooManyFunctions:DatabaseModule.kt$DatabaseModule</ID>
+    <ID>TooManyFunctions:Entity.kt$io.homeassistant.companion.android.common.data.integration.Entity.kt</ID>
+    <ID>TooManyFunctions:HAButtons.kt$io.homeassistant.companion.android.common.compose.composable.HAButtons.kt</ID>
+    <ID>TooManyFunctions:IntegrationRepository.kt$IntegrationRepository</ID>
+    <ID>TooManyFunctions:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl : IntegrationRepository</ID>
+    <ID>TooManyFunctions:JsonUtil.kt$io.homeassistant.companion.android.common.util.JsonUtil.kt</ID>
+    <ID>TooManyFunctions:LocalStorage.kt$LocalStorage</ID>
+    <ID>TooManyFunctions:LocalStorageImpl.kt$LocalStorageImpl : LocalStorage</ID>
+    <ID>TooManyFunctions:NetworkSensorManager.kt$NetworkSensorManager : SensorManager</ID>
+    <ID>TooManyFunctions:NotificationFunctions.kt$io.homeassistant.companion.android.common.notifications.NotificationFunctions.kt</ID>
+    <ID>TooManyFunctions:PrefsRepository.kt$PrefsRepository</ID>
+    <ID>TooManyFunctions:PrefsRepositoryImpl.kt$PrefsRepositoryImpl : PrefsRepository</ID>
+    <ID>TooManyFunctions:SensorDao.kt$SensorDao</ID>
+    <ID>TooManyFunctions:SensorManager.kt$SensorManager</ID>
+    <ID>TooManyFunctions:ServerDao.kt$ServerDao</ID>
+    <ID>TooManyFunctions:ServerManager.kt$ServerManager</ID>
+    <ID>TooManyFunctions:ServerManagerImpl.kt$ServerManagerImpl : ServerManager</ID>
+    <ID>TooManyFunctions:WearPrefsRepository.kt$WearPrefsRepository</ID>
+    <ID>TooManyFunctions:WearPrefsRepositoryImpl.kt$WearPrefsRepositoryImpl : WearPrefsRepository</ID>
+    <ID>TooManyFunctions:WebSocketCoreImpl.kt$WebSocketCoreImpl : WebSocketListenerWebSocketCore</ID>
+    <ID>TooManyFunctions:WebSocketRepository.kt$WebSocketRepository</ID>
+    <ID>TooManyFunctions:WebSocketRepositoryImpl.kt$WebSocketRepositoryImpl : WebSocketListenerWebSocketRepository</ID>
+    <ID>UnusedPrivateMember:HABanner.kt$@PreviewLightDark @Composable private fun HAHintPreview()</ID>
+    <ID>UnusedPrivateMember:HADetails.kt$@PreviewLightDark @Composable private fun HADetailsPreview_close()</ID>
+    <ID>UnusedPrivateMember:HADetails.kt$@PreviewLightDark @Composable private fun HADetailsPreview_open()</ID>
+    <ID>UnusedPrivateMember:HADropdownMenu.kt$@Preview @Composable private fun HADropdownMenuCollapsedPreview()</ID>
+    <ID>UnusedPrivateMember:HADropdownMenu.kt$@Preview @Composable private fun HADropdownMenuDisabledPreview()</ID>
+    <ID>UnusedPrivateMember:HADropdownMenu.kt$@Preview @Composable private fun HADropdownMenuNoLabelPreview()</ID>
+    <ID>UnusedPrivateMember:HADropdownMenu.kt$@Preview @Composable private fun HADropdownMenuSelectedPreview()</ID>
+    <ID>UnusedPrivateMember:HALabel.kt$@PreviewLightDark @Composable private fun HALabelPreview()</ID>
+    <ID>UnusedPrivateMember:HASettingsCard.kt$@PreviewLightDark @Composable private fun HASettingsCardPreview()</ID>
+    <ID>UseRequire:JsonUtil.kt$throw IllegalArgumentException("Unsupported type: ${key?.javaClass} as map key")</ID>
+    <ID>UseRequire:TransmitterManager.kt$TransmitterManager$throw IllegalArgumentException("Invalid Major or Minor")</ID>
+  </CurrentIssues>
+</SmellBaseline>
