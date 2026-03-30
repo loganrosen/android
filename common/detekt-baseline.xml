@@ -44,47 +44,6 @@
     <ID>EmptyFunctionBlock:BroadcastReceiverExtTest.kt$BroadcastReceiverExtTest.&lt;no name provided&gt;${}</ID>
     <ID>ExplicitItLambdaParameter:LastUpdateManager.kt$LastUpdateManager${ index, it -&gt; it.copy(name = "$INTENT_SETTING_PREFIX${index + 1}:") }</ID>
     <ID>ForbiddenComment:WebSocketRepositoryImpl.kt$WebSocketRepositoryImpl$// TODO: Send default locale of device with request.</ID>
-    <ID>FunctionNaming:HABanner.kt$@Composable fun HABanner(modifier: Modifier = Modifier, content: @Composable RowScope.() -&gt; Unit)</ID>
-    <ID>FunctionNaming:HABanner.kt$@Composable fun HAHint(text: String, modifier: Modifier = Modifier, onClose: (() -&gt; Unit)? = null)</ID>
-    <ID>FunctionNaming:HABanner.kt$@PreviewLightDark @Composable private fun HAHintPreview()</ID>
-    <ID>FunctionNaming:HAButtons.kt$@Composable fun HAAccentButton( text: String, onClick: () -&gt; Unit, modifier: Modifier = Modifier, variant: ButtonVariant = ButtonVariant.PRIMARY, enabled: Boolean = true, size: ButtonSize = ButtonSize.MEDIUM, textOverflow: TextOverflow = TextOverflow.Clip, maxLines: Int = Int.MAX_VALUE, prefix: @Composable (BoxScope.() -&gt; Unit)? = null, suffix: @Composable (BoxScope.() -&gt; Unit)? = null, )</ID>
-    <ID>FunctionNaming:HAButtons.kt$@Composable fun HAFilledButton( text: String, onClick: () -&gt; Unit, modifier: Modifier = Modifier, variant: ButtonVariant = ButtonVariant.PRIMARY, enabled: Boolean = true, size: ButtonSize = ButtonSize.MEDIUM, textOverflow: TextOverflow = TextOverflow.Clip, maxLines: Int = Int.MAX_VALUE, prefix: @Composable (BoxScope.() -&gt; Unit)? = null, suffix: @Composable (BoxScope.() -&gt; Unit)? = null, )</ID>
-    <ID>FunctionNaming:HAButtons.kt$@Composable fun HAIconButton( icon: ImageVector, onClick: () -&gt; Unit, contentDescription: String?, modifier: Modifier = Modifier, variant: ButtonVariant = ButtonVariant.PRIMARY, enabled: Boolean = true, )</ID>
-    <ID>FunctionNaming:HAButtons.kt$@Composable fun HAPlainButton( text: String, onClick: () -&gt; Unit, modifier: Modifier = Modifier, variant: ButtonVariant = ButtonVariant.PRIMARY, enabled: Boolean = true, size: ButtonSize = ButtonSize.MEDIUM, textOverflow: TextOverflow = TextOverflow.Clip, maxLines: Int = Int.MAX_VALUE, prefix: @Composable (BoxScope.() -&gt; Unit)? = null, suffix: @Composable (BoxScope.() -&gt; Unit)? = null, )</ID>
-    <ID>FunctionNaming:HAButtons.kt$@Composable private fun HABaseButton( text: String, onClick: () -&gt; Unit, colors: HAButtonColors, size: ButtonSize, enabled: Boolean, textOverflow: TextOverflow, maxLines: Int, prefix: @Composable (BoxScope.() -&gt; Unit)?, suffix: @Composable (BoxScope.() -&gt; Unit)?, modifier: Modifier = Modifier, )</ID>
-    <ID>FunctionNaming:HAButtons.kt$@Composable private fun RippleConfigurationLocalProvider(rippleColor: Color, content: @Composable () -&gt; Unit)</ID>
-    <ID>FunctionNaming:HAButtons.kt$@Composable private fun RowScope.ButtonContent( text: String, prefix: @Composable (BoxScope.() -&gt; Unit)?, suffix: @Composable (BoxScope.() -&gt; Unit)?, textOverflow: TextOverflow, maxLines: Int, )</ID>
-    <ID>FunctionNaming:HAButtons.kt$@Composable private fun RowScope.ButtonDecorator(type: ButtonDecoratorType, content: @Composable (BoxScope.() -&gt; Unit)?)</ID>
-    <ID>FunctionNaming:HADetails.kt$@Composable fun HADetails( title: String, modifier: Modifier = Modifier, defaultExpanded: Boolean = false, content: @Composable ColumnScope.() -&gt; Unit, )</ID>
-    <ID>FunctionNaming:HADetails.kt$@Composable private fun ExpandableSectionTitle(isExpanded: Boolean, title: String, modifier: Modifier = Modifier)</ID>
-    <ID>FunctionNaming:HADetails.kt$@PreviewLightDark @Composable private fun HADetailsPreview_close()</ID>
-    <ID>FunctionNaming:HADetails.kt$@PreviewLightDark @Composable private fun HADetailsPreview_open()</ID>
-    <ID>FunctionNaming:HADropdownMenu.kt$@Composable @VisibleForTesting internal fun &lt;T&gt; HADropdownMenuInternal( @SuppressLint("ComposeUnstableCollections") items: List&lt;HADropdownItem&lt;T&gt;&gt;, selectedKey: T?, onItemSelected: (T) -&gt; Unit, modifier: Modifier = Modifier, label: String? = null, placeholder: String? = null, enabled: Boolean = true, initiallyExpanded: Boolean = false, )</ID>
-    <ID>FunctionNaming:HADropdownMenu.kt$@Composable fun &lt;T&gt; HADropdownMenu( @SuppressLint("ComposeUnstableCollections") items: List&lt;HADropdownItem&lt;T&gt;&gt;, selectedKey: T?, onItemSelected: (T) -&gt; Unit, modifier: Modifier = Modifier, label: String? = null, placeholder: String? = null, enabled: Boolean = true, )</ID>
-    <ID>FunctionNaming:HADropdownMenu.kt$@Composable private fun &lt;T&gt; DropdownPopupMenu( @SuppressLint("ComposeUnstableCollections") items: List&lt;HADropdownItem&lt;T&gt;&gt;, selectedKey: T?, expanded: Boolean, onItemSelected: (T) -&gt; Unit, onDismissRequest: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
-    <ID>FunctionNaming:HADropdownMenu.kt$@Composable private fun DropdownField( selectedLabel: String?, label: String?, placeholder: String?, enabled: Boolean, expanded: Boolean, onClick: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
-    <ID>FunctionNaming:HADropdownMenu.kt$@Preview @Composable private fun HADropdownMenuCollapsedPreview()</ID>
-    <ID>FunctionNaming:HADropdownMenu.kt$@Preview @Composable private fun HADropdownMenuDisabledPreview()</ID>
-    <ID>FunctionNaming:HADropdownMenu.kt$@Preview @Composable private fun HADropdownMenuNoLabelPreview()</ID>
-    <ID>FunctionNaming:HADropdownMenu.kt$@Preview @Composable private fun HADropdownMenuSelectedPreview()</ID>
-    <ID>FunctionNaming:HAHorizontalDivider.kt$@Composable fun HAHorizontalDivider(modifier: Modifier = Modifier)</ID>
-    <ID>FunctionNaming:HALabel.kt$@Composable fun HALabel( text: String, modifier: Modifier = Modifier, variant: LabelVariant = LabelVariant.PRIMARY, size: LabelSize = LabelSize.MEDIUM, )</ID>
-    <ID>FunctionNaming:HALabel.kt$@PreviewLightDark @Composable private fun HALabelPreview()</ID>
-    <ID>FunctionNaming:HAModalBottomSheet.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun HAModalBottomSheet( bottomSheetState: SheetState, modifier: Modifier = Modifier, onDismissRequest: () -&gt; Unit = {}, content: @Composable ColumnScope.() -&gt; Unit, )</ID>
-    <ID>FunctionNaming:HAProgress.kt$@Composable fun HALoading(modifier: Modifier = Modifier, strokeWidth: Dp = ProgressIndicatorDefaults.CircularStrokeWidth)</ID>
-    <ID>FunctionNaming:HAProgress.kt$@Composable fun HAProgress( progress: () -&gt; Float, modifier: Modifier = Modifier, strokeWidth: Dp = ProgressIndicatorDefaults.CircularStrokeWidth, )</ID>
-    <ID>FunctionNaming:HARadioGroup.kt$@Composable fun &lt;T&gt; HARadioGroup( @SuppressLint("ComposeUnstableCollections") options: List&lt;RadioOption&lt;T&gt;&gt;, onSelect: (RadioOption&lt;T&gt;) -&gt; Unit, modifier: Modifier = Modifier, selectedOption: RadioOption&lt;T&gt;? = null, spaceBy: Dp = HADimens.SPACE6, )</ID>
-    <ID>FunctionNaming:HARadioGroup.kt$@Composable fun &lt;T&gt; HARadioGroup( @SuppressLint("ComposeUnstableCollections") options: List&lt;RadioOption&lt;T&gt;&gt;, onSelect: (RadioOption&lt;T&gt;) -&gt; Unit, modifier: Modifier = Modifier, selectionKey: T? = null, spaceBy: Dp = HADimens.SPACE6, )</ID>
-    <ID>FunctionNaming:HARadioGroup.kt$@Composable private fun HARadioButton( headline: String, onSelect: () -&gt; Unit, isSelected: Boolean, enabled: Boolean, modifier: Modifier = Modifier, secondary: String? = null, )</ID>
-    <ID>FunctionNaming:HASettingsCard.kt$@Composable fun HASettingsCard(modifier: Modifier = Modifier, content: @Composable () -&gt; Unit)</ID>
-    <ID>FunctionNaming:HASettingsCard.kt$@PreviewLightDark @Composable private fun HASettingsCardPreview()</ID>
-    <ID>FunctionNaming:HASwitch.kt$@Composable fun HASwitch( checked: Boolean, onCheckedChange: (Boolean) -&gt; Unit, modifier: Modifier = Modifier, enabled: Boolean = true, )</ID>
-    <ID>FunctionNaming:HATextField.kt$@Composable fun HATextField( value: String, onValueChange: (String) -&gt; Unit, modifier: Modifier = Modifier, enabled: Boolean = true, isError: Boolean = false, label: @Composable (() -&gt; Unit)? = null, placeholder: @Composable (() -&gt; Unit)? = null, supportingText: @Composable (() -&gt; Unit)? = null, trailingIcon: @Composable (() -&gt; Unit)? = null, leadingIcon: @Composable (() -&gt; Unit)? = null, keyboardOptions: KeyboardOptions = KeyboardOptions.Default, keyboardActions: KeyboardActions = KeyboardActions.Default, maxLines: Int = Int.MAX_VALUE, singleLine: Boolean = maxLines == 1, visualTransformation: VisualTransformation = VisualTransformation.None, )</ID>
-    <ID>FunctionNaming:HATheme.kt$@Composable fun HATheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -&gt; Unit)</ID>
-    <ID>FunctionNaming:HATheme.kt$@Composable fun HAThemeForPreview(modifier: Modifier = Modifier, content: @Composable BoxScope.() -&gt; Unit)</ID>
-    <ID>FunctionNaming:HATopBar.kt$@Composable fun HATopBar( modifier: Modifier = Modifier, title: @Composable () -&gt; Unit = {}, onHelpClick: (suspend () -&gt; Unit)? = null, onBackClick: (() -&gt; Unit)? = null, onCloseClick: (() -&gt; Unit)? = null, )</ID>
-    <ID>FunctionNaming:HATopBar.kt$@Composable fun HATopBarPlaceholder(modifier: Modifier = Modifier)</ID>
-    <ID>FunctionNaming:HATopBar.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun HATopBar( modifier: Modifier = Modifier, title: @Composable () -&gt; Unit = {}, navigationIcon: (@Composable () -&gt; Unit)? = null, actions: (@Composable () -&gt; Unit)? = null, )</ID>
     <ID>ImplicitDefaultLocale:SensorReceiverBase.kt$SensorReceiverBase$String.format( "Sensor(s) %s corresponding to received event %s are disabled, skipping sensors update", sensors.toString(), intent.action, )</ID>
     <ID>ImplicitDefaultLocale:StorageSensorManager.kt$StorageSensorManager$String.format("%,d", sizeLong)</ID>
     <ID>InstanceOfCheckForException:SensorReceiverBase.kt$SensorReceiverBase$e is IntegrationException</ID>
@@ -109,22 +68,12 @@
     <ID>LongMethod:SensorReceiverBase.kt$SensorReceiverBase$override fun onReceive(context: Context, intent: Intent)</ID>
     <ID>LongMethod:SensorReceiverBase.kt$SensorReceiverBase$private suspend fun syncSensorsWithServer( context: Context, serverManager: ServerManager, server: Server, sensorDao: SensorDao, ): Boolean</ID>
     <ID>LongMethod:WebSocketCoreImpl.kt$WebSocketCoreImpl$private suspend fun handleEvent(response: EventSocketResponse)</ID>
-    <ID>LongParameterList:HAButtons.kt$( icon: ImageVector, onClick: () -&gt; Unit, contentDescription: String?, modifier: Modifier = Modifier, variant: ButtonVariant = ButtonVariant.PRIMARY, enabled: Boolean = true, )</ID>
     <ID>LongParameterList:HAButtons.kt$( text: String, onClick: () -&gt; Unit, colors: HAButtonColors, size: ButtonSize, enabled: Boolean, textOverflow: TextOverflow, maxLines: Int, prefix: @Composable (BoxScope.() -&gt; Unit)?, suffix: @Composable (BoxScope.() -&gt; Unit)?, modifier: Modifier = Modifier, )</ID>
-    <ID>LongParameterList:HAButtons.kt$( text: String, onClick: () -&gt; Unit, modifier: Modifier = Modifier, variant: ButtonVariant = ButtonVariant.PRIMARY, enabled: Boolean = true, size: ButtonSize = ButtonSize.MEDIUM, textOverflow: TextOverflow = TextOverflow.Clip, maxLines: Int = Int.MAX_VALUE, prefix: @Composable (BoxScope.() -&gt; Unit)? = null, suffix: @Composable (BoxScope.() -&gt; Unit)? = null, )</ID>
     <ID>LongParameterList:HAColors.kt$HAColorScheme$( val colorFillPrimaryLoudResting: Color, val colorFillPrimaryNormalResting: Color, val colorFillPrimaryQuietResting: Color, val colorFillPrimaryLoudHover: Color, val colorFillPrimaryNormalHover: Color, val colorFillPrimaryQuietHover: Color, val colorFillPrimaryNormalActive: Color, val colorOnPrimaryLoud: Color, val colorOnPrimaryNormal: Color, val colorOnPrimaryQuiet: Color, val colorFillNeutralLoudResting: Color, val colorFillNeutralNormalResting: Color, val colorFillNeutralQuietResting: Color, val colorFillNeutralLoudHover: Color, val colorFillNeutralNormalHover: Color, val colorFillNeutralQuietHover: Color, val colorOnNeutralLoud: Color, val colorOnNeutralNormal: Color, val colorOnNeutralQuiet: Color, val colorFillDangerLoudResting: Color, val colorFillDangerNormalResting: Color, val colorFillDangerQuietResting: Color, val colorFillDangerLoudHover: Color, val colorFillDangerNormalHover: Color, val colorFillDangerQuietHover: Color, val colorOnDangerLoud: Color, val colorOnDangerNormal: Color, val colorOnDangerQuiet: Color, val colorFillWarningLoudResting: Color, val colorFillWarningNormalResting: Color, val colorFillWarningQuietResting: Color, val colorFillWarningLoudHover: Color, val colorFillWarningNormalHover: Color, val colorFillWarningQuietHover: Color, val colorOnWarningLoud: Color, val colorOnWarningNormal: Color, val colorOnWarningQuiet: Color, val colorFillSuccessLoudResting: Color, val colorFillSuccessNormalResting: Color, val colorFillSuccessQuietResting: Color, val colorFillSuccessLoudHover: Color, val colorFillSuccessNormalHover: Color, val colorFillSuccessQuietHover: Color, val colorOnSuccessLoud: Color, val colorOnSuccessNormal: Color, val colorOnSuccessQuiet: Color, val colorFillDisabledLoudResting: Color, val colorFillDisabledNormalResting: Color, val colorFillDisabledQuietResting: Color, val colorOnDisabledLoud: Color, val colorOnDisabledNormal: Color, val colorOnDisabledQuiet: Color, val colorSurfaceDefault: Color, val colorSurfaceLow: Color, val colorTextPrimary: Color, val colorTextSecondary: Color, val colorTextDisabled: Color, val colorTextLink: Color, val colorBorderPrimaryNormal: Color, val colorBorderPrimaryLoud: Color, val colorBorderNeutralQuiet: Color, val colorBorderNeutralNormal: Color, val colorBorderDangerNormal: Color, val colorBorderWarningNormal: Color, val colorBorderSuccessNormal: Color, val colorOverlayModal: Color, )</ID>
-    <ID>LongParameterList:HADropdownMenu.kt$( @SuppressLint("ComposeUnstableCollections") items: List&lt;HADropdownItem&lt;T&gt;&gt;, selectedKey: T?, expanded: Boolean, onItemSelected: (T) -&gt; Unit, onDismissRequest: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
-    <ID>LongParameterList:HADropdownMenu.kt$( @SuppressLint("ComposeUnstableCollections") items: List&lt;HADropdownItem&lt;T&gt;&gt;, selectedKey: T?, onItemSelected: (T) -&gt; Unit, modifier: Modifier = Modifier, label: String? = null, placeholder: String? = null, enabled: Boolean = true, )</ID>
-    <ID>LongParameterList:HADropdownMenu.kt$( @SuppressLint("ComposeUnstableCollections") items: List&lt;HADropdownItem&lt;T&gt;&gt;, selectedKey: T?, onItemSelected: (T) -&gt; Unit, modifier: Modifier = Modifier, label: String? = null, placeholder: String? = null, enabled: Boolean = true, initiallyExpanded: Boolean = false, )</ID>
     <ID>LongParameterList:HADropdownMenu.kt$( selectedLabel: String?, label: String?, placeholder: String?, enabled: Boolean, expanded: Boolean, onClick: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
-    <ID>LongParameterList:HARadioGroup.kt$( headline: String, onSelect: () -&gt; Unit, isSelected: Boolean, enabled: Boolean, modifier: Modifier = Modifier, secondary: String? = null, )</ID>
-    <ID>LongParameterList:HATextField.kt$( value: String, onValueChange: (String) -&gt; Unit, modifier: Modifier = Modifier, enabled: Boolean = true, isError: Boolean = false, label: @Composable (() -&gt; Unit)? = null, placeholder: @Composable (() -&gt; Unit)? = null, supportingText: @Composable (() -&gt; Unit)? = null, trailingIcon: @Composable (() -&gt; Unit)? = null, leadingIcon: @Composable (() -&gt; Unit)? = null, keyboardOptions: KeyboardOptions = KeyboardOptions.Default, keyboardActions: KeyboardActions = KeyboardActions.Default, maxLines: Int = Int.MAX_VALUE, singleLine: Boolean = maxLines == 1, visualTransformation: VisualTransformation = VisualTransformation.None, )</ID>
     <ID>LongParameterList:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$( private val integrationService: IntegrationService, private val serverManager: ServerManager, @Assisted private val serverId: Int, @NamedIntegrationStorage private val localStorage: LocalStorage, @NamedManufacturer private val manufacturer: String, @NamedModel private val model: String, @NamedOsVersion private val osVersion: String, @NamedDeviceId private val deviceId: String, )</ID>
     <ID>LongParameterList:NotificationFunctions.kt$( context: Context, builder: NotificationCompat.Builder, data: Map&lt;String, String&gt;, messageId: Int, group: String?, groupId: Int, databaseId: Long?, )</ID>
-    <ID>LongParameterList:SensorManager.kt$SensorManager$( context: Context, basicSensor: BasicSensor, state: Any, mdiIcon: String, attributes: Map&lt;String, Any?&gt;, forceUpdate: Boolean = false, )</ID>
-    <ID>LongParameterList:SensorManager.kt$SensorManager$( context: Context, sensor: BasicSensor, settingName: String, settingType: SensorSettingType, default: String, enabled: Boolean = true, entries: List&lt;String&gt; = arrayListOf(), )</ID>
     <ID>LongParameterList:ServerConnectionStateProviderImpl.kt$ServerConnectionStateProviderImpl$( @param:ApplicationContext private val context: Context, private val serverManager: ServerManager, private val serverDao: ServerDao, private val wifiHelper: WifiHelper, private val networkHelper: NetworkHelper, private val networkChangeObserver: NetworkChangeObserver, @Assisted private val serverId: Int, )</ID>
-    <ID>LongParameterList:ServerConnectionStateProviderImplTest.kt$ServerConnectionStateProviderImplTest$( externalUrl: String = "https://external.example.com", internalUrl: String? = null, cloudUrl: String? = null, cloudhookUrl: String? = null, webhookId: String? = null, useCloud: Boolean = false, internalSsids: List&lt;String&gt; = emptyList(), internalEthernet: Boolean? = null, internalVpn: Boolean? = null, prioritizeInternal: Boolean = false, allowInsecureConnection: Boolean? = null, )</ID>
     <ID>LongParameterList:ServerManagerImpl.kt$ServerManagerImpl$( private val authenticationRepositoryFactory: AuthenticationRepositoryFactory, private val integrationRepositoryFactory: IntegrationRepositoryFactory, private val webSocketRepositoryFactory: WebSocketRepositoryFactory, private val serverConnectionStateProviderFactory: ServerConnectionStateProviderFactory, private val prefsRepository: PrefsRepository, private val serverDao: ServerDao, private val sensorDao: SensorDao, private val settingsDao: SettingsDao, @NamedSessionStorage private val localStorage: LocalStorage, )</ID>
     <ID>MagicNumber:AppSensorManagerBase.kt$AppSensorManagerBase$3</ID>
     <ID>MagicNumber:AppSensorManagerBase.kt$AppSensorManagerBase$4</ID>
@@ -138,28 +87,6 @@
     <ID>MagicNumber:BatterySensorManager.kt$BatterySensorManager$60000f</ID>
     <ID>MagicNumber:BatterySensorManager.kt$BatterySensorManager$9</ID>
     <ID>MagicNumber:CompressedEntity.kt$CompressedEntityState$1000</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$10</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$11</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$12</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$13</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$14</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$15</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$16</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$17</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$18</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$19</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$20</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$21</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$22</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$23</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$24</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$3</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$4</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$5</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$6</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$7</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$8</ID>
-    <ID>MagicNumber:DatabaseMigration.kt$&lt;no name provided&gt;$9</ID>
     <ID>MagicNumber:DatabaseMigration.kt$MIGRATION6to7$6</ID>
     <ID>MagicNumber:DatabaseMigration.kt$MIGRATION6to7$7</ID>
     <ID>MagicNumber:DatabaseMigration.kt$Migration16to17$16</ID>
@@ -188,139 +115,7 @@
     <ID>MagicNumber:ExoPlayerExt.kt$30000</ID>
     <ID>MagicNumber:ExoPlayerExt.kt$7</ID>
     <ID>MagicNumber:ExoPlayerExt.kt$8.0f</ID>
-    <ID>MagicNumber:HAColors.kt$HABrandColors$0xFF18BCF2</ID>
-    <ID>MagicNumber:HAColors.kt$HABrandColors$0xFFF2F4F9</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF000000</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF000F35</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF00151B</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF001721</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF001A4E</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF002129</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF00222F</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF002D77</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF002E3E</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF003844</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF003D51</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF003F9C</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF004156</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF004E67</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF0053C0</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF006787</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF007093</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF0071EC</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF00883C</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF009AC7</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF00A3C0</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF00A4D4</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF00AC49</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF014C5B</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF026274</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF031608</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF036730</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF052310</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF078098</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF0A3A1D</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF0A5027</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF0D0A3A</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF141414</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF181255</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF18BCF2</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF1E0532</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF1FBCF1</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF202020</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF220C00</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF28041A</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF280700</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF292381</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF2A040B</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF2D0B48</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF2FBEDC</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF331600</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF363636</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF37C8FD</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF3933A7</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF3B0F00</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF3C0828</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF3E0913</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF3E96FF</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF491870</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF4945CB</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF4A4A4A</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF532600</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF5DC36F</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF5E1342</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF5E1C00</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF5E5E5E</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF612692</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF6163F2</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF631323</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF6EB3FF</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF6F3601</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF7936B3</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF7A7A7A</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF7BD4FB</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF7D1E58</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF7E2900</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF7FD6EC</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF808AFF</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF8A132C</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF8C4602</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF93DA98</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF989898</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF9951DB</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF9D3800</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF9DA9FF</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF9E2A6C</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFF9FCEFF</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFB1B1B1</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFB30532</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFB45F04</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFB678F5</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFB9E6FC</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFBCC7FF</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFC2F2C1</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFC5ECF7</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFC84382</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFC94E00</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFCA99FF</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFCCCCCC</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFD1E8FF</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFDA7E00</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFDC3146</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFDDBDFF</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFDFF3FC</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFDFe5FF</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFE3F6FB</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFE3F9E3</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFE66BA3</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFE6E6E6</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFE8F3FF</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFEEDFFF</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFEF9D00</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFEFF9FE</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFF0F2FF</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFF3676C</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFF36D00</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFF3F3F3</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFF78DBF</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFF7F0FF</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFAC22B</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFCB5D8</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFD8F90</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFEDDF0</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFEF3CD</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFEFFF9</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFF9342</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFFB8B6</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFFBB89</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFFDEDC</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFFE0C8</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFFE495</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFFF0E4</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFFF0EF</ID>
-    <ID>MagicNumber:HAColors.kt$HAColors$0xFFFFFFFF</ID>
     <ID>MagicNumber:HADropdownMenu.kt$3</ID>
-    <ID>MagicNumber:HARipple.kt$0.5f</ID>
     <ID>MagicNumber:HomeAssistantVersion.kt$HomeAssistantVersion.Companion$3</ID>
     <ID>MagicNumber:IBeaconMonitor.kt$IBeaconMonitor$0.5</ID>
     <ID>MagicNumber:IBeaconMonitor.kt$IBeaconMonitor$100</ID>
@@ -338,9 +133,7 @@
     <ID>MagicNumber:IntegrationRepositoryImpl.kt$IntegrationRepositoryImpl$86400000</ID>
     <ID>MagicNumber:IntervalToString.kt$60</ID>
     <ID>MagicNumber:LastRebootSensorManager.kt$LastRebootSensorManager$60000</ID>
-    <ID>MagicNumber:MonitoringManager.kt$MonitoringManager$1100</ID>
     <ID>MagicNumber:MonitoringManager.kt$MonitoringManager$444</ID>
-    <ID>MagicNumber:MonitoringManager.kt$MonitoringManager$500</ID>
     <ID>MagicNumber:NetworkSensorManager.kt$NetworkSensorManager$0xFF</ID>
     <ID>MagicNumber:NetworkSensorManager.kt$NetworkSensorManager$16</ID>
     <ID>MagicNumber:NetworkSensorManager.kt$NetworkSensorManager$24</ID>
@@ -371,15 +164,12 @@
     <ID>MagicNumber:SensorWorkerBase.kt$SensorWorkerBase$6</ID>
     <ID>MagicNumber:ServerSessionInfo.kt$ServerSessionInfo$1000</ID>
     <ID>MagicNumber:StorageSensorManager.kt$StorageSensorManager$1024</ID>
-    <ID>MagicNumber:ThreadDatasetTlvResponse.kt$ThreadDatasetTlvResponse$16</ID>
     <ID>MagicNumber:TrafficStatsManager.kt$TrafficStatsManager$3</ID>
     <ID>MagicNumber:TransmitterManager.kt$TransmitterManager$65535</ID>
     <ID>MagicNumber:UpdateLocationRequest.kt$UpdateLocationRequestSerializer$3</ID>
     <ID>MagicNumber:UpdateLocationRequest.kt$UpdateLocationRequestSerializer$4</ID>
     <ID>MagicNumber:UpdateLocationRequest.kt$UpdateLocationRequestSerializer$5</ID>
     <ID>MagicNumber:UpdateLocationRequest.kt$UpdateLocationRequestSerializer$6</ID>
-    <ID>MagicNumber:UrlUtil.kt$443</ID>
-    <ID>MagicNumber:UrlUtil.kt$80</ID>
     <ID>MagicNumber:VoiceAudioRecorder.kt$0xFF</ID>
     <ID>MagicNumber:VoiceAudioRecorder.kt$4</ID>
     <ID>MagicNumber:VoiceAudioRecorder.kt$8</ID>
@@ -632,10 +422,6 @@
     <ID>UnusedPrivateMember:HABanner.kt$@PreviewLightDark @Composable private fun HAHintPreview()</ID>
     <ID>UnusedPrivateMember:HADetails.kt$@PreviewLightDark @Composable private fun HADetailsPreview_close()</ID>
     <ID>UnusedPrivateMember:HADetails.kt$@PreviewLightDark @Composable private fun HADetailsPreview_open()</ID>
-    <ID>UnusedPrivateMember:HADropdownMenu.kt$@Preview @Composable private fun HADropdownMenuCollapsedPreview()</ID>
-    <ID>UnusedPrivateMember:HADropdownMenu.kt$@Preview @Composable private fun HADropdownMenuDisabledPreview()</ID>
-    <ID>UnusedPrivateMember:HADropdownMenu.kt$@Preview @Composable private fun HADropdownMenuNoLabelPreview()</ID>
-    <ID>UnusedPrivateMember:HADropdownMenu.kt$@Preview @Composable private fun HADropdownMenuSelectedPreview()</ID>
     <ID>UnusedPrivateMember:HALabel.kt$@PreviewLightDark @Composable private fun HALabelPreview()</ID>
     <ID>UnusedPrivateMember:HASettingsCard.kt$@PreviewLightDark @Composable private fun HASettingsCardPreview()</ID>
     <ID>UseRequire:JsonUtil.kt$throw IllegalArgumentException("Unsupported type: ${key?.javaClass} as map key")</ID>
