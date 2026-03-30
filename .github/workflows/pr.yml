@@ -81,8 +81,32 @@ jobs:
         with:
           category: "KTlint"
 
+  detekt:
+    needs: [yamllint, lockfiles]
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - uses: ./.github/actions/setup-build-env
+        with:
+          cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
+          mock-google-services: "true"
+
+      # Since `build-logic` is added with `includeBuild` we have to call detekt explicitly on `:convention`.
+      - name: Run detekt
+        run: ./gradlew detekt :build-logic:convention:detekt --continue
+
+      - uses: ./.github/actions/upload-sarif-results
+        if: always()
+        with:
+          category: "Detekt"
+
   lint:
-    needs: [lockfiles, ktlint]
+    needs: [lockfiles, ktlint, detekt]
     runs-on: ubuntu-latest
     permissions:
       security-events: write
@@ -113,7 +137,7 @@ jobs:
 
   screenshot_test:
     name: "Screenshot Tests"
-    needs: [lint, lockfiles, ktlint]
+    needs: [lint, lockfiles, ktlint, detekt]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -140,7 +164,7 @@ jobs:
           test-name: Screenshot test
 
   pr_build:
-    needs: [lockfiles, ktlint]
+    needs: [lockfiles, ktlint, detekt]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -186,7 +210,7 @@ jobs:
           path: ./**/*.apk
 
   pr_build_release:
-    needs: [lockfiles, ktlint]
+    needs: [lockfiles, ktlint, detekt]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -220,7 +244,7 @@ jobs:
 
   unit_tests:
     name: "Unit Tests"
-    needs: [lint, lockfiles, ktlint]
+    needs: [lint, lockfiles, ktlint, detekt]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -243,7 +267,7 @@ jobs:
 
   instrumentation_test:
     name: "Instrumentation Tests"
-    needs: [lint, lockfiles, ktlint]
+    needs: [lint, lockfiles, ktlint, detekt]
     runs-on: ubuntu-latest
     strategy:
       # We want the result of each device to be reported, so we can't fail-fast

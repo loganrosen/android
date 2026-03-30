@@ -1,0 +1,208 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>ComplexCondition:ConversationViewModel.kt$ConversationViewModel$(onConversationVersion &amp;&amp; !onPipelineVersion &amp;&amp; config == null) || (onPipelineVersion &amp;&amp; config == null)</ID>
+    <ID>ComplexCondition:HealthServicesSensorManager.kt$HealthServicesSensorManager$!activityStateEnabled &amp;&amp; !dailyFloorEnabled &amp;&amp; !dailyDistanceEnabled &amp;&amp; !dailyCaloriesEnabled &amp;&amp; !dailyStepsEnabled</ID>
+    <ID>ComplexCondition:SensorUi.kt$it.key == Manifest.permission.ACCESS_FINE_LOCATION &amp;&amp; Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.R &amp;&amp; manager.requiredPermissions( context, basicSensor.id, ).contains(Manifest.permission.ACCESS_FINE_LOCATION) &amp;&amp; manager.requiredPermissions( context, basicSensor.id, ).contains(Manifest.permission.ACCESS_BACKGROUND_LOCATION)</ID>
+    <ID>ComplexCondition:SensorUi.kt$it.key == Manifest.permission.BODY_SENSORS &amp;&amp; Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.TIRAMISU &amp;&amp; manager.requiredPermissions(context, basicSensor.id).contains(Manifest.permission.BODY_SENSORS) &amp;&amp; manager.requiredPermissions( context, basicSensor.id, ).contains(Manifest.permission.BODY_SENSORS_BACKGROUND)</ID>
+    <ID>CyclomaticComplexMethod:ConversationViewModel.kt$ConversationViewModel$private suspend fun setPipeline(id: String?): Boolean</ID>
+    <ID>CyclomaticComplexMethod:ConversationViewModel.kt$ConversationViewModel$suspend fun onCreate(hasPermission: Boolean): Boolean</ID>
+    <ID>CyclomaticComplexMethod:EntityStateDataSourceService.kt$EntityStateDataSourceService$override suspend fun onComplicationRequest(request: ComplicationRequest): ComplicationData?</ID>
+    <ID>CyclomaticComplexMethod:HealthServicesSensorManager.kt$HealthServicesSensorManager$private fun getActivityIcon(info: UserActivityInfo): String</ID>
+    <ID>CyclomaticComplexMethod:HealthServicesSensorManager.kt$HealthServicesSensorManager$private suspend fun updateHealthServices()</ID>
+    <ID>CyclomaticComplexMethod:MainView.kt$@Composable fun MainView( uiState: MainViewModel.MainViewUiState, entityClassification: MainViewModel.EntityClassification, onEntityClicked: (String, String) -&gt; Unit, onEntityLongClicked: (String) -&gt; Unit, onRetryLoadEntitiesClicked: () -&gt; Unit, onSettingsClicked: () -&gt; Unit, onNavigationClicked: ( entityIdLists: Map&lt;String, List&lt;String&gt;&gt;, listOrder: List&lt;String&gt;, filter: (Entity) -&gt; Boolean, ) -&gt; Unit, isHapticEnabled: Boolean, isToastEnabled: Boolean, )</ID>
+    <ID>CyclomaticComplexMethod:MessagingManager.kt$MessagingManager$fun handleMessage(notificationData: Map&lt;String, String&gt;, source: String)</ID>
+    <ID>CyclomaticComplexMethod:SensorUi.kt$@SuppressLint("InlinedApi") @Composable fun SensorUi( sensor: Sensor?, manager: SensorManager, basicSensor: SensorManager.BasicSensor, onSensorClicked: (String, Boolean) -&gt; Unit, )</ID>
+    <ID>CyclomaticComplexMethod:ThermostatTile.kt$ThermostatTile$override fun onTileRequest(requestParams: RequestBuilders.TileRequest): ListenableFuture&lt;Tile&gt;</ID>
+    <ID>CyclomaticComplexMethod:ThermostatTile.kt$ThermostatTile$private fun timeline( tileConfig: ThermostatTile, entity: Entity, targetTemperature: Float?, temperatureUnit: String, ): Timeline</ID>
+    <ID>CyclomaticComplexMethod:WearToggleChip.kt$WearToggleChip$@Composable fun entityToggleChipBackgroundColors(entity: Entity, checked: Boolean): ToggleChipColors</ID>
+    <ID>CyclomaticComplexMethod:WearToggleChip.kt$WearToggleChipColors$override fun equals(other: Any?): Boolean</ID>
+    <ID>ForbiddenComment:MainViewModel.kt$MainViewModel$// TODO: This is bad, do this instead: https://stackoverflow.com/questions/46283981/android-viewmodel-additional-arguments</ID>
+    <ID>FunctionOnlyReturningConstant:ApplicationModule.kt$ApplicationModule$@Provides @Singleton @PushWebsocketSupport fun providesPushWebsocketSupport(): Boolean</ID>
+    <ID>InstanceOfCheckForException:EntityStateDataSourceService.kt$EntityStateDataSourceService$t is HttpException</ID>
+    <ID>InstanceOfCheckForException:OnboardingActivity.kt$OnboardingActivity$e is RemoteActivityHelper.RemoteIntentException</ID>
+    <ID>LongMethod:CameraTile.kt$CameraTile$override fun onTileResourcesRequest(requestParams: RequestBuilders.ResourcesRequest): ListenableFuture&lt;Resources&gt;</ID>
+    <ID>LongMethod:ChooseEntityView.kt$@Composable fun ChooseEntityView( entitiesByDomainOrder: List&lt;String&gt;, entitiesByDomain: Map&lt;String, List&lt;Entity&gt;&gt;, favoriteEntityIds: List&lt;String&gt;, onNoneClicked: () -&gt; Unit, onEntitySelected: (entity: SimplifiedEntity) -&gt; Unit, allowNone: Boolean = true, )</ID>
+    <ID>LongMethod:ComplicationConfigMainView.kt$@Composable fun MainConfigView( entity: SimplifiedEntity?, showTitle: Boolean, showUnit: Boolean, loadingState: ComplicationConfigViewModel.LoadingState, onChooseEntityClicked: () -&gt; Unit, onShowTitleClicked: (Boolean) -&gt; Unit, onShowUnitClicked: (Boolean) -&gt; Unit, onAcceptClicked: () -&gt; Unit, )</ID>
+    <ID>LongMethod:ConversationView.kt$@Composable fun ConversationResultView( conversation: List&lt;AssistMessage&gt;, inputMode: AssistViewModelBase.AssistInputMode, currentPipeline: AssistPipelineResponse?, hapticFeedback: Boolean, onChangePipeline: () -&gt; Unit, onMicrophoneInput: () -&gt; Unit, )</ID>
+    <ID>LongMethod:ConversationViewModel.kt$ConversationViewModel$suspend fun onCreate(hasPermission: Boolean): Boolean</ID>
+    <ID>LongMethod:DetailsPanelView.kt$@Composable fun ColorTempSlider( attributes: Map&lt;*, *&gt;, onColorTempChanged: (Float, Boolean) -&gt; Unit, isToastEnabled: Boolean, isHapticEnabled: Boolean, )</ID>
+    <ID>LongMethod:DetailsPanelView.kt$@Composable fun DetailsPanelView( entity: Entity, onEntityToggled: (String, String) -&gt; Unit, onFanSpeedChanged: (Float) -&gt; Unit, onBrightnessChanged: (Float) -&gt; Unit, onColorTempChanged: (Float, Boolean) -&gt; Unit, isToastEnabled: Boolean, isHapticEnabled: Boolean, )</ID>
+    <ID>LongMethod:EntityStateDataSourceService.kt$EntityStateDataSourceService$override suspend fun onComplicationRequest(request: ComplicationRequest): ComplicationData?</ID>
+    <ID>LongMethod:EntityUi.kt$@Composable fun EntityUi( entity: Entity, onEntityClicked: (String, String) -&gt; Unit, isHapticEnabled: Boolean, isToastEnabled: Boolean, onEntityLongPressed: (String) -&gt; Unit, )</ID>
+    <ID>LongMethod:HomeAssistantApplication.kt$HomeAssistantApplication$@OptIn(ExperimentalComposeRuntimeApi::class) override fun onCreate()</ID>
+    <ID>LongMethod:HomeView.kt$@Composable fun LoadHomePage(mainViewModel: MainViewModel)</ID>
+    <ID>LongMethod:MainView.kt$@Composable fun MainView( uiState: MainViewModel.MainViewUiState, entityClassification: MainViewModel.EntityClassification, onEntityClicked: (String, String) -&gt; Unit, onEntityLongClicked: (String) -&gt; Unit, onRetryLoadEntitiesClicked: () -&gt; Unit, onSettingsClicked: () -&gt; Unit, onNavigationClicked: ( entityIdLists: Map&lt;String, List&lt;String&gt;&gt;, listOrder: List&lt;String&gt;, filter: (Entity) -&gt; Boolean, ) -&gt; Unit, isHapticEnabled: Boolean, isToastEnabled: Boolean, )</ID>
+    <ID>LongMethod:MainViewModel.kt$MainViewModel$private suspend fun updateEntityDomains()</ID>
+    <ID>LongMethod:PhoneInstallView.kt$@Composable fun PhoneInstallView(onInstall: () -&gt; Unit, onRefresh: () -&gt; Unit, onAdvanced: () -&gt; Unit)</ID>
+    <ID>LongMethod:PhoneSettingsListener.kt$PhoneSettingsListener$private fun login(dataMap: DataMap)</ID>
+    <ID>LongMethod:SensorUi.kt$@SuppressLint("InlinedApi") @Composable fun SensorUi( sensor: Sensor?, manager: SensorManager, basicSensor: SensorManager.BasicSensor, onSensorClicked: (String, Boolean) -&gt; Unit, )</ID>
+    <ID>LongMethod:SetCameraTileView.kt$@Composable fun SetCameraTileView( tile: CameraTile?, entities: List&lt;Entity&gt;?, onSelectEntity: () -&gt; Unit, onSelectRefreshInterval: () -&gt; Unit, )</ID>
+    <ID>LongMethod:SetThermostatTileView.kt$@Composable fun SetThermostatTileView( tile: ThermostatTile?, entities: List&lt;Entity&gt;?, onSelectEntity: () -&gt; Unit, onSelectRefreshInterval: () -&gt; Unit, onNameEnabled: (Int, Boolean) -&gt; Unit, )</ID>
+    <ID>LongMethod:SettingsView.kt$@Composable fun SettingsView( loadingState: MainViewModel.LoadingState, favorites: List&lt;String&gt;, onClickSetFavorites: () -&gt; Unit, onClearFavorites: () -&gt; Unit, onClickSetShortcuts: () -&gt; Unit, onClickSensors: () -&gt; Unit, onClickLogout: () -&gt; Unit, isHapticEnabled: Boolean, isToastEnabled: Boolean, isFavoritesOnly: Boolean, isAssistantAppAllowed: Boolean, areNotificationsAllowed: Boolean, onHapticEnabled: (Boolean) -&gt; Unit, onToastEnabled: (Boolean) -&gt; Unit, setFavoritesOnly: (Boolean) -&gt; Unit, onClickCameraTile: () -&gt; Unit, onClickTemplateTiles: () -&gt; Unit, onClickThermostatTiles: () -&gt; Unit, onAssistantAppAllowed: (Boolean) -&gt; Unit, onClickNotifications: () -&gt; Unit, )</ID>
+    <ID>LongMethod:ShortcutsTile.kt$ShortcutsTile$private fun iconLayout(entity: SimplifiedEntity, showLabels: Boolean): LayoutElement</ID>
+    <ID>LongMethod:ThermostatTile.kt$ThermostatTile$override fun onTileRequest(requestParams: RequestBuilders.TileRequest): ListenableFuture&lt;Tile&gt;</ID>
+    <ID>LongMethod:ThermostatTile.kt$ThermostatTile$private fun timeline( tileConfig: ThermostatTile, entity: Entity, targetTemperature: Float?, temperatureUnit: String, ): Timeline</ID>
+    <ID>LongMethod:WearToggleChip.kt$WearToggleChip$@Composable fun entityToggleChipBackgroundColors(entity: Entity, checked: Boolean): ToggleChipColors</ID>
+    <ID>LongMethod:WearToggleChip.kt$WearToggleChip$@Composable private fun defaultChipColors( checkedStartBackgroundColor: Color = wearColorScheme.outlineVariant.copy(alpha = 0f) .compositeOver(wearColorScheme.tertiary), checkedEndBackgroundColor: Color = wearColorScheme.primary.copy(alpha = 0.5f) .compositeOver(wearColorScheme.tertiary), checkedContentColor: Color = wearColorScheme.onTertiary, checkedSecondaryContentColor: Color = wearColorScheme.tertiary, checkedToggleControlColor: Color = wearColorScheme.tertiary, uncheckedStartBackgroundColor: Color = wearColorScheme.outlineVariant, uncheckedEndBackgroundColor: Color = uncheckedStartBackgroundColor, uncheckedContentColor: Color = contentColorFor(checkedEndBackgroundColor), uncheckedSecondaryContentColor: Color = uncheckedContentColor, uncheckedToggleControlColor: Color = uncheckedContentColor, gradientDirection: LayoutDirection = LocalLayoutDirection.current, ): WearToggleChipColors</ID>
+    <ID>LongParameterList:ComplicationConfigMainView.kt$( entity: SimplifiedEntity?, showTitle: Boolean, showUnit: Boolean, loadingState: ComplicationConfigViewModel.LoadingState, onChooseEntityClicked: () -&gt; Unit, onShowTitleClicked: (Boolean) -&gt; Unit, onShowUnitClicked: (Boolean) -&gt; Unit, onAcceptClicked: () -&gt; Unit, )</ID>
+    <ID>LongParameterList:ConversationView.kt$( conversation: List&lt;AssistMessage&gt;, inputMode: AssistViewModelBase.AssistInputMode, currentPipeline: AssistPipelineResponse?, hapticFeedback: Boolean, onChangePipeline: () -&gt; Unit, onMicrophoneInput: () -&gt; Unit, )</ID>
+    <ID>LongParameterList:DetailsPanelView.kt$( entity: Entity, onEntityToggled: (String, String) -&gt; Unit, onFanSpeedChanged: (Float) -&gt; Unit, onBrightnessChanged: (Float) -&gt; Unit, onColorTempChanged: (Float, Boolean) -&gt; Unit, isToastEnabled: Boolean, isHapticEnabled: Boolean, )</ID>
+    <ID>LongParameterList:DetailsPanelView.kt$( isToastEnabled: Boolean, isHapticEnabled: Boolean, increase: Boolean, sliderName: String, context: Context, haptic: HapticFeedback, )</ID>
+    <ID>LongParameterList:EntityListView.kt$( entityLists: Map&lt;String, List&lt;Entity&gt;&gt;, entityListsOrder: List&lt;String&gt;, entityListFilter: (Entity) -&gt; Boolean, onEntityClicked: (String, String) -&gt; Unit, onEntityLongClicked: (String) -&gt; Unit, isHapticEnabled: Boolean, isToastEnabled: Boolean, )</ID>
+    <ID>LongParameterList:MainView.kt$( uiState: MainViewModel.MainViewUiState, entityClassification: MainViewModel.EntityClassification, onEntityClicked: (String, String) -&gt; Unit, onEntityLongClicked: (String) -&gt; Unit, onRetryLoadEntitiesClicked: () -&gt; Unit, onSettingsClicked: () -&gt; Unit, onNavigationClicked: ( entityIdLists: Map&lt;String, List&lt;String&gt;&gt;, listOrder: List&lt;String&gt;, filter: (Entity) -&gt; Boolean, ) -&gt; Unit, isHapticEnabled: Boolean, isToastEnabled: Boolean, )</ID>
+    <ID>LongParameterList:SettingsView.kt$( loadingState: MainViewModel.LoadingState, favorites: List&lt;String&gt;, onClickSetFavorites: () -&gt; Unit, onClearFavorites: () -&gt; Unit, onClickSetShortcuts: () -&gt; Unit, onClickSensors: () -&gt; Unit, onClickLogout: () -&gt; Unit, isHapticEnabled: Boolean, isToastEnabled: Boolean, isFavoritesOnly: Boolean, isAssistantAppAllowed: Boolean, areNotificationsAllowed: Boolean, onHapticEnabled: (Boolean) -&gt; Unit, onToastEnabled: (Boolean) -&gt; Unit, setFavoritesOnly: (Boolean) -&gt; Unit, onClickCameraTile: () -&gt; Unit, onClickTemplateTiles: () -&gt; Unit, onClickThermostatTiles: () -&gt; Unit, onAssistantAppAllowed: (Boolean) -&gt; Unit, onClickNotifications: () -&gt; Unit, )</ID>
+    <ID>LongParameterList:TileViews.kt$( context: Context, requestParams: RequestBuilders.TileRequest, @StringRes title: Int?, @StringRes text: Int, @StringRes actionText: Int, action: ActionBuilders.Action, )</ID>
+    <ID>LongParameterList:WearToggleChip.kt$WearToggleChipColors$( var checkedBackgroundPainter: Painter, var checkedContentColor: Color, var checkedSecondaryContentColor: Color, var checkedIconColor: Color, var disabledCheckedBackgroundPainter: Painter, var disabledCheckedContentColor: Color, var disabledCheckedSecondaryContentColor: Color, var disabledCheckedIconColor: Color, var uncheckedBackgroundPainter: Painter, var uncheckedContentColor: Color, var uncheckedSecondaryContentColor: Color, var uncheckedIconColor: Color, var disabledUncheckedBackgroundPainter: Painter, var disabledUncheckedContentColor: Color, var disabledUncheckedSecondaryContentColor: Color, var disabledUncheckedIconColor: Color, )</ID>
+    <ID>MagicNumber:CameraTile.kt$CameraTile$100</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.05</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.10</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.15</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.20</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.25</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.30</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.35</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.40</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.45</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.50</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.55</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.60</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.65</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.70</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.75</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.80</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.85</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.90</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0.95</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffa6d1ff</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffafd6ff</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffb8dbff</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffc1e0ff</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffcae4ff</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffd3e9ff</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffdcedff</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffe5f2ff</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffeef6ff</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xfff7fbff</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffffa000</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffffaa1a</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffffb333</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffffbd4d</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffffc666</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffffd080</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffffd999</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffffe3b3</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffffeccc</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xfffff6e6</ID>
+    <ID>MagicNumber:ColorTemperature.kt$0xffffffff</ID>
+    <ID>MagicNumber:ConversationActivity.kt$ConversationActivity$3</ID>
+    <ID>MagicNumber:ConversationTile.kt$ConversationTile$16f</ID>
+    <ID>MagicNumber:ConversationTile.kt$ConversationTile$20f</ID>
+    <ID>MagicNumber:ConversationTile.kt$ConversationTile$24f</ID>
+    <ID>MagicNumber:ConversationTile.kt$ConversationTile$40f</ID>
+    <ID>MagicNumber:ConversationTile.kt$ConversationTile$8f</ID>
+    <ID>MagicNumber:ConversationView.kt$600</ID>
+    <ID>MagicNumber:ConversationViewModel.kt$ConversationViewModel$2023</ID>
+    <ID>MagicNumber:ConversationViewModel.kt$ConversationViewModel$5</ID>
+    <ID>MagicNumber:DetailsPanelView.kt$100</ID>
+    <ID>MagicNumber:DetailsPanelView.kt$255</ID>
+    <ID>MagicNumber:EntityStateDataSourceService.kt$EntityStateDataSourceService$2023</ID>
+    <ID>MagicNumber:EntityStateDataSourceService.kt$EntityStateDataSourceService$3</ID>
+    <ID>MagicNumber:EntityStateDataSourceService.kt$EntityStateDataSourceService$404</ID>
+    <ID>MagicNumber:HealthServicesSensorManager.kt$HealthServicesSensorManager$1800000</ID>
+    <ID>MagicNumber:HeartRateSensorManager.kt$HeartRateSensorManager$10</ID>
+    <ID>MagicNumber:HeartRateSensorManager.kt$HeartRateSensorManager$60000</ID>
+    <ID>MagicNumber:ListHeader.kt$48</ID>
+    <ID>MagicNumber:MainView.kt$64</ID>
+    <ID>MagicNumber:MainViewModel.kt$MainViewModel$1000</ID>
+    <ID>MagicNumber:ManualSetupActivity.kt$ManualSetupActivity$2000</ID>
+    <ID>MagicNumber:OnboardingActivity.kt$OnboardingActivity$2000</ID>
+    <ID>MagicNumber:PhoneInstallActivity.kt$PhoneInstallActivity$2000</ID>
+    <ID>MagicNumber:RefreshIntervalPickerView.kt$10</ID>
+    <ID>MagicNumber:RefreshIntervalPickerView.kt$15</ID>
+    <ID>MagicNumber:RefreshIntervalPickerView.kt$24</ID>
+    <ID>MagicNumber:RefreshIntervalPickerView.kt$30</ID>
+    <ID>MagicNumber:RefreshIntervalPickerView.kt$5</ID>
+    <ID>MagicNumber:RefreshIntervalPickerView.kt$60</ID>
+    <ID>MagicNumber:SelectShortcutsTileView.kt$1111</ID>
+    <ID>MagicNumber:SelectShortcutsTileView.kt$2222</ID>
+    <ID>MagicNumber:SelectShortcutsTileView.kt$7</ID>
+    <ID>MagicNumber:SelectTemplateTileView.kt$10</ID>
+    <ID>MagicNumber:SelectTemplateTileView.kt$1111</ID>
+    <ID>MagicNumber:SelectTemplateTileView.kt$20</ID>
+    <ID>MagicNumber:SelectTemplateTileView.kt$2222</ID>
+    <ID>MagicNumber:SensorWorker.kt$SensorWorker.Companion$15</ID>
+    <ID>MagicNumber:ServerListAdapter.kt$ServerListAdapter$3</ID>
+    <ID>MagicNumber:ServerListAdapter.kt$ServerListAdapter$4</ID>
+    <ID>MagicNumber:SetShortcutsTileView.kt$7</ID>
+    <ID>MagicNumber:ShortcutsTile.kt$ShortcutsTile$5</ID>
+    <ID>MagicNumber:ShortcutsTile.kt$ShortcutsTile$7</ID>
+    <ID>MagicNumber:TemplateTile.kt$TemplateTile$10</ID>
+    <ID>MagicNumber:TemplateTile.kt$TemplateTile$16</ID>
+    <ID>MagicNumber:TemplateTile.kt$TemplateTile$1_000</ID>
+    <ID>MagicNumber:ThermostatTile.kt$ThermostatTile$0.5f</ID>
+    <ID>MagicNumber:ThermostatTile.kt$ThermostatTile$10f</ID>
+    <ID>MagicNumber:ThermostatTile.kt$ThermostatTile$180f</ID>
+    <ID>MagicNumber:ThermostatTile.kt$ThermostatTile$20f</ID>
+    <ID>MagicNumber:ThermostatTile.kt$ThermostatTile$30f</ID>
+    <ID>MagicNumber:ThermostatTile.kt$ThermostatTile$360f</ID>
+    <ID>MagicNumber:TileViews.kt$10</ID>
+    <ID>MagicNumber:TileViews.kt$10f</ID>
+    <ID>MagicNumber:TileViews.kt$180f</ID>
+    <ID>MagicNumber:TileViews.kt$200</ID>
+    <ID>MagicNumber:TileViews.kt$24f</ID>
+    <ID>MagicNumber:TileViews.kt$3</ID>
+    <ID>MagicNumber:TileViews.kt$4</ID>
+    <ID>MagicNumber:WearToggleChip.kt$WearToggleChip$0.025f</ID>
+    <ID>MagicNumber:WearToggleChip.kt$WearToggleChip$0.975f</ID>
+    <ID>MaxLineLength:CameraTile.kt$CameraTile$"Scaling camera snapshot to fit screen (${bitmap.width}x${bitmap.height} to ${maxWidth.toInt()}x${maxHeight.toInt()} max)"</ID>
+    <ID>MaxLineLength:HealthServicesSensorManager.kt$HealthServicesSensorManager$"${basicSensor.id} data index: $index with value: ${intervalDataPoint.value} end time: ${endTime.toEpochMilli()}"</ID>
+    <ID>MaxLineLength:HealthServicesSensorManager.kt$HealthServicesSensorManager.&lt;no name provided&gt;$"Data for ${dataType.name} index: $indexPoint with value: ${dataPoint.value} end time: ${endTime.toEpochMilli()}"</ID>
+    <ID>MaxLineLength:HealthServicesSensorManager.kt$HealthServicesSensorManager.&lt;no name provided&gt;$"Health services callback successfully registered for the following data types: ${passiveListenerConfig!!.dataTypes} User Activity Info: ${passiveListenerConfig!!.shouldUserActivityInfoBeRequested} Health Events: ${passiveListenerConfig!!.healthEventTypes}"</ID>
+    <ID>MaxLineLength:MainView.kt$// when we don't have the state of the entity, create a Chip from cache as we don't have the state yet</ID>
+    <ID>MaxLineLength:OnboardingActivity.kt$OnboardingActivity$"requestInstances: failed to request home assistant instances from $node.id: ${node.displayName}"</ID>
+    <ID>MaxLineLength:ShortcutsTile.kt$ShortcutsTile$*</ID>
+    <ID>MaxLineLength:TemplateTile.kt$TemplateTile$*</ID>
+    <ID>MaxLineLength:WearDnsTest.kt$WearDnsTest$val homeAssistantLocal2: InetAddress = InetAddress.getByAddress("homeassistant.local", byteArrayOf(192.toByte(), 168.toByte(), 0, 24))</ID>
+    <ID>MaxLineLength:WearDnsTest.kt$WearDnsTest$val homeAssistantLocal: InetAddress = InetAddress.getByAddress("homeassistant.local", byteArrayOf(192.toByte(), 168.toByte(), 0, 23))</ID>
+    <ID>NestedBlockDepth:TemplateTile.kt$TemplateTile$private fun parseHtml(renderedText: String): LayoutElementBuilders.Spannable</ID>
+    <ID>ReturnCount:ColorTemperature.kt$fun getColorTemperature(ratio: Double, isKelvin: Boolean): Color</ID>
+    <ID>ReturnCount:ConversationViewModel.kt$ConversationViewModel$suspend fun onCreate(hasPermission: Boolean): Boolean</ID>
+    <ID>ReturnCount:EntityStateDataSourceService.kt$EntityStateDataSourceService$override suspend fun onComplicationRequest(request: ComplicationRequest): ComplicationData?</ID>
+    <ID>SpreadOperator:WearToggleChip.kt$WearToggleChip$(*checkedColorStops)</ID>
+    <ID>SpreadOperator:WearToggleChip.kt$WearToggleChip$(*disabledCheckedColorStops)</ID>
+    <ID>SwallowedException:MobileAppIntegrationPresenterImpl.kt$MobileAppIntegrationPresenterImpl$e: Exception</ID>
+    <ID>SwallowedException:WearDnsTest.kt$WearDnsTest$e: UnknownHostException</ID>
+    <ID>ThrowsCount:WearDns.kt$WearDns$private suspend fun attemptLookupViaMobile(hostname: String, e: Exception): List&lt;InetAddress&gt;</ID>
+    <ID>TooGenericExceptionCaught:ApplicationModule.kt$ApplicationModule$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:BedtimeModeSensorManager.kt$BedtimeModeSensorManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:CameraTile.kt$CameraTile$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ComplicationConfigViewModel.kt$ComplicationConfigViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ConversationViewModel.kt$ConversationViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:EntityStateDataSourceService.kt$EntityStateDataSourceService$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:EntityStateDataSourceService.kt$EntityStateDataSourceService$t: Throwable</ID>
+    <ID>TooGenericExceptionCaught:FirebaseCloudMessagingService.kt$FirebaseCloudMessagingService$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:HomeActivity.kt$HomeActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:HomePresenterImpl.kt$HomePresenterImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:MainViewModel.kt$MainViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ManualSetupPresenterImpl.kt$ManualSetupPresenterImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:MobileAppIntegrationPresenterImpl.kt$MobileAppIntegrationPresenterImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:OnboardingActivity.kt$OnboardingActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:OnboardingPresenterImpl.kt$OnboardingPresenterImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:PhoneInstallActivity.kt$PhoneInstallActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:PhoneSettingsListener.kt$PhoneSettingsListener$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:TemplateTile.kt$TemplateTile$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:TheaterModeSensorManager.kt$TheaterModeSensorManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ThermostatTile.kt$ThermostatTile$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:TileActionReceiver.kt$TileActionReceiver$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:WearDns.kt$WearDns$e2: Exception</ID>
+    <ID>TooManyFunctions:ConversationViewModel.kt$ConversationViewModel : AssistViewModelBase</ID>
+    <ID>TooManyFunctions:HomePresenter.kt$HomePresenter</ID>
+    <ID>TooManyFunctions:HomePresenterImpl.kt$HomePresenterImpl : HomePresenter</ID>
+    <ID>TooManyFunctions:MainViewModel.kt$MainViewModel : AndroidViewModel</ID>
+    <ID>TooManyFunctions:OnboardingActivity.kt$OnboardingActivity : AppCompatActivityOnboardingView</ID>
+    <ID>UnusedPrivateProperty:PhoneSettingsListener.kt$PhoneSettingsListener$val deviceTrackingEnabled = dataMap.getBoolean("LocationTracking")</ID>
+    <ID>UnusedPrivateProperty:PhoneSettingsListener.kt$PhoneSettingsListener$val notificationsEnabled = dataMap.getBoolean("Notifications")</ID>
+  </CurrentIssues>
+</SmellBaseline>

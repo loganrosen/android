@@ -1,0 +1,753 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues/>
+  <CurrentIssues>
+    <ID>ComplexCondition:AssistViewModel.kt$AssistViewModel$pipelineId == PIPELINE_LAST_USED &amp;&amp; recorderAutoStart &amp;&amp; hasPermission &amp;&amp; hasMicrophone &amp;&amp; serverManager.getServer(selectedServerId) != null &amp;&amp; serverManager.integrationRepository(selectedServerId).getLastUsedPipelineSttSupport()</ID>
+    <ID>ComplexCondition:ButtonWidgetConfigureActivity.kt$ButtonWidgetConfigureActivity$Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.O &amp;&amp; selectedServerId != null &amp;&amp; ( widgetConfigAction in actions[selectedServerId].orEmpty().keys || widgetConfigAction.split(".", limit = 2).size == 2 )</ID>
+    <ID>ComplexCondition:CarSensorManager.kt$CarSensorManager$(isAutomotive &amp;&amp; !carSensor.automotiveEnabled) || (!isAutomotive &amp;&amp; !carSensor.autoEnabled)</ID>
+    <ID>ComplexCondition:ManageWidgetsView.kt$viewModel.buttonWidgetList.value.isEmpty() &amp;&amp; viewModel.staticWidgetList.value.isEmpty() &amp;&amp; viewModel.mediaWidgetList.value.isEmpty() &amp;&amp; viewModel.templateWidgetList.value.isEmpty() &amp;&amp; viewModel.cameraWidgetList.value.isEmpty() &amp;&amp; viewModel.todoWidgetList.value.isEmpty()</ID>
+    <ID>ComplexCondition:MessagingManager.kt$MessagingManager$!jsonData[NotificationData.MEDIA_STREAM].isNullOrEmpty() &amp;&amp; jsonData[NotificationData.MEDIA_STREAM] in CHANNEL_VOLUME_STREAM &amp;&amp; !jsonData[NotificationData.COMMAND].isNullOrEmpty() &amp;&amp; jsonData[NotificationData.COMMAND]?.toIntOrNull() != null</ID>
+    <ID>ComplexCondition:MessagingManager.kt$MessagingManager$( !jsonData[NotificationData.COMMAND].isNullOrEmpty() &amp;&amp; jsonData[NotificationData.COMMAND] in DeviceCommandData.ENABLE_COMMANDS ) || ( !jsonData[NotificationData.COMMAND].isNullOrEmpty() &amp;&amp; jsonData[NotificationData.COMMAND] in FORCE_COMMANDS ) || ( !jsonData[NotificationData.COMMAND].isNullOrEmpty() &amp;&amp; jsonData[NotificationData.COMMAND] == HIGH_ACCURACY_SET_UPDATE_INTERVAL &amp;&amp; jsonData[HIGH_ACCURACY_UPDATE_INTERVAL]?.toIntOrNull() != null &amp;&amp; jsonData[HIGH_ACCURACY_UPDATE_INTERVAL]?.toInt()!! &gt;= 5 )</ID>
+    <ID>ComplexCondition:NotificationSensorManager.kt$NotificationSensorManager$sbn.packageName == application.packageName || (allowPackages.isNotEmpty() &amp;&amp; sbn.packageName !in allowPackages) || (!disableAllowListRequirement &amp;&amp; allowPackages.isEmpty())</ID>
+    <ID>ComplexCondition:SsidView.kt$activeSsid?.isNotBlank() == true &amp;&amp; wifiSsids.none { it == activeSsid } &amp;&amp; (Build.VERSION.SDK_INT &lt; Build.VERSION_CODES.R || activeSsid !== WifiManager.UNKNOWN_SSID)</ID>
+    <ID>ComplexCondition:TileExtensions.kt$TileExtensions$tileData != null &amp;&amp; tileData.isSetup &amp;&amp; tileData.entityId.split('.')[0] in toggleDomainsWithLock &amp;&amp; serverManager.getServer(tileData.serverId) != null</ID>
+    <ID>ComplexCondition:WebViewActivity.kt$WebViewActivity$tlsWebViewClient?.isTLSClientAuthNeeded == true &amp;&amp; (errorType == ErrorType.TIMEOUT_GENERAL || errorType == ErrorType.TIMEOUT_EXTERNAL_BUS) &amp;&amp; !tlsWebViewClient.hasUserDeniedAccess</ID>
+    <ID>ComplexCondition:WebsocketManager.kt$WebsocketManager$jobs.values.any { it.isActive } &amp;&amp; isActive &amp;&amp; shouldWeRun() &amp;&amp; manageServerJobs(jobs, this)</ID>
+    <ID>ConstructorParameterNaming:FrontendViewModel.kt$FrontendViewModel.ViewStateManager$private val _state: MutableStateFlow&lt;FrontendViewState&gt; = MutableStateFlow(initialState)</ID>
+    <ID>CyclomaticComplexMethod:AssistSheetView.kt$@Composable fun AssistSheetControls( inputMode: AssistViewModelBase.AssistInputMode?, onChangeInput: () -&gt; Unit, onTextInput: (String) -&gt; Unit, onMicrophoneInput: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>CyclomaticComplexMethod:AssistViewModel.kt$AssistViewModel$fun onCreate( hasPermission: Boolean, serverId: Int?, pipelineId: String?, startListening: Boolean?, wakeWordPhrase: String?, )</ID>
+    <ID>CyclomaticComplexMethod:AssistViewModel.kt$AssistViewModel$private fun runAssistPipeline(text: String?)</ID>
+    <ID>CyclomaticComplexMethod:AssistViewModel.kt$AssistViewModel$private suspend fun setPipeline(id: String?)</ID>
+    <ID>CyclomaticComplexMethod:BarcodeScannerView.kt$@SuppressLint("UnusedBoxWithConstraintsScope") @Composable fun BarcodeScannerView( title: String, subtitle: String, action: String?, hasFlashlight: Boolean, hasPermission: Boolean, didRequestPermission: Boolean, requestPermission: () -&gt; Unit, onResult: (String, BarcodeFormat) -&gt; Unit, onCancel: (Boolean) -&gt; Unit, modifier: Modifier = Modifier, resultTimeoutMillis: Long = 1500L, )</ID>
+    <ID>CyclomaticComplexMethod:ButtonWidget.kt$ButtonWidget$private suspend fun getWidgetRemoteViews(context: Context, appWidgetId: Int): RemoteViews</ID>
+    <ID>CyclomaticComplexMethod:ButtonWidgetConfigureActivity.kt$ButtonWidgetConfigureActivity$public override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>CyclomaticComplexMethod:CameraWidget.kt$CameraWidget$private suspend fun getWidgetRemoteViews(context: Context, appWidgetId: Int): RemoteViews?</ID>
+    <ID>CyclomaticComplexMethod:CameraWidgetConfigureActivity.kt$CameraWidgetConfigureActivity$public override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>CyclomaticComplexMethod:CarSensorManager.kt$CarSensorManager$@androidx.annotation.OptIn(androidx.car.app.annotations.ExperimentalCarApi::class) private fun setListener(l: Listener, enable: Boolean)</ID>
+    <ID>CyclomaticComplexMethod:DeveloperSettingsPresenterImpl.kt$DeveloperSettingsPresenterImpl$override fun runThreadDebug(context: Context, serverId: Int)</ID>
+    <ID>CyclomaticComplexMethod:EntityGridVehicleScreen.kt$EntityGridVehicleScreen$private fun createEntityGrid(entities: List&lt;Entity&gt;, canSwitchServers: Boolean): ItemList.Builder</ID>
+    <ID>CyclomaticComplexMethod:EntityInfo.kt$@Composable fun getEntityDomainString(domain: String): String</ID>
+    <ID>CyclomaticComplexMethod:EntityWidget.kt$EntityWidget$private suspend fun resolveTextToShow( context: Context, serverId: Int, entityId: String?, suggestedEntity: Entity?, attributeIds: String?, stateSeparator: String, attributeSeparator: String, appWidgetId: Int, ): ResolvedText</ID>
+    <ID>CyclomaticComplexMethod:EntityWidgetConfigureActivity.kt$EntityWidgetConfigureActivity$override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>CyclomaticComplexMethod:EntityWidgetConfigureActivity.kt$EntityWidgetConfigureActivity$override suspend fun getPendingDaoEntity(): StaticWidgetEntity</ID>
+    <ID>CyclomaticComplexMethod:HaControl.kt$HaControl$@SuppressLint("ResourceType") fun createControl(context: Context, entity: Entity, info: HaControlInfo): Control</ID>
+    <ID>CyclomaticComplexMethod:HaControlsProviderService.kt$HaControlsProviderService$private suspend fun subscribeToEntitiesForServer( serverId: Int, controlIds: List&lt;String&gt;, webSocketScope: CoroutineScope, subscriber: Flow.Subscriber&lt;in Control&gt;, )</ID>
+    <ID>CyclomaticComplexMethod:HealthConnectSensorManager.kt$HealthConnectSensorManager$override suspend fun requestSensorUpdate(context: Context)</ID>
+    <ID>CyclomaticComplexMethod:HomeAssistantApplication.kt$HomeAssistantApplication$@OptIn(ExperimentalComposeRuntimeApi::class) override fun onCreate()</ID>
+    <ID>CyclomaticComplexMethod:ImprovSheetView.kt$@Composable fun ImprovSheetView( screenState: ImprovSheetState, onConnect: (String, String, String, String) -&gt; Unit, onRestart: () -&gt; Unit, onDismiss: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>CyclomaticComplexMethod:LocationTrackingView.kt$@Composable fun LocationTrackingHistoryRow(item: LocationHistoryItem?, servers: List&lt;Server&gt;, modifier: Modifier = Modifier)</ID>
+    <ID>CyclomaticComplexMethod:ManageControlsView.kt$@Composable fun ManageControlsView( panelEnabled: Boolean, authSetting: ControlsAuthRequiredSetting, authRequiredList: List&lt;String&gt;, entitiesLoaded: Boolean, entitiesList: Map&lt;Int, List&lt;Entity&gt;&gt;, panelSetting: Pair&lt;String?, Int&gt;?, serversList: List&lt;Server&gt;, structureEnabled: Boolean, defaultServer: Int, onSetPanelEnabled: (Boolean) -&gt; Unit, onSelectAll: () -&gt; Unit, onSelectNone: () -&gt; Unit, onSelectEntity: (String, Int) -&gt; Unit, onSetPanelSetting: (String, Int) -&gt; Unit, onSetStructureEnabled: (Boolean) -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>CyclomaticComplexMethod:ManageShortcutsView.kt$@RequiresApi(Build.VERSION_CODES.N_MR1) @Composable private fun CreateShortcutView(i: Int, viewModel: ManageShortcutsViewModel, showIconDialog: (tag: String) -&gt; Unit)</ID>
+    <ID>CyclomaticComplexMethod:MediaPlayerControlsWidget.kt$MediaPlayerControlsWidget$override suspend fun getWidgetRemoteViews( context: Context, appWidgetId: Int, suggestedEntity: Entity?, ): RemoteViews</ID>
+    <ID>CyclomaticComplexMethod:MediaPlayerControlsWidgetConfigureActivity.kt$MediaPlayerControlsWidgetConfigureActivity$public override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>CyclomaticComplexMethod:MessagingManager.kt$MessagingManager$fun handleMessage(notificationData: Map&lt;String, String&gt;, source: String)</ID>
+    <ID>CyclomaticComplexMethod:MessagingManager.kt$MessagingManager$private fun addExtrasToIntent(intent: Intent, extras: String)</ID>
+    <ID>CyclomaticComplexMethod:MessagingManager.kt$MessagingManager$private fun createOpenUriPendingIntent(uri: String, data: Map&lt;String, String&gt;): PendingIntent</ID>
+    <ID>CyclomaticComplexMethod:MessagingManager.kt$MessagingManager$private suspend fun handleDeviceCommands(data: Map&lt;String, String&gt;)</ID>
+    <ID>CyclomaticComplexMethod:NotificationSensorManager.kt$NotificationSensorManager$private suspend fun mappedBundle(bundle: Bundle, keySuffix: String = ""): Map&lt;String, Any?&gt;?</ID>
+    <ID>CyclomaticComplexMethod:OnSwipeListener.kt$OnSwipeListener$override fun onTouch(v: View?, event: MotionEvent?): Boolean</ID>
+    <ID>CyclomaticComplexMethod:SensorDetailView.kt$@Composable fun SensorDetailSettingDialog( viewModel: SensorDetailViewModel, state: SensorDetailViewModel.Companion.SettingDialogState, onDismiss: () -&gt; Unit, onSubmit: (SensorDetailViewModel.Companion.SettingDialogState) -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>CyclomaticComplexMethod:SensorDetailView.kt$@Composable fun SensorDetailTopPanel( basicSensor: SensorManager.BasicSensor, dbSensor: List&lt;SensorWithAttributes&gt;, sensorsExpanded: Boolean, serverNames: Map&lt;Int, String&gt;, onSetEnabled: (Boolean, Int?) -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>CyclomaticComplexMethod:SensorDetailView.kt$@Composable fun SensorDetailView( viewModel: SensorDetailViewModel, onSetEnabled: (Boolean, Int?) -&gt; Unit, onToggleSettingSubmitted: (SensorSetting) -&gt; Unit, onDialogSettingClicked: (SensorSetting) -&gt; Unit, onDialogSettingSubmitted: (SensorDetailViewModel.Companion.SettingDialogState) -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>CyclomaticComplexMethod:SensorDetailViewModel.kt$SensorDetailViewModel$suspend fun getSettingEntries(setting: SensorSetting, entries: List&lt;String&gt;?): List&lt;String&gt;</ID>
+    <ID>CyclomaticComplexMethod:ServerSettingsFragment.kt$ServerSettingsFragment$@Deprecated("Deprecated in Java") override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?)</ID>
+    <ID>CyclomaticComplexMethod:SettingsActivity.kt$SettingsActivity$override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>CyclomaticComplexMethod:SettingsFragment.kt$SettingsFragment$override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?)</ID>
+    <ID>CyclomaticComplexMethod:SsidView.kt$@OptIn(ExperimentalMaterialApi::class) @Composable fun SsidView( wifiSsids: List&lt;String&gt;, canReadWifi: Boolean, ethernet: Boolean?, vpn: Boolean?, prioritizeInternal: Boolean, usingWifi: Boolean, activeSsid: String?, activeBssid: String?, onAddWifiSsid: (String) -&gt; Boolean, onRemoveWifiSsid: (String) -&gt; Unit, onRequestPermission: () -&gt; Unit, onSetEthernet: (Boolean) -&gt; Unit, onSetVpn: (Boolean) -&gt; Unit, onSetPrioritize: (Boolean) -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>CyclomaticComplexMethod:TileExtensions.kt$TileExtensions$private suspend fun setTileData(tileId: String, tile: Tile): Boolean</ID>
+    <ID>CyclomaticComplexMethod:WebViewActivity.kt$WebViewActivity$@SuppressLint("SetJavaScriptEnabled") override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>CyclomaticComplexMethod:WebViewActivity.kt$WebViewActivity$override fun showError(errorType: ErrorType, error: SslError?, description: String?)</ID>
+    <ID>CyclomaticComplexMethod:WebViewActivity.kt$WebViewActivity$private fun handleWebViewGesture(direction: GestureDirection, pointerCount: Int)</ID>
+    <ID>CyclomaticComplexMethod:WebViewPresenterImpl.kt$WebViewPresenterImpl$override fun onGetExternalAuth(context: Context, callback: String, force: Boolean)</ID>
+    <ID>CyclomaticComplexMethod:WidgetDynamicFieldAdapter.kt$WidgetDynamicFieldAdapter$override fun onBindViewHolder(holder: ViewHolder, position: Int)</ID>
+    <ID>EmptyFunctionBlock:ButtonWidgetConfigureActivity.kt$ButtonWidgetConfigureActivity.&lt;no name provided&gt;${}</ID>
+    <ID>EmptyFunctionBlock:FrontendJsBridge.kt$FrontendJsBridge.Companion.&lt;no name provided&gt;${ }</ID>
+    <ID>EmptyFunctionBlock:LogFragment.kt$LogFragment.&lt;no name provided&gt;${}</ID>
+    <ID>ExplicitItLambdaParameter:SsidView.kt${ _, it -&gt; val connected = remember(it, activeSsid, activeBssid, usingWifi) { usingWifi &amp;&amp; ( it == activeSsid || ( it.startsWith(WifiHelper.BSSID_PREFIX) &amp;&amp; it.removePrefix(WifiHelper.BSSID_PREFIX).equals(activeBssid, ignoreCase = true) ) ) } Row( modifier = Modifier .heightIn(min = 48.dp) .padding(horizontal = 16.dp) .animateItem(), verticalAlignment = Alignment.CenterVertically, ) { if (connected) { Image( asset = CommunityMaterial.Icon3.cmd_wifi_check, colorFilter = ColorFilter.tint(colorResource(commonR.color.colorAccent)), ) Spacer(Modifier.width(16.dp)) } Text( text = if (it.startsWith(WifiHelper.BSSID_PREFIX)) { it.removePrefix(WifiHelper.BSSID_PREFIX) } else { it }, fontFamily = if (it.startsWith(WifiHelper.BSSID_PREFIX)) { FontFamily.Monospace } else { null }, modifier = Modifier .padding(end = 16.dp) .weight(1f), ) Icon( imageVector = Icons.Default.Clear, contentDescription = stringResource(commonR.string.remove_ssid), tint = colorResource(commonR.color.colorWarning), modifier = Modifier .clickable { onRemoveWifiSsid(it) } .size(48.dp) .padding(all = 12.dp), ) } }</ID>
+    <ID>FunctionOnlyReturningConstant:ApplicationModule.kt$ApplicationModule$@Provides @Singleton @PushWebsocketSupport fun providesPushWebsocketSupport(): Boolean</ID>
+    <ID>ImplicitDefaultLocale:ContextExtensions.kt$String.format("#%06X", 0xFFFFFF and color)</ID>
+    <ID>InstanceOfCheckForException:WebViewPresenterImpl.kt$WebViewPresenterImpl$e is SSLException</ID>
+    <ID>InstanceOfCheckForException:WebViewPresenterImpl.kt$WebViewPresenterImpl$e is SSLHandshakeException</ID>
+    <ID>InstanceOfCheckForException:WebViewPresenterImpl.kt$WebViewPresenterImpl$e is SocketTimeoutException</ID>
+    <ID>InstanceOfCheckForException:WebsocketManager.kt$WebsocketManager$e is CancellationException</ID>
+    <ID>LargeClass:HealthConnectSensorManager.kt$HealthConnectSensorManager : SensorManager</ID>
+    <ID>LargeClass:MediaPlayerControlsWidget.kt$MediaPlayerControlsWidget : BaseWidgetProvider</ID>
+    <ID>LargeClass:MessagingManager.kt$MessagingManager</ID>
+    <ID>LargeClass:WebViewActivity.kt$WebViewActivity : BaseActivityWebView</ID>
+    <ID>LongMethod:AndroidAutoFavoritesView.kt$@RequiresApi(Build.VERSION_CODES.O) @Composable fun AndroidAutoFavoritesSettings( androidAutoViewModel: ManageAndroidAutoViewModel, serversList: List&lt;Server&gt;, defaultServer: Int, modifier: Modifier = Modifier, )</ID>
+    <ID>LongMethod:AssistActivity.kt$AssistActivity$override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:AssistSettingsScreen.kt$@Composable @VisibleForTesting internal fun AssistSettingsContent( uiState: AssistSettingsUiState, hasAudioPermission: Boolean, onSetDefaultAssistant: () -&gt; Unit, onToggleWakeWord: (Boolean) -&gt; Unit, onSelectWakeWord: (MicroWakeWordModelConfig) -&gt; Unit, onStartTestWakeWord: () -&gt; Unit, onStopTestWakeWord: () -&gt; Unit, modifier: Modifier = Modifier, onLearnMorePlayServices: () -&gt; Unit = {}, )</ID>
+    <ID>LongMethod:AssistSheetView.kt$@Composable fun AssistSheetControls( inputMode: AssistViewModelBase.AssistInputMode?, onChangeInput: () -&gt; Unit, onTextInput: (String) -&gt; Unit, onMicrophoneInput: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongMethod:AssistSheetView.kt$@Composable fun AssistSheetHeader( pipelines: List&lt;AssistUiPipeline&gt;, currentPipeline: AssistUiPipeline?, fromFrontend: Boolean, onSelectPipeline: (Int, String) -&gt; Unit, onManagePipelines: (() -&gt; Unit)?, modifier: Modifier = Modifier, )</ID>
+    <ID>LongMethod:AssistSheetView.kt$@OptIn(ExperimentalMaterialApi::class) @Composable fun AssistSheetView( conversation: List&lt;AssistMessage&gt;, pipelines: List&lt;AssistUiPipeline&gt;, inputMode: AssistViewModelBase.AssistInputMode?, currentPipeline: AssistUiPipeline?, fromFrontend: Boolean, onSelectPipeline: (Int, String) -&gt; Unit, onManagePipelines: (() -&gt; Unit)?, onChangeInput: () -&gt; Unit, onTextInput: (String) -&gt; Unit, onMicrophoneInput: () -&gt; Unit, onHide: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongMethod:AssistShortcutView.kt$@Composable fun AssistShortcutView( selectedServerId: Int, servers: List&lt;Server&gt;, supported: Boolean?, pipelines: AssistPipelineListResponse?, onSetServer: (Int) -&gt; Unit, onSubmit: (String, Int, String?, Boolean) -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongMethod:AssistViewModel.kt$AssistViewModel$fun onCreate( hasPermission: Boolean, serverId: Int?, pipelineId: String?, startListening: Boolean?, wakeWordPhrase: String?, )</ID>
+    <ID>LongMethod:BarcodeScannerView.kt$@SuppressLint("UnusedBoxWithConstraintsScope") @Composable fun BarcodeScannerView( title: String, subtitle: String, action: String?, hasFlashlight: Boolean, hasPermission: Boolean, didRequestPermission: Boolean, requestPermission: () -&gt; Unit, onResult: (String, BarcodeFormat) -&gt; Unit, onCancel: (Boolean) -&gt; Unit, modifier: Modifier = Modifier, resultTimeoutMillis: Long = 1500L, )</ID>
+    <ID>LongMethod:ButtonWidget.kt$ButtonWidget$private suspend fun callConfiguredAction(context: Context, appWidgetId: Int)</ID>
+    <ID>LongMethod:ButtonWidget.kt$ButtonWidget$private suspend fun getWidgetRemoteViews(context: Context, appWidgetId: Int): RemoteViews</ID>
+    <ID>LongMethod:ButtonWidgetConfigureActivity.kt$ButtonWidgetConfigureActivity$public override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:ButtonWidgetConfigureActivity.kt$ButtonWidgetConfigureActivity.&lt;no name provided&gt;$@SuppressLint("NotifyDataSetChanged") override fun afterTextChanged(p0: Editable?)</ID>
+    <ID>LongMethod:CameraWidget.kt$CameraWidget$private suspend fun getWidgetRemoteViews(context: Context, appWidgetId: Int): RemoteViews?</ID>
+    <ID>LongMethod:CameraWidgetConfigureActivity.kt$CameraWidgetConfigureActivity$public override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:ConnectivityChecksSection.kt$@Composable private fun CheckResultRow(label: String, result: ConnectivityCheckResult)</ID>
+    <ID>LongMethod:DeveloperSettingsPresenterImpl.kt$DeveloperSettingsPresenterImpl$override fun runThreadDebug(context: Context, serverId: Int)</ID>
+    <ID>LongMethod:EntityGridVehicleScreen.kt$EntityGridVehicleScreen$private fun createEntityGrid(entities: List&lt;Entity&gt;, canSwitchServers: Boolean): ItemList.Builder</ID>
+    <ID>LongMethod:EntityPicker.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable @VisibleForTesting internal fun EntityPicker( entities: List&lt;EntityPickerItem&gt;, selectedEntityId: String?, onEntitySelectedId: (String) -&gt; Unit, onEntityCleared: () -&gt; Unit, modifier: Modifier = Modifier, addButtonText: String = defaultAddText(), isExpanded: Boolean = false, dispatcher: CoroutineContext = Dispatchers.Default, )</ID>
+    <ID>LongMethod:EntityWidget.kt$EntityWidget$override suspend fun getWidgetRemoteViews( context: Context, appWidgetId: Int, suggestedEntity: Entity?, ): RemoteViews</ID>
+    <ID>LongMethod:EntityWidgetConfigureActivity.kt$EntityWidgetConfigureActivity$override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:ExternalUrlInputView.kt$@OptIn(ExperimentalComposeUiApi::class) @Composable fun ExternalUrlInputView( url: String?, focusRequester: FocusRequester, onSaveUrl: (String) -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongMethod:HANavHost.kt$@Composable internal fun HANavHost( navController: NavHostController, startDestination: HAStartDestinationRoute?, onShowSnackbar: suspend (message: String, action: String?) -&gt; Boolean, )</ID>
+    <ID>LongMethod:HaControl.kt$HaControl$@SuppressLint("ResourceType") fun createControl(context: Context, entity: Entity, info: HaControlInfo): Control</ID>
+    <ID>LongMethod:HaControlsProviderService.kt$HaControlsProviderService$override fun createPublisherForAllAvailable(): Flow.Publisher&lt;Control&gt;</ID>
+    <ID>LongMethod:HaControlsProviderService.kt$HaControlsProviderService$private suspend fun subscribeToEntitiesForServer( serverId: Int, controlIds: List&lt;String&gt;, webSocketScope: CoroutineScope, subscriber: Flow.Subscriber&lt;in Control&gt;, )</ID>
+    <ID>LongMethod:HealthConnectSensorManager.kt$HealthConnectSensorManager$override suspend fun requestSensorUpdate(context: Context)</ID>
+    <ID>LongMethod:HomeAssistantApplication.kt$HomeAssistantApplication$@OptIn(ExperimentalComposeRuntimeApi::class) override fun onCreate()</ID>
+    <ID>LongMethod:ImprovSheetView.kt$@Composable fun ImprovSheetView( screenState: ImprovSheetState, onConnect: (String, String, String, String) -&gt; Unit, onRestart: () -&gt; Unit, onDismiss: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongMethod:LocationForSecureConnectionScreen.kt$@OptIn(ExperimentalPermissionsApi::class) @Composable private fun LocationForSecureConnectionContent( isStandaloneScreen: Boolean, hasPlainTextUrl: Boolean, initialAllowInsecureConnection: Boolean?, onAllowInsecureConnection: (allowInsecureConnection: Boolean) -&gt; Unit, onShowSnackbar: suspend (message: String, action: String?) -&gt; Boolean, modifier: Modifier = Modifier, )</ID>
+    <ID>LongMethod:LocationTrackingView.kt$@Composable fun LocationTrackingHistoryRow(item: LocationHistoryItem?, servers: List&lt;Server&gt;, modifier: Modifier = Modifier)</ID>
+    <ID>LongMethod:LocationTrackingView.kt$@Composable fun LocationTrackingView( useHistory: Boolean, onSetHistory: (Boolean) -&gt; Unit, history: Flow&lt;PagingData&lt;LocationHistoryItem&gt;&gt;, serversList: List&lt;Server&gt;, modifier: Modifier = Modifier, )</ID>
+    <ID>LongMethod:LogFragment.kt$LogFragment$private fun shareLog()</ID>
+    <ID>LongMethod:MainVehicleScreen.kt$MainVehicleScreen$override fun onGetTemplate(): Template</ID>
+    <ID>LongMethod:ManageControlsView.kt$@Composable fun ManageControlsView( panelEnabled: Boolean, authSetting: ControlsAuthRequiredSetting, authRequiredList: List&lt;String&gt;, entitiesLoaded: Boolean, entitiesList: Map&lt;Int, List&lt;Entity&gt;&gt;, panelSetting: Pair&lt;String?, Int&gt;?, serversList: List&lt;Server&gt;, structureEnabled: Boolean, defaultServer: Int, onSetPanelEnabled: (Boolean) -&gt; Unit, onSelectAll: () -&gt; Unit, onSelectNone: () -&gt; Unit, onSelectEntity: (String, Int) -&gt; Unit, onSetPanelSetting: (String, Int) -&gt; Unit, onSetStructureEnabled: (Boolean) -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongMethod:ManageShortcutsView.kt$@RequiresApi(Build.VERSION_CODES.N_MR1) @Composable private fun CreateShortcutView(i: Int, viewModel: ManageShortcutsViewModel, showIconDialog: (tag: String) -&gt; Unit)</ID>
+    <ID>LongMethod:ManageTilesView.kt$@Composable fun ManageTilesView( viewModel: ManageTilesViewModel, onShowIconDialog: (tag: String?) -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongMethod:ManageWidgetsView.kt$@Composable fun ManageWidgetsView(viewModel: ManageWidgetsViewModel, modifier: Modifier = Modifier)</ID>
+    <ID>LongMethod:MapVehicleScreen.kt$MapVehicleScreen$override fun onGetTemplate(): Template</ID>
+    <ID>LongMethod:MediaPlayerControlsWidget.kt$MediaPlayerControlsWidget$override suspend fun getWidgetRemoteViews( context: Context, appWidgetId: Int, suggestedEntity: Entity?, ): RemoteViews</ID>
+    <ID>LongMethod:MediaPlayerControlsWidgetConfigureActivity.kt$MediaPlayerControlsWidgetConfigureActivity$public override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:MessagingManager.kt$MessagingManager$fun handleMessage(notificationData: Map&lt;String, String&gt;, source: String)</ID>
+    <ID>LongMethod:MessagingManager.kt$MessagingManager$private fun addExtrasToIntent(intent: Intent, extras: String)</ID>
+    <ID>LongMethod:MessagingManager.kt$MessagingManager$private fun createOpenUriPendingIntent(uri: String, data: Map&lt;String, String&gt;): PendingIntent</ID>
+    <ID>LongMethod:MessagingManager.kt$MessagingManager$private fun handleActions( builder: NotificationCompat.Builder, tag: String?, messageId: Int, databaseId: Long?, data: Map&lt;String, String&gt;, )</ID>
+    <ID>LongMethod:MessagingManager.kt$MessagingManager$private suspend fun getVideoFrames(serverId: Int, url: URL?, requiresAuth: Boolean = false): List&lt;Bitmap&gt;?</ID>
+    <ID>LongMethod:MessagingManager.kt$MessagingManager$private suspend fun handleDeviceCommands(data: Map&lt;String, String&gt;)</ID>
+    <ID>LongMethod:MessagingManager.kt$MessagingManager$private suspend fun sendNotification(data: Map&lt;String, String&gt;, id: Long? = null, received: Long? = null)</ID>
+    <ID>LongMethod:NfcEditView.kt$@SuppressLint("HardwareIds") @Composable fun NfcEditView( identifier: String?, showDeviceSample: Boolean, onDuplicateClicked: () -&gt; Unit, onFireEventClicked: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongMethod:NfcNavigationView.kt$@Composable fun LoadNfcView( viewModel: NfcViewModel, startDestination: String, pressedUpAtRoot: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongMethod:NotificationChannelView.kt$@RequiresApi(Build.VERSION_CODES.O) @Composable fun NotificationChannelView(notificationViewModel: NotificationViewModel, modifier: Modifier = Modifier)</ID>
+    <ID>LongMethod:NotificationPermissionPrompt.kt$@OptIn(ExperimentalMaterial3Api::class, ExperimentalPermissionsApi::class) @Composable @RequiresApi(Build.VERSION_CODES.TIRAMISU) internal fun NotificationPermissionPrompt(onPermissionResult: (Boolean) -&gt; Unit)</ID>
+    <ID>LongMethod:OnSwipeListener.kt$OnSwipeListener$override fun onTouch(v: View?, event: MotionEvent?): Boolean</ID>
+    <ID>LongMethod:OnboardingNavigation.kt$internal fun NavGraphBuilder.onboarding( navController: NavController, onShowSnackbar: suspend (message: String, action: String?) -&gt; Boolean, onOnboardingDone: () -&gt; Unit, urlToOnboard: String?, hideExistingServers: Boolean, skipWelcome: Boolean, hasLocationTracking: Boolean, )</ID>
+    <ID>LongMethod:SensorDetailFragment.kt$SensorDetailFragment$@SuppressLint("InlinedApi") override fun onViewCreated(view: View, savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:SensorDetailView.kt$@Composable fun SensorDetailSettingDialog( viewModel: SensorDetailViewModel, state: SensorDetailViewModel.Companion.SettingDialogState, onDismiss: () -&gt; Unit, onSubmit: (SensorDetailViewModel.Companion.SettingDialogState) -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongMethod:SensorDetailView.kt$@Composable fun SensorDetailTopPanel( basicSensor: SensorManager.BasicSensor, dbSensor: List&lt;SensorWithAttributes&gt;, sensorsExpanded: Boolean, serverNames: Map&lt;Int, String&gt;, onSetEnabled: (Boolean, Int?) -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongMethod:SensorDetailView.kt$@Composable fun SensorDetailView( viewModel: SensorDetailViewModel, onSetEnabled: (Boolean, Int?) -&gt; Unit, onToggleSettingSubmitted: (SensorSetting) -&gt; Unit, onDialogSettingClicked: (SensorSetting) -&gt; Unit, onDialogSettingSubmitted: (SensorDetailViewModel.Companion.SettingDialogState) -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongMethod:ServerSettingsFragment.kt$ServerSettingsFragment$@Deprecated("Deprecated in Java") override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?)</ID>
+    <ID>LongMethod:SettingsActivity.kt$SettingsActivity$override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:SettingsFragment.kt$SettingsFragment$override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?)</ID>
+    <ID>LongMethod:SsidView.kt$@OptIn(ExperimentalMaterialApi::class) @Composable fun SsidView( wifiSsids: List&lt;String&gt;, canReadWifi: Boolean, ethernet: Boolean?, vpn: Boolean?, prioritizeInternal: Boolean, usingWifi: Boolean, activeSsid: String?, activeBssid: String?, onAddWifiSsid: (String) -&gt; Boolean, onRemoveWifiSsid: (String) -&gt; Unit, onRequestPermission: () -&gt; Unit, onSetEthernet: (Boolean) -&gt; Unit, onSetVpn: (Boolean) -&gt; Unit, onSetPrioritize: (Boolean) -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongMethod:TemplateComponents.kt$@RequiresApi(Build.VERSION_CODES.O) fun getDomainList( domains: MutableSet&lt;String&gt;, carContext: CarContext, screenManager: ScreenManager, serverManager: ServerManager, serverId: StateFlow&lt;Int&gt;, prefsRepository: PrefsRepository, allEntities: Flow&lt;Map&lt;String, Entity&gt;&gt;, entityRegistry: List&lt;EntityRegistryResponse&gt;?, lifecycleScope: LifecycleCoroutineScope, ): ItemList.Builder</ID>
+    <ID>LongMethod:TemplateWidget.kt$TemplateWidget$private suspend fun getWidgetRemoteViews( context: Context, appWidgetId: Int, suggestedTemplate: String? = null, ): RemoteViews</ID>
+    <ID>LongMethod:TemplateWidgetConfigureActivity.kt$TemplateWidgetConfigureActivity$public override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:TileExtensions.kt$TileExtensions$private suspend fun setTileData(tileId: String, tile: Tile): Boolean</ID>
+    <ID>LongMethod:TileExtensions.kt$TileExtensions$private suspend fun tileClicked(tileId: String, tile: Tile, isUnlock: Boolean)</ID>
+    <ID>LongMethod:TodoWidgetConfigureActivity.kt$@Composable private fun TodoWidgetConfigureView( servers: List&lt;Server&gt;, selectedServerId: Int, onServerSelected: (Int) -&gt; Unit, entities: List&lt;Entity&gt;, selectedEntityId: String?, onEntitySelected: (String?) -&gt; Unit, showCompleted: Boolean, onShowCompletedChanged: (Boolean) -&gt; Unit, selectedBackgroundType: WidgetBackgroundType, onBackgroundTypeSelected: (WidgetBackgroundType) -&gt; Unit, textColorIndex: Int, onTextColorSelected: (Int) -&gt; Unit, isUpdateWidget: Boolean, onActionClick: () -&gt; Unit, entityRegistry: List&lt;EntityRegistryResponse&gt;? = null, deviceRegistry: List&lt;DeviceRegistryResponse&gt;? = null, areaRegistry: List&lt;AreaRegistryResponse&gt;? = null, )</ID>
+    <ID>LongMethod:WebViewActivity.kt$WebViewActivity$@SuppressLint("InflateParams") private fun authenticationDialog( handler: HttpAuthHandler, host: String, resource: String, realm: String, authError: Boolean, )</ID>
+    <ID>LongMethod:WebViewActivity.kt$WebViewActivity$@SuppressLint("SetJavaScriptEnabled") override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:WebViewActivity.kt$WebViewActivity$override fun showError(errorType: ErrorType, error: SslError?, description: String?)</ID>
+    <ID>LongMethod:WebViewActivity.kt$WebViewActivity$private fun handleWebViewGesture(direction: GestureDirection, pointerCount: Int)</ID>
+    <ID>LongMethod:WebViewActivity.kt$WebViewActivity.&lt;no name provided&gt;$@JavascriptInterface fun externalBus(message: String)</ID>
+    <ID>LongMethod:WebsocketManager.kt$WebsocketManager$private suspend fun createNotification(): Boolean</ID>
+    <ID>LongMethod:WebsocketSettingView.kt$@Composable fun WebsocketSettingView( websocketSetting: WebsocketSetting, unrestrictedBackgroundAccess: Boolean, hasWifi: Boolean, onSettingChanged: (WebsocketSetting) -&gt; Unit, onBackgroundAccessTapped: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongMethod:WidgetDynamicFieldAdapter.kt$WidgetDynamicFieldAdapter$override fun onBindViewHolder(holder: ViewHolder, position: Int)</ID>
+    <ID>LongParameterList:AssistSettingsScreen.kt$( uiState: AssistSettingsUiState, hasAudioPermission: Boolean, onSetDefaultAssistant: () -&gt; Unit, onToggleWakeWord: (Boolean) -&gt; Unit, onSelectWakeWord: (MicroWakeWordModelConfig) -&gt; Unit, onStartTestWakeWord: () -&gt; Unit, onStopTestWakeWord: () -&gt; Unit, modifier: Modifier = Modifier, onLearnMorePlayServices: () -&gt; Unit = {}, )</ID>
+    <ID>LongParameterList:AssistSettingsScreen.kt$( uiState: AssistSettingsUiState, hasAudioPermission: Boolean, onToggleWakeWord: (Boolean) -&gt; Unit, onSelectWakeWord: (MicroWakeWordModelConfig) -&gt; Unit, onStartTestWakeWord: () -&gt; Unit, onStopTestWakeWord: () -&gt; Unit, )</ID>
+    <ID>LongParameterList:AssistSheetView.kt$( conversation: List&lt;AssistMessage&gt;, pipelines: List&lt;AssistUiPipeline&gt;, inputMode: AssistViewModelBase.AssistInputMode?, currentPipeline: AssistUiPipeline?, fromFrontend: Boolean, onSelectPipeline: (Int, String) -&gt; Unit, onManagePipelines: (() -&gt; Unit)?, onChangeInput: () -&gt; Unit, onTextInput: (String) -&gt; Unit, onMicrophoneInput: () -&gt; Unit, onHide: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:AssistShortcutView.kt$( selectedServerId: Int, servers: List&lt;Server&gt;, supported: Boolean?, pipelines: AssistPipelineListResponse?, onSetServer: (Int) -&gt; Unit, onSubmit: (String, Int, String?, Boolean) -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:BarcodeScannerView.kt$( title: String, subtitle: String, action: String?, hasFlashlight: Boolean, hasPermission: Boolean, didRequestPermission: Boolean, requestPermission: () -&gt; Unit, onResult: (String, BarcodeFormat) -&gt; Unit, onCancel: (Boolean) -&gt; Unit, modifier: Modifier = Modifier, resultTimeoutMillis: Long = 1500L, )</ID>
+    <ID>LongParameterList:BlockInsecureScreen.kt$( missingHomeSetup: Boolean, missingLocation: Boolean, onRetry: () -&gt; Unit, onHelpClick: suspend () -&gt; Unit, onOpenSettings: () -&gt; Unit, onChangeSecurityLevel: () -&gt; Unit, onOpenLocationSettings: () -&gt; Unit, onConfigureHomeNetwork: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:ConnectionScreen.kt$( url: String?, isLoading: Boolean, isError: Boolean, webViewClient: WebViewClient, onBackClick: () -&gt; Unit, onWebViewCreationFailed: (Throwable) -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:EntityGridVehicleScreen.kt$EntityGridVehicleScreen$( carContext: CarContext, val serverManager: ServerManager, val serverId: StateFlow&lt;Int&gt;, val prefsRepository: PrefsRepository, val integrationRepositoryProvider: suspend () -&gt; IntegrationRepository, val title: String, private val entityRegistry: List&lt;EntityRegistryResponse&gt;?, private val domains: MutableSet&lt;String&gt;, private val entitiesFlow: Flow&lt;List&lt;Entity&gt;&gt;, private val allEntities: Flow&lt;Map&lt;String, Entity&gt;&gt;, )</ID>
+    <ID>LongParameterList:EntityPicker.kt$( entities: List&lt;EntityPickerItem&gt;, searchQuery: String, onSearchQueryChange: (String) -&gt; Unit, onEntitySelected: (EntityPickerItem) -&gt; Unit, onDismissRequest: () -&gt; Unit, bottomSheetState: SheetState, dispatcher: CoroutineContext, )</ID>
+    <ID>LongParameterList:EntityWidget.kt$EntityWidget$( context: Context, serverId: Int, entityId: String?, suggestedEntity: Entity?, attributeIds: String?, stateSeparator: String, attributeSeparator: String, appWidgetId: Int, )</ID>
+    <ID>LongParameterList:FrontendConnectionErrorScreen.kt$( errorDescription: String, errorType: String, expanded: Boolean, showConnectivityChecks: Boolean, connectivityCheckState: ConnectivityCheckState, onRetryConnectivityCheck: () -&gt; Unit, )</ID>
+    <ID>LongParameterList:FrontendConnectionErrorScreen.kt$( onOpenExternalLink: suspend (Uri) -&gt; Unit, icon: ImageVector, title: String, subtitle: String, url: String?, connectivityCheckState: ConnectivityCheckState, onRetryConnectivityCheck: () -&gt; Unit, errorDescription: String, errorType: String, errorDetailsExpanded: Boolean, modifier: Modifier = Modifier, actions: @Composable () -&gt; Unit = {}, )</ID>
+    <ID>LongParameterList:FrontendConnectionErrorScreen.kt$( onOpenExternalLink: suspend (Uri) -&gt; Unit, title: String, subtitle: String, errorDescription: String, errorType: String, url: String?, icon: ImageVector, errorDetailsExpanded: Boolean, connectivityCheckState: ConnectivityCheckState, onRetryConnectivityCheck: () -&gt; Unit, actions: @Composable () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:FrontendMessageHandler.kt$FrontendMessageHandler$( private val externalBusRepository: FrontendExternalBusRepository, private val packageManager: PackageManager, private val matterManager: MatterManager, private val threadManager: ThreadManager, private val appVersionProvider: AppVersionProvider, private val sessionManager: ServerSessionManager, @param:IsAutomotive private val isAutomotive: Boolean, )</ID>
+    <ID>LongParameterList:FrontendNavigation.kt$( navController: NavController, onOpenExternalLink: suspend (Uri) -&gt; Unit = {}, onNavigateToSettings: (SettingsActivity.Deeplink?) -&gt; Unit, onSecurityLevelHelpClick: suspend () -&gt; Unit, onOpenLocationSettings: () -&gt; Unit, onConfigureHomeNetwork: (serverId: Int) -&gt; Unit, onShowSnackbar: suspend (message: String, action: String?) -&gt; Boolean, )</ID>
+    <ID>LongParameterList:FrontendScreen.kt$( onBackClick: () -&gt; Unit, onWebViewCreated: (WebView) -&gt; Unit, webViewClient: WebViewClient, frontendJsCallback: FrontendJsCallback, contentState: FrontendViewState.Content?, onWebViewCreationFailed: (Throwable) -&gt; Unit, webChromeClient: WebChromeClient? = null, )</ID>
+    <ID>LongParameterList:FrontendScreen.kt$( onBackClick: () -&gt; Unit, viewModel: FrontendViewModel, onOpenExternalLink: suspend (Uri) -&gt; Unit, onBlockInsecureHelpClick: suspend () -&gt; Unit, onOpenSettings: () -&gt; Unit, onOpenLocationSettings: () -&gt; Unit, onConfigureHomeNetwork: (serverId: Int) -&gt; Unit, onSecurityLevelHelpClick: suspend () -&gt; Unit, onShowSnackbar: suspend (message: String, action: String?) -&gt; Boolean, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:FrontendScreen.kt$( onBackClick: () -&gt; Unit, viewState: FrontendViewState, webViewClient: WebViewClient, webChromeClient: WebChromeClient, frontendJsCallback: FrontendJsCallback, scriptsToEvaluate: Flow&lt;WebViewScript&gt;, onBlockInsecureRetry: () -&gt; Unit, onOpenExternalLink: suspend (Uri) -&gt; Unit, onBlockInsecureHelpClick: suspend () -&gt; Unit, onOpenSettings: () -&gt; Unit, onChangeSecurityLevel: () -&gt; Unit, onOpenLocationSettings: () -&gt; Unit, onConfigureHomeNetwork: (serverId: Int) -&gt; Unit, onSecurityLevelHelpClick: suspend () -&gt; Unit, onShowSnackbar: suspend (message: String, action: String?) -&gt; Boolean, onWebViewCreationFailed: (Throwable) -&gt; Unit, modifier: Modifier = Modifier, pendingWebViewPermission: PendingWebViewPermissionRequest? = null, onWebViewPermissionResult: (Map&lt;String, Boolean&gt;) -&gt; Unit = {}, errorStateProvider: FrontendConnectionErrorStateProvider = FrontendConnectionErrorStateProvider.noOp, securityLevelViewModel: LocationForSecureConnectionViewModel? = null, onSecurityLevelDone: () -&gt; Unit = {}, onNotificationPermissionResult: (Boolean) -&gt; Unit = {}, supportsNotificationPermission: Boolean = Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.TIRAMISU, )</ID>
+    <ID>LongParameterList:FrontendScreen.kt$( viewState: FrontendViewState, errorStateProvider: FrontendConnectionErrorStateProvider, securityLevelViewModel: LocationForSecureConnectionViewModel?, onSecurityLevelDone: () -&gt; Unit, onSecurityLevelHelpClick: suspend () -&gt; Unit, onRetry: () -&gt; Unit, onInsecureHelpClick: suspend () -&gt; Unit, onOpenSettings: () -&gt; Unit, onChangeSecurityLevel: () -&gt; Unit, onOpenLocationSettings: () -&gt; Unit, onConfigureHomeNetwork: (serverId: Int) -&gt; Unit, onOpenExternalLink: suspend (Uri) -&gt; Unit, onShowSnackbar: suspend (message: String, action: String?) -&gt; Boolean, onNotificationPermissionResult: (Boolean) -&gt; Unit, supportsNotificationPermission: Boolean, )</ID>
+    <ID>LongParameterList:FrontendScreen.kt$( viewState: FrontendViewState.Insecure, onRetry: () -&gt; Unit, onHelpClick: suspend () -&gt; Unit, onOpenSettings: () -&gt; Unit, onChangeSecurityLevel: () -&gt; Unit, onOpenLocationSettings: () -&gt; Unit, onConfigureHomeNetwork: (serverId: Int) -&gt; Unit, )</ID>
+    <ID>LongParameterList:FrontendViewModel.kt$FrontendViewModel$( initialServerId: Int, initialPath: String?, webViewClientFactory: HAWebViewClientFactory, private val frontendMessageHandler: FrontendMessageHandler, private val urlManager: FrontendUrlManager, private val connectivityCheckRepository: ConnectivityCheckRepository, private val permissionManager: PermissionManager, )</ID>
+    <ID>LongParameterList:HAWebViewClient.kt$HAWebViewClient$( keyChainRepository: KeyChainRepository, private val currentUrlFlow: StateFlow&lt;String?&gt;, private val onFrontendError: (FrontendConnectionError) -&gt; Unit, private val frontendJsCallback: FrontendJsCallback?, private val onCrash: (() -&gt; Unit)?, private val onUrlIntercepted: ((uri: Uri, isTLSClientAuthNeeded: Boolean) -&gt; Boolean)?, private val onPageFinished: (() -&gt; Unit)?, )</ID>
+    <ID>LongParameterList:HaControlsProviderService.kt$HaControlsProviderService$( subscriber: Flow.Subscriber&lt;in Control&gt;, controlIds: List&lt;String&gt;, entities: Map&lt;String, Entity&gt;, serverId: Int, serverName: String?, coroutineScope: CoroutineScope, baseUrl: String, )</ID>
+    <ID>LongParameterList:LaunchViewModel.kt$LaunchViewModel$( initialDeepLink: LaunchActivity.DeepLink?, private val workManager: WorkManager, private val serverManager: ServerManager, private val networkStatusMonitor: NetworkStatusMonitor, private val hasLocationTrackingSupport: Boolean, isAutomotive: Boolean, isFullFlavor: Boolean, )</ID>
+    <ID>LongParameterList:MainVehicleScreen.kt$MainVehicleScreen$( carContext: CarContext, val serverManager: ServerManager, private val serverId: StateFlow&lt;Int&gt;, private val allEntities: Flow&lt;Map&lt;String, Entity&gt;&gt;, private val prefsRepository: PrefsRepository, private val onChangeServer: (Int) -&gt; Unit, private val onRefresh: () -&gt; Unit, )</ID>
+    <ID>LongParameterList:ManageControlsView.kt$( panelEnabled: Boolean, authSetting: ControlsAuthRequiredSetting, authRequiredList: List&lt;String&gt;, entitiesLoaded: Boolean, entitiesList: Map&lt;Int, List&lt;Entity&gt;&gt;, panelSetting: Pair&lt;String?, Int&gt;?, serversList: List&lt;Server&gt;, structureEnabled: Boolean, defaultServer: Int, onSetPanelEnabled: (Boolean) -&gt; Unit, onSelectAll: () -&gt; Unit, onSelectNone: () -&gt; Unit, onSelectEntity: (String, Int) -&gt; Unit, onSetPanelSetting: (String, Int) -&gt; Unit, onSetStructureEnabled: (Boolean) -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:ManageShortcutsViewModel.kt$ManageShortcutsViewModel$( shortcutId: String, serverId: Int, shortcutLabel: String, shortcutDesc: String, shortcutPath: String, icon: IIcon?, )</ID>
+    <ID>LongParameterList:ManageWidgetsViewModel.kt$ManageWidgetsViewModel$( buttonWidgetDao: ButtonWidgetDao, cameraWidgetDao: CameraWidgetDao, staticWidgetDao: StaticWidgetDao, todoWidgetDao: TodoWidgetDao, mediaPlayerControlsWidgetDao: MediaPlayerControlsWidgetDao, templateWidgetDao: TemplateWidgetDao, application: Application, )</ID>
+    <ID>LongParameterList:ManualServerScreen.kt$( isServerUrlValid: Boolean, onBackClick: () -&gt; Unit, onConnectClick: () -&gt; Unit, onHelpClick: suspend () -&gt; Unit, onServerUrlChange: (String) -&gt; Unit, serverUrl: String, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:MessagingManager.kt$MessagingManager$( @ApplicationContext val context: Context, private val okHttpClient: OkHttpClient, private val serverManager: ServerManager, private val prefsRepository: PrefsRepository, private val notificationDao: NotificationDao, private val sensorDao: SensorDao, private val settingsDao: SettingsDao, private val textToSpeechClient: TextToSpeechClient, private val flashlightHelper: FlashlightHelper, private val permissionRequestMediator: PermissionRequestMediator, private val assistConfigManager: AssistConfigManager, private val defaultAssistantManager: DefaultAssistantManager, )</ID>
+    <ID>LongParameterList:NameYourDeviceScreen.kt$( onHelpClick: suspend () -&gt; Unit, onBackClick: () -&gt; Unit, deviceName: String, onDeviceNameChange: (String) -&gt; Unit, saveClickable: Boolean, deviceNameEditable: Boolean, onSaveClick: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:OnboardingNavigation.kt$( navController: NavController, onShowSnackbar: suspend (message: String, action: String?) -&gt; Boolean, onOnboardingDone: () -&gt; Unit, urlToOnboard: String?, hideExistingServers: Boolean, skipWelcome: Boolean, hasLocationTracking: Boolean, )</ID>
+    <ID>LongParameterList:OnboardingNavigation.kt$( serverId: Int, hasPlainTextAccess: Boolean, isPubliclyAccessible: Boolean, hasLocationTracking: Boolean, navOptions: NavOptions, onOnboardingDone: () -&gt; Unit, )</ID>
+    <ID>LongParameterList:ServerDiscoveryScreen.kt$( discoveryState: DiscoveryState, onBackClick: () -&gt; Unit, onConnectClick: (server: URL) -&gt; Unit, onDismissOneServerFound: () -&gt; Unit, onHelpClick: suspend () -&gt; Unit, onManualSetupClick: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:SetHomeNetworkScreen.kt$( currentWifiNetwork: String, onCurrentWifiNetworkChange: (String) -&gt; Unit, showVpn: Boolean, isUsingVpn: Boolean, onUsingVpnChange: (Boolean) -&gt; Unit, showEthernet: Boolean, isUsingEthernet: Boolean, onUsingEthernetChange: (Boolean) -&gt; Unit, onNextClick: () -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:SetHomeNetworkScreen.kt$( onHelpClick: suspend () -&gt; Unit, onNextClick: () -&gt; Unit, currentWifiNetwork: String, onCurrentWifiNetworkChange: (String) -&gt; Unit, showVpn: Boolean, isUsingVpn: Boolean, onUsingVpnChange: (Boolean) -&gt; Unit, showEthernet: Boolean, isUsingEthernet: Boolean, onUsingEthernetChange: (Boolean) -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:SettingsPresenterImpl.kt$SettingsPresenterImpl$( private val serverManager: ServerManager, private val prefsRepository: PrefsRepository, private val nightModeManager: NightModeManager, private val langsManager: LanguagesManager, private val changeLog: ChangeLog, private val settingsDao: SettingsDao, private val defaultAssistantManager: DefaultAssistantManager, )</ID>
+    <ID>LongParameterList:SsidView.kt$( wifiSsids: List&lt;String&gt;, canReadWifi: Boolean, ethernet: Boolean?, vpn: Boolean?, prioritizeInternal: Boolean, usingWifi: Boolean, activeSsid: String?, activeBssid: String?, onAddWifiSsid: (String) -&gt; Boolean, onRemoveWifiSsid: (String) -&gt; Unit, onRequestPermission: () -&gt; Unit, onSetEthernet: (Boolean) -&gt; Unit, onSetVpn: (Boolean) -&gt; Unit, onSetPrioritize: (Boolean) -&gt; Unit, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:TemplateComponents.kt$( carContext: CarContext, lifecycleScope: LifecycleCoroutineScope, screenManager: ScreenManager, serverManager: ServerManager, serverId: StateFlow&lt;Int&gt;, onChangeServer: (Int) -&gt; Unit, )</ID>
+    <ID>LongParameterList:TemplateComponents.kt$( carContext: CarContext, screenManager: ScreenManager, serverManager: ServerManager, serverId: StateFlow&lt;Int&gt;, allEntities: Flow&lt;Map&lt;String, Entity&gt;&gt;, prefsRepository: PrefsRepository, entityRegistry: List&lt;EntityRegistryResponse&gt;?, )</ID>
+    <ID>LongParameterList:TemplateComponents.kt$( domains: MutableSet&lt;String&gt;, carContext: CarContext, screenManager: ScreenManager, serverManager: ServerManager, serverId: StateFlow&lt;Int&gt;, prefsRepository: PrefsRepository, allEntities: Flow&lt;Map&lt;String, Entity&gt;&gt;, entityRegistry: List&lt;EntityRegistryResponse&gt;?, lifecycleScope: LifecycleCoroutineScope, )</ID>
+    <ID>LongParameterList:TodoWidgetConfigureActivity.kt$( servers: List&lt;Server&gt;, selectedServerId: Int, onServerSelected: (Int) -&gt; Unit, entities: List&lt;Entity&gt;, selectedEntityId: String?, onEntitySelected: (String?) -&gt; Unit, showCompleted: Boolean, onShowCompletedChanged: (Boolean) -&gt; Unit, selectedBackgroundType: WidgetBackgroundType, onBackgroundTypeSelected: (WidgetBackgroundType) -&gt; Unit, textColorIndex: Int, onTextColorSelected: (Int) -&gt; Unit, isUpdateWidget: Boolean, onActionClick: () -&gt; Unit, entityRegistry: List&lt;EntityRegistryResponse&gt;? = null, deviceRegistry: List&lt;DeviceRegistryResponse&gt;? = null, areaRegistry: List&lt;AreaRegistryResponse&gt;? = null, )</ID>
+    <ID>LongParameterList:WearMTLSScreen.kt$( onHelpClick: suspend () -&gt; Unit, onBackClick: () -&gt; Unit, onNext: (certUri: Uri, certPassword: String) -&gt; Unit, onPasswordChange: (String) -&gt; Unit, onFileChange: (Uri?) -&gt; Unit, selectedUri: Uri?, selectedFilename: String?, currentPassword: String, isCertValidated: Boolean, isError: Boolean, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:WearMTLSScreen.kt$( onNext: (certUri: Uri, certPassword: String) -&gt; Unit, onPasswordChange: (String) -&gt; Unit, onFileChange: (Uri?) -&gt; Unit, selectedUri: Uri?, selectedFilename: String?, currentPassword: String, isCertValidated: Boolean, isError: Boolean, modifier: Modifier = Modifier, )</ID>
+    <ID>LongParameterList:WebViewContentScreen.kt$( webView: WebView?, nightModeTheme: NightModeTheme?, snackbarHostState: SnackbarHostState, currentAppLocked: Boolean, statusBarColor: Color?, backgroundColor: Color?, serverHandleInsets: Boolean, )</ID>
+    <ID>LongParameterList:WebViewContentScreen.kt$( webView: WebView?, player: Player?, snackbarHostState: SnackbarHostState, playerSize: DpSize?, playerTop: Dp, playerLeft: Dp, currentAppLocked: Boolean, customViewFromWebView: View?, shouldAskNotificationPermission: Boolean, webViewInitialized: Boolean, onFullscreenClicked: (isFullscreen: Boolean) -&gt; Unit, onNotificationPermissionResult: (Boolean) -&gt; Unit, serverHandleInsets: Boolean, nightModeTheme: NightModeTheme? = null, statusBarColor: Color? = null, backgroundColor: Color? = null, supportsNotificationPermission: Boolean = Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.TIRAMISU, )</ID>
+    <ID>LongParameterList:WebViewPresenterImpl.kt$WebViewPresenterImpl$( @ActivityContext context: Context, private val serverManager: ServerManager, private val externalBusRepository: ExternalBusRepository, private val improvRepository: ImprovRepository, private val prefsRepository: PrefsRepository, private val matterUseCase: MatterManager, private val threadUseCase: ThreadManager, private val settingsDao: SettingsDao, )</ID>
+    <ID>LoopWithTooManyJumpStatements:OnSwipeListener.kt$OnSwipeListener$for</ID>
+    <ID>MagicNumber:AssistSheetView.kt$0.5f</ID>
+    <ID>MagicNumber:AssistSheetView.kt$600</ID>
+    <ID>MagicNumber:AssistShortcutViewModel.kt$AssistShortcutViewModel$2023</ID>
+    <ID>MagicNumber:AssistShortcutViewModel.kt$AssistShortcutViewModel$5</ID>
+    <ID>MagicNumber:AssistViewModel.kt$AssistViewModel$2023</ID>
+    <ID>MagicNumber:AssistViewModel.kt$AssistViewModel$5</ID>
+    <ID>MagicNumber:BarcodeScannerView.kt$0.5</ID>
+    <ID>MagicNumber:BarcodeScannerView.kt$0.5f</ID>
+    <ID>MagicNumber:ButtonWidget.kt$ButtonWidget$16</ID>
+    <ID>MagicNumber:ButtonWidget.kt$ButtonWidget$24</ID>
+    <ID>MagicNumber:ClimateControl.kt$ClimateControl$0.5f</ID>
+    <ID>MagicNumber:ClimateControl.kt$ClimateControl$100f</ID>
+    <ID>MagicNumber:ContextExtensions.kt$0xFFFFFF</ID>
+    <ID>MagicNumber:CoverControl.kt$CoverControl$100f</ID>
+    <ID>MagicNumber:CrashSaving.kt$12</ID>
+    <ID>MagicNumber:DefaultAssistantManager.kt$DefaultAssistantManagerImpl$2023</ID>
+    <ID>MagicNumber:DefaultAssistantManager.kt$DefaultAssistantManagerImpl$5</ID>
+    <ID>MagicNumber:DeveloperSettingsFragment.kt$DeveloperSettingsFragment$750L</ID>
+    <ID>MagicNumber:DynamicColorSensorManager.kt$DynamicColorSensorManager$0xFFFFFF</ID>
+    <ID>MagicNumber:EmptyState.kt$0.7f</ID>
+    <ID>MagicNumber:EntityGridVehicleScreen.kt$EntityGridVehicleScreen$3</ID>
+    <ID>MagicNumber:EntityGridVehicleScreen.kt$EntityGridVehicleScreen$64</ID>
+    <ID>MagicNumber:EntityWidget.kt$EntityWidget$2023</ID>
+    <ID>MagicNumber:EntityWidget.kt$EntityWidget$3</ID>
+    <ID>MagicNumber:ExternalBusMessage.kt$NavigateTo.Companion$2025</ID>
+    <ID>MagicNumber:ExternalBusMessage.kt$NavigateTo.Companion$6</ID>
+    <ID>MagicNumber:FanControl.kt$FanControl$100f</ID>
+    <ID>MagicNumber:FragmentExtensions.kt$0.03f</ID>
+    <ID>MagicNumber:GesturesScreen.kt$200</ID>
+    <ID>MagicNumber:HAWebView.kt$5</ID>
+    <ID>MagicNumber:HAWebViewClient.kt$HAWebViewClient$400</ID>
+    <ID>MagicNumber:HaControl.kt$HaControl$48</ID>
+    <ID>MagicNumber:HaControlsProviderService.kt$HaControlsProviderService$2022</ID>
+    <ID>MagicNumber:HaControlsProviderService.kt$HaControlsProviderService$4</ID>
+    <ID>MagicNumber:HaControlsProviderService.kt$HaControlsProviderService$404</ID>
+    <ID>MagicNumber:HealthConnectSensorManager.kt$HealthConnectSensorManager$30</ID>
+    <ID>MagicNumber:IconDialogFragment.kt$IconDialogFragment$0.9</ID>
+    <ID>MagicNumber:IconDialogFragment.kt$IconDialogFragment$480f</ID>
+    <ID>MagicNumber:IconDialogFragment.kt$IconDialogFragment$500f</ID>
+    <ID>MagicNumber:ImprovSheetView.kt$0.8f</ID>
+    <ID>MagicNumber:LastAppSensorManager.kt$LastAppSensorManager$1000</ID>
+    <ID>MagicNumber:LightControl.kt$LightControl$100</ID>
+    <ID>MagicNumber:LightControl.kt$LightControl$100f</ID>
+    <ID>MagicNumber:LightControl.kt$LightControl$255</ID>
+    <ID>MagicNumber:LoginScreen.kt$LoginScreen$1000</ID>
+    <ID>MagicNumber:MainVehicleScreen.kt$MainVehicleScreen$1000</ID>
+    <ID>MagicNumber:MainVehicleScreen.kt$MainVehicleScreen$64</ID>
+    <ID>MagicNumber:ManageControlsView.kt$0.5f</ID>
+    <ID>MagicNumber:ManageShortcutsSettingsFragment.kt$ManageShortcutsSettingsFragment$3</ID>
+    <ID>MagicNumber:ManageShortcutsSettingsFragment.kt$ManageShortcutsSettingsFragment$4</ID>
+    <ID>MagicNumber:ManageShortcutsSettingsFragment.kt$ManageShortcutsSettingsFragment$5</ID>
+    <ID>MagicNumber:ManageShortcutsView.kt$5</ID>
+    <ID>MagicNumber:ManageShortcutsView.kt$6</ID>
+    <ID>MagicNumber:ManageShortcutsViewModel.kt$ManageShortcutsViewModel$108f</ID>
+    <ID>MagicNumber:ManageShortcutsViewModel.kt$ManageShortcutsViewModel$48</ID>
+    <ID>MagicNumber:MapVehicleScreen.kt$MapVehicleScreen$64</ID>
+    <ID>MagicNumber:MediaPlayerControl.kt$MediaPlayerControl$100</ID>
+    <ID>MagicNumber:MediaPlayerControl.kt$MediaPlayerControl$100f</ID>
+    <ID>MagicNumber:MediaPlayerControlsWidget.kt$MediaPlayerControlsWidget$10</ID>
+    <ID>MagicNumber:MediaPlayerControlsWidget.kt$MediaPlayerControlsWidget$1024</ID>
+    <ID>MagicNumber:MessagingManager.kt$MessagingManager$1000</ID>
+    <ID>MagicNumber:MessagingManager.kt$MessagingManager$1000L</ID>
+    <ID>MagicNumber:MessagingManager.kt$MessagingManager$255</ID>
+    <ID>MagicNumber:MessagingManager.kt$MessagingManager$3</ID>
+    <ID>MagicNumber:MessagingManager.kt$MessagingManager$30</ID>
+    <ID>MagicNumber:MessagingManager.kt$MessagingManager$3000</ID>
+    <ID>MagicNumber:MessagingManager.kt$MessagingManager$480</ID>
+    <ID>MagicNumber:MessagingManager.kt$MessagingManager$5</ID>
+    <ID>MagicNumber:MessagingManager.kt$MessagingManager$5000000</ID>
+    <ID>MagicNumber:MicroWakeWord.kt$MicroWakeWord$0xFF</ID>
+    <ID>MagicNumber:MicroWakeWord.kt$MicroWakeWord$127</ID>
+    <ID>MagicNumber:MicroWakeWord.kt$MicroWakeWord$128</ID>
+    <ID>MagicNumber:MicroWakeWord.kt$MicroWakeWord$4</ID>
+    <ID>MagicNumber:NameYourDeviceViewModel.kt$NameYourDeviceViewModel$404</ID>
+    <ID>MagicNumber:NfcReadView.kt$0.75f</ID>
+    <ID>MagicNumber:NfcViewModel.kt$NfcViewModel$12</ID>
+    <ID>MagicNumber:NfcViewModel.kt$NfcViewModel$2022</ID>
+    <ID>MagicNumber:NfcWriteView.kt$0.75f</ID>
+    <ID>MagicNumber:NotificationActionReceiver.kt$NotificationActionReceiver$3</ID>
+    <ID>MagicNumber:NotificationChannelView.kt$30</ID>
+    <ID>MagicNumber:NotificationDetailView.kt$16f</ID>
+    <ID>MagicNumber:NotificationHistoryFragment.kt$NotificationHistoryFragment$25</ID>
+    <ID>MagicNumber:NotificationHistoryFragment.kt$NotificationHistoryFragment.&lt;no name provided&gt;$100</ID>
+    <ID>MagicNumber:NotificationHistoryFragment.kt$NotificationHistoryFragment.&lt;no name provided&gt;$25</ID>
+    <ID>MagicNumber:NotificationHistoryFragment.kt$NotificationHistoryFragment.&lt;no name provided&gt;$50</ID>
+    <ID>MagicNumber:NotificationSensorManager.kt$NotificationSensorManager$255</ID>
+    <ID>MagicNumber:OnSwipeListener.kt$OnSwipeListener$1000</ID>
+    <ID>MagicNumber:OnSwipeListener.kt$OnSwipeListener$500</ID>
+    <ID>MagicNumber:SensorDetailView.kt$0.5f</ID>
+    <ID>MagicNumber:SensorDetailViewModel.kt$SensorDetailViewModel$1000L</ID>
+    <ID>MagicNumber:SensorWorker.kt$SensorWorker.Companion$15</ID>
+    <ID>MagicNumber:ServerDiscoveryScreen.kt$0.2f</ID>
+    <ID>MagicNumber:ServerDiscoveryScreen.kt$2042</ID>
+    <ID>MagicNumber:ServerDiscoveryScreen.kt$42</ID>
+    <ID>MagicNumber:ServerSettingsFragment.kt$ServerSettingsFragment$2500L</ID>
+    <ID>MagicNumber:SettingsActivity.kt$SettingsActivity$8f</ID>
+    <ID>MagicNumber:SettingsFragment.kt$SettingsFragment$100</ID>
+    <ID>MagicNumber:SettingsFragment.kt$SettingsFragment$115</ID>
+    <ID>MagicNumber:SettingsFragment.kt$SettingsFragment$125</ID>
+    <ID>MagicNumber:SettingsFragment.kt$SettingsFragment$150</ID>
+    <ID>MagicNumber:SettingsFragment.kt$SettingsFragment$175</ID>
+    <ID>MagicNumber:SettingsFragment.kt$SettingsFragment$200</ID>
+    <ID>MagicNumber:SettingsFragment.kt$SettingsFragment$50</ID>
+    <ID>MagicNumber:SettingsFragment.kt$SettingsFragment$5_000</ID>
+    <ID>MagicNumber:SettingsFragment.kt$SettingsFragment$75</ID>
+    <ID>MagicNumber:SettingsFragment.kt$SettingsFragment$85</ID>
+    <ID>MagicNumber:TagReaderView.kt$0.75f</ID>
+    <ID>MagicNumber:TemplateComponents.kt$64</ID>
+    <ID>MagicNumber:TileExtensions.kt$TileExtensions$1000</ID>
+    <ID>MagicNumber:TileExtensions.kt$TileExtensions$48</ID>
+    <ID>MagicNumber:TileExtensions.kt$TileExtensions$500</ID>
+    <ID>MagicNumber:TileSlot.kt$4</ID>
+    <ID>MagicNumber:TodoGlanceAppWidget.kt$250</ID>
+    <ID>MagicNumber:TodoGlanceAppWidget.kt$320</ID>
+    <ID>MagicNumber:WebViewActivity.kt$WebViewActivity$0.5</ID>
+    <ID>MagicNumber:WebViewActivity.kt$WebViewActivity$1000</ID>
+    <ID>MagicNumber:WebViewActivity.kt$WebViewActivity$1080</ID>
+    <ID>MagicNumber:WebViewActivity.kt$WebViewActivity$1500</ID>
+    <ID>MagicNumber:WebViewActivity.kt$WebViewActivity$1920</ID>
+    <ID>MagicNumber:WebViewActivity.kt$WebViewActivity$2025</ID>
+    <ID>MagicNumber:WebViewActivity.kt$WebViewActivity$2026</ID>
+    <ID>MagicNumber:WebViewActivity.kt$WebViewActivity$400</ID>
+    <ID>MagicNumber:WebViewActivity.kt$WebViewActivity$5</ID>
+    <ID>MagicNumber:WebViewActivity.kt$WebViewActivity$50</ID>
+    <ID>MagicNumber:WebViewActivity.kt$WebViewActivity$500</ID>
+    <ID>MagicNumber:WebViewActivity.kt$WebViewActivity$6</ID>
+    <ID>MagicNumber:WebViewActivity.kt$WebViewActivity$67</ID>
+    <ID>MagicNumber:WebViewActivity.kt$WebViewActivity$68</ID>
+    <ID>MagicNumber:WebViewActivity.kt$WebViewActivity.&lt;no name provided&gt;$100</ID>
+    <ID>MagicNumber:WebViewActivity.kt$WebViewActivity.&lt;no name provided&gt;$2000L</ID>
+    <ID>MagicNumber:WebViewActivity.kt$WebViewActivity.&lt;no name provided&gt;$500</ID>
+    <ID>MagicNumber:WebViewActivity.kt$WebViewActivity.&lt;no name provided&gt;$75</ID>
+    <ID>MagicNumber:WebViewPresenterImpl.kt$WebViewPresenterImpl$1000</ID>
+    <ID>MagicNumber:WebViewPresenterImpl.kt$WebViewPresenterImpl$2021</ID>
+    <ID>MagicNumber:WebViewPresenterImpl.kt$WebViewPresenterImpl$3</ID>
+    <ID>MagicNumber:WebViewPresenterImpl.kt$WebViewPresenterImpl$5</ID>
+    <ID>MagicNumber:WebsocketManager.kt$WebsocketManager$30000</ID>
+    <ID>MagicNumber:WebsocketManager.kt$WebsocketManager.Companion$15</ID>
+    <ID>MagicNumber:WelcomeScreen.kt$0.2f</ID>
+    <ID>MatchingDeclarationName:AutomotiveNavigation.kt$AutomotiveRoute : HAStartDestinationRoute</ID>
+    <ID>MatchingDeclarationName:ConnectionNavigation.kt$ConnectionRoute</ID>
+    <ID>MatchingDeclarationName:LoadingNavigation.kt$LoadingRoute</ID>
+    <ID>MatchingDeclarationName:LocalFirstNavigation.kt$LocalFirstRoute</ID>
+    <ID>MatchingDeclarationName:LocationSharingNavigation.kt$LocationSharingRoute</ID>
+    <ID>MatchingDeclarationName:ManageWidgetsView.kt$WidgetType</ID>
+    <ID>MatchingDeclarationName:ManualServerNavigation.kt$ManualServerRoute</ID>
+    <ID>MatchingDeclarationName:NameYourDeviceNavigation.kt$NameYourDeviceRoute</ID>
+    <ID>MatchingDeclarationName:NameYourWearDeviceNavigation.kt$NameYourWearDeviceRoute</ID>
+    <ID>MatchingDeclarationName:SetHomeNetworkNavigation.kt$SetHomeNetworkRoute</ID>
+    <ID>MatchingDeclarationName:WelcomeNavigation.kt$WelcomeRoute</ID>
+    <ID>MaxLineLength:AssistConfigManagerTest.kt$AssistConfigManagerTest.SetWakeWordEnabledTest$fun</ID>
+    <ID>MaxLineLength:AssistSettingsViewModelTest.kt$AssistSettingsViewModelTest.MissingPlayServicesHintTest$fun</ID>
+    <ID>MaxLineLength:AssistSettingsViewModelTest.kt$AssistSettingsViewModelTest.ToggleWakeWordTest$coEvery { assistConfigManager.getSelectedWakeWordModel() } returnsMany listOf(null, microWakeWordModelConfigs[1])</ID>
+    <ID>MaxLineLength:AssistSettingsViewModelTest.kt$AssistSettingsViewModelTest.ToggleWakeWordTest$fun</ID>
+    <ID>MaxLineLength:AssistViewModel.kt$AssistViewModel$/** When true, the UI should not be shown yet (waiting to confirm the pipeline is not a duplicate wake-up). The activity should finish if a duplicate is detected. */</ID>
+    <ID>MaxLineLength:AssistViewModelTest.kt$AssistViewModelTest$private</ID>
+    <ID>MaxLineLength:AssistViewModelTest.kt$AssistViewModelTest.InactivityTimerTest$fun</ID>
+    <ID>MaxLineLength:AssistVoiceInteractionServiceTest.kt$AssistVoiceInteractionServiceTest$every { create(capture(onWakeWordDetectedSlot), any(), any(), capture(onListenerFailureSlot)) } returns wakeWordListener</ID>
+    <ID>MaxLineLength:AssistVoiceInteractionServiceTest.kt$AssistVoiceInteractionServiceTest$fun</ID>
+    <ID>MaxLineLength:AssistVoiceInteractionServiceTest.kt$AssistVoiceInteractionServiceTest$private</ID>
+    <ID>MaxLineLength:AutomotiveNavigation.kt$// Inspired from activity&lt;T&gt; { } to be able to give a ComponentName instead of a class since :app doesn't know :automotive</ID>
+    <ID>MaxLineLength:BaseGlanceEntityWidgetReceiver.kt$BaseGlanceEntityWidgetReceiver$"Found widgets $invalidWidgetIds in database, but not in AppWidgetManager - removing it from the database."</ID>
+    <ID>MaxLineLength:BaseGlanceEntityWidgetReceiver.kt$BaseGlanceEntityWidgetReceiver$*</ID>
+    <ID>MaxLineLength:BaseGlanceEntityWidgetReceiverTest.kt$BaseGlanceEntityWidgetReceiverTest$every { intent.getIntExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, AppWidgetManager.INVALID_APPWIDGET_ID) } returns (appWidgetId ?: AppWidgetManager.INVALID_APPWIDGET_ID)</ID>
+    <ID>MaxLineLength:BaseGlanceEntityWidgetReceiverTest.kt$BaseGlanceEntityWidgetReceiverTest$fun</ID>
+    <ID>MaxLineLength:BaseGlanceEntityWidgetReceiverTest.kt$BaseGlanceEntityWidgetReceiverTest$return</ID>
+    <ID>MaxLineLength:BaseGlanceEntityWidgetReceiverTest.kt$BaseGlanceEntityWidgetReceiverTest.&lt;no name provided&gt;$override suspend fun getWidgetEntitiesByServer(context: Context): Map&lt;Int, EntitiesPerServer&gt;</ID>
+    <ID>MaxLineLength:BaseWidgetConfigureActivity.kt$BaseWidgetConfigureActivity$// We need the PendingIntent to be mutable so the system inject the EXTRA_APPWIDGET_ID of the created widget</ID>
+    <ID>MaxLineLength:BlockInsecureViewModelTest.kt$BlockInsecureViewModelTest$fun</ID>
+    <ID>MaxLineLength:ChangeLogTest.kt$ChangeLogTest$fun</ID>
+    <ID>MaxLineLength:ConnectionNavigationTest.kt$ConnectionNavigationTest$fun</ID>
+    <ID>MaxLineLength:ConnectionScreenTest.kt$ConnectionScreenTest$onNodeWithContentDescription(stringResource(commonR.string.loading_content_description)).assertIsNotDisplayed()</ID>
+    <ID>MaxLineLength:ConnectionSecurityLevelFragment.kt$ConnectionSecurityLevelFragment$*</ID>
+    <ID>MaxLineLength:ConnectionViewModelTest.kt$ConnectionViewModelTest$fun</ID>
+    <ID>MaxLineLength:ConnectionViewModelTest.kt$ConnectionViewModelTest$private suspend inline</ID>
+    <ID>MaxLineLength:ConnectionViewModelTest.kt$ConnectionViewModelTest$val expectedAuthUrl = "$baseUrl/auth/authorize?response_type=code&amp;client_id=${AuthenticationService.CLIENT_ID}&amp;redirect_uri=homeassistant://auth-callback"</ID>
+    <ID>MaxLineLength:ConnectionViewModelTest.kt$ConnectionViewModelTest$val viewModel = ConnectionViewModel("http://homeassistant.local:8123", webViewClientFactory, connectivityCheckRepository)</ID>
+    <ID>MaxLineLength:CrashSaving.kt$* Final location of a file on the device is /data/data/io.homeassistant.companion.android&lt;.debug&gt;/cache/fatalcrash/last_crash</ID>
+    <ID>MaxLineLength:EntityAddToActionTest.kt$EntityAddToActionTest$every { context.getString(commonR.string.add_to_android_auto_driving_favorite) } returns "Add to driving favorites"</ID>
+    <ID>MaxLineLength:EntityAddToHandlerTest.kt$EntityAddToHandlerTest$// Always override the handler so individual test can decide to override it or not without impacting the other tests</ID>
+    <ID>MaxLineLength:EntityAddToHandlerTest.kt$EntityAddToHandlerTest$fun</ID>
+    <ID>MaxLineLength:EntityAddToHandlerTest.kt$EntityAddToHandlerTest$val actions = handler.actionsForEntity(isFullFlavor = isFullFlavor, isAutomotive = true, isQuest = false, entityId)</ID>
+    <ID>MaxLineLength:EntityAddToHandlerTest.kt$EntityAddToHandlerTest$val actions = handler.actionsForEntity(isFullFlavor = true, isAutomotive = false, isQuest = false, entityId = entityId)</ID>
+    <ID>MaxLineLength:EntityPickerTest.kt$EntityPickerTest$composeTestRule.onNodeWithContentDescription(composeTestRule.stringResource(commonR.string.search_clear_selection))</ID>
+    <ID>MaxLineLength:EntityWidgetTest.kt$EntityWidgetTest$coEvery { dao.get(appWidgetId) } returns createWidgetEntity(attributeIds = "unit_of_measurement", lastUpdate = "")</ID>
+    <ID>MaxLineLength:EntityWidgetTest.kt$EntityWidgetTest$coEvery { dao.get(appWidgetId) } returns createWidgetEntity(attributeIds = "unit_of_measurement", lastUpdate = "5 W")</ID>
+    <ID>MaxLineLength:EntityWidgetTest.kt$EntityWidgetTest$fun</ID>
+    <ID>MaxLineLength:ForegroundServiceLauncher.kt$ForegroundServiceLauncher$"Service ${serviceClass.simpleName} should be stopped after. Service will be stopped after is started..."</ID>
+    <ID>MaxLineLength:ForegroundServiceLauncher.kt$ForegroundServiceLauncher$"Stop service ${serviceClass.simpleName}. Service currently restarting. Stopping service after it is restarted."</ID>
+    <ID>MaxLineLength:ForegroundServiceLauncher.kt$ForegroundServiceLauncher$"Stop service ${serviceClass.simpleName}. Service is currently starting. Stopping service after it is started."</ID>
+    <ID>MaxLineLength:FrontendConnectionErrorScreenTest.kt$FrontendConnectionErrorScreenTest$error = FrontendConnectionError.AuthenticationError(R.string.tls_cert_expired_message, "details", "errorType")</ID>
+    <ID>MaxLineLength:FrontendConnectionErrorScreenTest.kt$FrontendConnectionErrorScreenTest$error = FrontendConnectionError.UnknownError(R.string.tls_cert_expired_message, "details", "errorType")</ID>
+    <ID>MaxLineLength:FrontendConnectionErrorScreenTest.kt$FrontendConnectionErrorScreenTest$fun</ID>
+    <ID>MaxLineLength:FrontendExternalBusRepositoryImplTest.kt$FrontendExternalBusRepositoryImplTest$assertEquals("externalBus(${frontendExternalBusJson.encodeToString&lt;OutgoingExternalBusMessage&gt;(configResponse)});", script.script)</ID>
+    <ID>MaxLineLength:FrontendMessageHandlerTest.kt$FrontendMessageHandlerTest$// Field names match ConfigResult serialization: hasNfc -&gt; canWriteTag, canExportThread -&gt; canImportThreadCredentials</ID>
+    <ID>MaxLineLength:FrontendMessageHandlerTest.kt$FrontendMessageHandlerTest$fun</ID>
+    <ID>MaxLineLength:FrontendScreenTest.kt$FrontendScreenTest$assertTrue("onChangeSecurityLevel should be called when change security level button is clicked", changeSecurityLevelCalled)</ID>
+    <ID>MaxLineLength:FrontendScreenTest.kt$FrontendScreenTest$assertTrue("onConfigureHomeNetwork should be called with correct serverId", configureHomeNetworkServerId == 42)</ID>
+    <ID>MaxLineLength:FrontendScreenTest.kt$FrontendScreenTest$fun</ID>
+    <ID>MaxLineLength:FrontendScreenTest.kt$FrontendScreenTest$onNodeWithText(stringResource(commonR.string.block_insecure_action_configure_home)).performScrollTo().performClick()</ID>
+    <ID>MaxLineLength:FrontendScreenTest.kt$FrontendScreenTest$onNodeWithText(stringResource(commonR.string.block_insecure_change_security_level)).performScrollTo().performClick()</ID>
+    <ID>MaxLineLength:FrontendScreenTest.kt$FrontendScreenTest$private</ID>
+    <ID>MaxLineLength:FrontendScreenTest.kt$FrontendScreenTest$viewState = FrontendViewState.Content(serverId = 1, url = "https://example.com", showNotificationPermission = false)</ID>
+    <ID>MaxLineLength:FrontendScreenTest.kt$FrontendScreenTest$viewState = FrontendViewState.Content(serverId = 1, url = "https://example.com", showNotificationPermission = true)</ID>
+    <ID>MaxLineLength:FrontendUrlManagerTest.kt$FrontendUrlManagerTest$fun</ID>
+    <ID>MaxLineLength:FrontendViewModel.kt$FrontendViewModel$*</ID>
+    <ID>MaxLineLength:FrontendViewModelTest.kt$FrontendViewModelTest.ConnectivityChecks$fun</ID>
+    <ID>MaxLineLength:FrontendViewModelTest.kt$FrontendViewModelTest.ConnectivityChecks$messageResId = io.homeassistant.companion.android.common.R.string.connection_check_home_assistant_success</ID>
+    <ID>MaxLineLength:FrontendViewModelTest.kt$FrontendViewModelTest.ConnectivityChecks$messageResId = io.homeassistant.companion.android.common.R.string.connection_check_tls_not_applicable</ID>
+    <ID>MaxLineLength:FrontendViewModelTest.kt$FrontendViewModelTest.ErrorFlow$assertTrue((errorState as FrontendViewState.Error).error is FrontendConnectionError.UnrecoverableError.WebViewCreationError)</ID>
+    <ID>MaxLineLength:FrontendViewModelTest.kt$FrontendViewModelTest.ErrorFlow$assertTrue((finalState as FrontendViewState.Error).error is FrontendConnectionError.UnrecoverableError.WebViewCreationError)</ID>
+    <ID>MaxLineLength:FrontendViewModelTest.kt$FrontendViewModelTest.ErrorFlow$fun</ID>
+    <ID>MaxLineLength:FrontendViewModelTest.kt$FrontendViewModelTest.ErrorFlow$urlFlow.emit(UrlLoadResult.Success(url = "https://internal.example.com?external_auth=1", serverId = serverId))</ID>
+    <ID>MaxLineLength:FrontendViewModelTest.kt$FrontendViewModelTest.NotificationPermission$fun</ID>
+    <ID>MaxLineLength:FrontendViewModelTest.kt$FrontendViewModelTest.SecurityLevel$fun</ID>
+    <ID>MaxLineLength:FrontendViewModelTest.kt$FrontendViewModelTest.UrlLoading$fun</ID>
+    <ID>MaxLineLength:GeocodeSensorManager.kt$GeocodeSensorManager$*</ID>
+    <ID>MaxLineLength:GeocodeSensorManagerTest.kt$GeocodeSensorManagerTest$fun</ID>
+    <ID>MaxLineLength:HAAppTest.kt$HAAppTest$onNodeWithContentDescription(stringResource(R.string.home_assistant_branding_icon_content_description)).assertIsDisplayed()</ID>
+    <ID>MaxLineLength:HAAppTest.kt$HAAppTest$onNodeWithText(stringResource(R.string.location_secure_connection_next)).performScrollTo().assertIsEnabled().assertIsDisplayed().performClick()</ID>
+    <ID>MaxLineLength:HAAppTest.kt$HAAppTest$private</ID>
+    <ID>MaxLineLength:HAMediaPlayer.kt$*</ID>
+    <ID>MaxLineLength:HAWebViewClientTest.kt$HAWebViewClientTest$assertTrue(capturedError is T, "Expected ${T::class.simpleName} but got ${capturedError?.let { it::class.simpleName }}")</ID>
+    <ID>MaxLineLength:HaControlsProviderService.kt$HaControlsProviderService$"Unable to get $missingEntity from Home Assistant, not returned in subscribe_entities."</ID>
+    <ID>MaxLineLength:HaControlsProviderService.kt$HaControlsProviderService$"Unable to load entities/registries for server ${server.id} (${server.friendlyName}), skipping"</ID>
+    <ID>MaxLineLength:HaControlsProviderService.kt$HaControlsProviderService$// Server name should only be specified if there's more than one server, as controls being split by structure (or the area names appended with the server name)</ID>
+    <ID>MaxLineLength:HomeAssistantSearcher.kt$HomeAssistantSearcherImpl$"Something already started to collect, this flow is designed to only be collected by one collector at the time."</ID>
+    <ID>MaxLineLength:HomeAssistantSearcherImplTest.kt$HomeAssistantSearcherImplTest$assertEquals("Something already started to collect, this flow is designed to only be collected by one collector at the time.", caughtException?.message)</ID>
+    <ID>MaxLineLength:HomeAssistantSearcherImplTest.kt$HomeAssistantSearcherImplTest$assertEquals("Something has already called discoveredInstanceFlow() and didn't close the flow yet.", caughtException?.message)</ID>
+    <ID>MaxLineLength:HomeAssistantSearcherImplTest.kt$HomeAssistantSearcherImplTest$every { nsdManager.discoverServices(SERVICE_TYPE, NsdManager.PROTOCOL_DNS_SD, capture(discoveryListener)) } just Runs</ID>
+    <ID>MaxLineLength:HomeAssistantSearcherImplTest.kt$HomeAssistantSearcherImplTest$fun</ID>
+    <ID>MaxLineLength:HomeAssistantSearcherImplTest.kt$HomeAssistantSearcherImplTest$private</ID>
+    <ID>MaxLineLength:HomeAssistantSearcherImplTest.kt$private</ID>
+    <ID>MaxLineLength:IncomingExternalBusMessage.kt$ConfigGetMessage$*</ID>
+    <ID>MaxLineLength:IncomingExternalBusMessage.kt$IncomingExternalBusMessage$*</ID>
+    <ID>MaxLineLength:LaunchViewModelTest.kt$LaunchViewModelTest$coEvery { serverManager.authenticationRepository().getSessionState() } throws IllegalStateException("server not found")</ID>
+    <ID>MaxLineLength:LaunchViewModelTest.kt$LaunchViewModelTest$coEvery { serverManager.authenticationRepository(connectedServer.id).getSessionState() } returns SessionState.CONNECTED</ID>
+    <ID>MaxLineLength:LaunchViewModelTest.kt$LaunchViewModelTest$coEvery { serverManager.authenticationRepository(connectedServer1.id).getSessionState() } returns SessionState.CONNECTED</ID>
+    <ID>MaxLineLength:LaunchViewModelTest.kt$LaunchViewModelTest$coEvery { serverManager.authenticationRepository(connectedServer2.id).getSessionState() } returns SessionState.CONNECTED</ID>
+    <ID>MaxLineLength:LaunchViewModelTest.kt$LaunchViewModelTest$coEvery { serverManager.authenticationRepository(invalidServer.id).getSessionState() } returns SessionState.ANONYMOUS</ID>
+    <ID>MaxLineLength:LaunchViewModelTest.kt$LaunchViewModelTest$fun</ID>
+    <ID>MaxLineLength:LinkHandler.kt$LinkHandlerImpl$*</ID>
+    <ID>MaxLineLength:LinkHandler.kt$LinkHandlerImpl$// Extract the server URL from the fragment #url=http://homeassistant.local:8123 and make it queryParam in a fake URI</ID>
+    <ID>MaxLineLength:LinkHandlerTest.kt$LinkHandlerTest$// To support this case the URL in `url=` is encoded twice, when building the URL the first time and then a second time to be used as a parameter</ID>
+    <ID>MaxLineLength:LinkHandlerTest.kt$LinkHandlerTest$LinkDestination.ServerPicker("_my_redirect/supervisor_add_addon_repository?repository_url=https%3A%2F%2Fgithub.com%2Fhome-assistant%2Fandroid%2F&amp;mobile=1")</ID>
+    <ID>MaxLineLength:LinkHandlerTest.kt$LinkHandlerTest$assertEquals(LinkDestination.Onboarding("http://homeassistant.local:8123?pre-auth=https%3A%2F%2Fgithub.com%2Fhome-assistant%2Fandroid%2F%26toto=tata"), result)</ID>
+    <ID>MaxLineLength:LinkHandlerTest.kt$LinkHandlerTest$assertEquals(LinkDestination.ServerPicker("homeassistant://navigate/lovelace/dashboard?server=NonExisting"), result)</ID>
+    <ID>MaxLineLength:LinkHandlerTest.kt$LinkHandlerTest$assertEquals(LinkDestination.Webview("_my_redirect/supervisor_add_addon_repository?repository_url=https%3A%2F%2Fgithub.com%2Fhome-assistant%2Fandroid%2F&amp;mobile=1", ServerManager.SERVER_ID_ACTIVE), result)</ID>
+    <ID>MaxLineLength:LinkHandlerTest.kt$LinkHandlerTest$assertEquals(LinkDestination.Webview("homeassistant://navigate/lovelace/dashboard?server=NonExisting", ServerManager.SERVER_ID_ACTIVE), result)</ID>
+    <ID>MaxLineLength:LinkHandlerTest.kt$LinkHandlerTest$fun</ID>
+    <ID>MaxLineLength:LinkHandlerTest.kt$LinkHandlerTest$val uri = "https://my.home-assistant.io/invite/#app=1&amp;url=http://homeassistant.local:8123&amp;repository_url=https%3A%2F%2Fgithub.com%2Fhome-assistant%2Fandroid%2F".toUri()</ID>
+    <ID>MaxLineLength:LinkHandlerTest.kt$LinkHandlerTest$val uri = "https://my.home-assistant.io/invite/#url=http://homeassistant.local:8123?pre-auth=https%253A%252F%252Fgithub.com%252Fhome-assistant%252Fandroid%252F%2526toto=tata&amp;second_param_out_of_url=1".toUri()</ID>
+    <ID>MaxLineLength:LinkHandlerTest.kt$LinkHandlerTest$val uri = "https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fhome-assistant%2Fandroid%2F".toUri()</ID>
+    <ID>MaxLineLength:LinkHandlerTest.kt$LinkHandlerTest$val uri = "https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fhome-assistant%2Fandroid%2F&amp;mobile=1".toUri()</ID>
+    <ID>MaxLineLength:LocalFirstNavigationTest.kt$LocalFirstNavigationTest$fun</ID>
+    <ID>MaxLineLength:LocalFirstScreenTest.kt$LocalFirstScreenTest$onNodeWithText(stringResource(commonR.string.local_first_next)).performScrollTo().assertIsDisplayed().performClick()</ID>
+    <ID>MaxLineLength:LocationForSecureConnectionScreenTest.kt$LocationForSecureConnectionScreenTest$assertEquals(stringResource(commonR.string.location_secure_connection_discard_permission), snackbarMessage)</ID>
+    <ID>MaxLineLength:LocationForSecureConnectionScreenTest.kt$LocationForSecureConnectionScreenTest$fun</ID>
+    <ID>MaxLineLength:LocationForSecureConnectionScreenTest.kt$LocationForSecureConnectionScreenTest$onNodeWithText(stringResource(commonR.string.connection_security_less_secure)).performScrollTo().assertIsDisplayed()</ID>
+    <ID>MaxLineLength:LocationForSecureConnectionScreenTest.kt$LocationForSecureConnectionScreenTest$onNodeWithText(stringResource(commonR.string.connection_security_less_secure)).performScrollTo().performClick()</ID>
+    <ID>MaxLineLength:LocationForSecureConnectionScreenTest.kt$LocationForSecureConnectionScreenTest$onNodeWithText(stringResource(commonR.string.connection_security_most_secure)).performScrollTo().assertIsDisplayed()</ID>
+    <ID>MaxLineLength:LocationForSecureConnectionScreenTest.kt$LocationForSecureConnectionScreenTest$onNodeWithText(stringResource(commonR.string.connection_security_most_secure)).performScrollTo().performClick()</ID>
+    <ID>MaxLineLength:LocationForSecureConnectionScreenTest.kt$LocationForSecureConnectionScreenTest$onNodeWithText(stringResource(commonR.string.location_secure_connection_hint)).performScrollTo().assertIsDisplayed()</ID>
+    <ID>MaxLineLength:LocationForSecureConnectionViewModel.kt$LocationForSecureConnectionViewModel$"Something went wrong while setting AllowInsecureConnection to $allowInsecureConnection for server $serverId"</ID>
+    <ID>MaxLineLength:LocationSharingNavigationTest.kt$LocationSharingNavigationTest$assertTrue(navController.currentBackStackEntry?.destination?.hasRoute&lt;LocationForSecureConnectionRoute&gt;() == true)</ID>
+    <ID>MaxLineLength:LocationSharingNavigationTest.kt$LocationSharingNavigationTest$fun</ID>
+    <ID>MaxLineLength:LocationSharingScreenTest.kt$LocationSharingScreenTest$fun</ID>
+    <ID>MaxLineLength:LocationSharingScreenTest.kt$LocationSharingScreenTest$onNodeWithText(stringResource(commonR.string.location_sharing_no_share)).performScrollTo().assertIsDisplayed().performClick()</ID>
+    <ID>MaxLineLength:LocationSharingScreenTest.kt$LocationSharingScreenTest$onNodeWithText(stringResource(commonR.string.location_sharing_share)).performScrollTo().assertIsDisplayed().performClick()</ID>
+    <ID>MaxLineLength:LocationSharingViewModelTest.kt$LocationSharingViewModelTest$fun</ID>
+    <ID>MaxLineLength:ManualServerNavigationTest.kt$ManualServerNavigationTest$fun</ID>
+    <ID>MaxLineLength:ManualServerScreenTest.kt$ManualServerScreenTest$onNodeWithContentDescription(stringResource(commonR.string.clear_text)).assertIsDisplayed().performClick()</ID>
+    <ID>MaxLineLength:ManualServerScreenTest.kt$ManualServerScreenTest$private</ID>
+    <ID>MaxLineLength:MdcAlertDialog.kt$*</ID>
+    <ID>MaxLineLength:MediaPlayerControlsWidget.kt$MediaPlayerControlsWidget.Companion$"io.homeassistant.companion.android.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_FASTFORWARD"</ID>
+    <ID>MaxLineLength:MediaPlayerControlsWidget.kt$MediaPlayerControlsWidget.Companion$"io.homeassistant.companion.android.widgets.media_player_controls.MediaPlayerControlsWidget.CALL_VOLUME_DOWN"</ID>
+    <ID>MaxLineLength:MediaPlayerControlsWidget.kt$MediaPlayerControlsWidget.Companion$"io.homeassistant.companion.android.widgets.media_player_controls.MediaPlayerControlsWidget.UPDATE_MEDIA_IMAGE"</ID>
+    <ID>MaxLineLength:MicroWakeWord.kt$MicroWakeWord$"MicroWakeWord model loaded: input=${inputShape.contentToString()}, output=${outputShape.contentToString()}"</ID>
+    <ID>MaxLineLength:MicroWakeWord.kt$MicroWakeWord$"Unexpected output shape ${outputShape.contentToString()}, expected ${EXPECTED_OUTPUT_SHAPE.contentToString()}"</ID>
+    <ID>MaxLineLength:NameYourDeviceNavigationTest.kt$NameYourDeviceNavigationTest$"There was an error loading Home Assistant, please review the connection settings and try again. We will attempt to try another provided URL when you select Refresh."</ID>
+    <ID>MaxLineLength:NameYourDeviceNavigationTest.kt$NameYourDeviceNavigationTest$fun</ID>
+    <ID>MaxLineLength:NameYourDeviceNavigationTest.kt$NameYourDeviceNavigationTest$val</ID>
+    <ID>MaxLineLength:NameYourDeviceScreenTest.kt$NameYourDeviceScreenTest$.</ID>
+    <ID>MaxLineLength:NameYourDeviceScreenTest.kt$NameYourDeviceScreenTest$// Set fake data to see if click actually does something. In this test it shouldn't do anything since it is disabled</ID>
+    <ID>MaxLineLength:NameYourDeviceScreenTest.kt$NameYourDeviceScreenTest$onNodeWithContentDescription(stringResource(commonR.string.clear_text)).assertIsDisplayed().performClick()</ID>
+    <ID>MaxLineLength:NameYourDeviceScreenTest.kt$NameYourDeviceScreenTest$onNodeWithTag(DEVICE_NAME_TEXT_FIELD_TAG).assertIsDisplayed().assertIsEnabled().performTextInput("Hello ")</ID>
+    <ID>MaxLineLength:NameYourDeviceScreenTest.kt$NameYourDeviceScreenTest$private</ID>
+    <ID>MaxLineLength:NameYourDeviceViewModelTest.kt$NameYourDeviceViewModelTest$fun</ID>
+    <ID>MaxLineLength:OnboardingNavigation.kt$*</ID>
+    <ID>MaxLineLength:OnboardingNavigation.kt$WearOnboardingRoute$*</ID>
+    <ID>MaxLineLength:OutgoingExternalBusMessageTest.kt$OutgoingExternalBusMessageTest$"""{"type":"result","id":1,"success":true,"result":{"hasSettingsScreen":true,"canWriteTag":true,"hasExoPlayer":true,"canCommissionMatter":true,"canImportThreadCredentials":true,"hasAssist":true,"hasBarCodeScanner":0,"canSetupImprov":true,"downloadFileSupported":true,"appVersion":"1.0.0 (1)","hasEntityAddTo":true,"hasAssistSettings":true},"error":null}"""</ID>
+    <ID>MaxLineLength:PermissionManagerTest.kt$PermissionManagerTest.ShouldAskNotificationPermission$coEvery { integrationRepository.shouldAskNotificationPermission() } returns storedPref?.toBooleanStrictOrNull()</ID>
+    <ID>MaxLineLength:ServerDiscoveryNavigationTest.kt$ServerDiscoveryNavigationTest$fun</ID>
+    <ID>MaxLineLength:ServerDiscoveryNavigationTest.kt$ServerDiscoveryNavigationTest$mainDispatcherRule.testDispatcher.scheduler.advanceTimeBy(DELAY_BEFORE_DISPLAY_DISCOVERY.inWholeMilliseconds)</ID>
+    <ID>MaxLineLength:ServerDiscoveryScreenTest.kt$ServerDiscoveryScreenTest$fun</ID>
+    <ID>MaxLineLength:ServerDiscoveryScreenTest.kt$ServerDiscoveryScreenTest$onNodeWithText(stringResource(commonR.string.manual_setup)).performScrollTo().assertIsDisplayed().performClick()</ID>
+    <ID>MaxLineLength:ServerDiscoveryViewModelTest.kt$ServerDiscoveryViewModelTest$coEvery { serverManager.servers() } returns listOf(mockServer(existingServerUrl, name = "Existing Server"), mockServer(url = null, name = "Broken server"))</ID>
+    <ID>MaxLineLength:ServerDiscoveryViewModelTest.kt$ServerDiscoveryViewModelTest$fun</ID>
+    <ID>MaxLineLength:ServerDiscoveryViewModelTest.kt$ServerDiscoveryViewModelTest$val differentPortInstance = HomeAssistantInstance("Server 8124", URL(existingServerUrl.replace("8123", "8124")), testHAVersion)</ID>
+    <ID>MaxLineLength:ServerDiscoveryViewModelTest.kt$ServerDiscoveryViewModelTest$val differentProtocolInstance = HomeAssistantInstance("Server HTTPS", URL(existingServerUrl.replace("http", "https")), testHAVersion)</ID>
+    <ID>MaxLineLength:ServerDiscoveryViewModelTest.kt$ServerDiscoveryViewModelTest$val server0 = mockServer("http://ha", haVersion = null, name = "server0", serverId = 0, serverManager = serverManager)</ID>
+    <ID>MaxLineLength:ServerSessionManagerTest.kt$ServerSessionManagerTest$fun</ID>
+    <ID>MaxLineLength:SetHomeNetworkScreenTest.kt$SetHomeNetworkScreenTest$fun</ID>
+    <ID>MaxLineLength:SetHomeNetworkScreenTest.kt$SetHomeNetworkScreenTest$onNodeWithText(stringResource(commonR.string.manage_ssids_ethernet)).performScrollTo().assertIsDisplayed()</ID>
+    <ID>MaxLineLength:SetHomeNetworkScreenTest.kt$SetHomeNetworkScreenTest$onNodeWithText(stringResource(commonR.string.set_home_network_next)).performScrollTo().assertIsDisplayed().performClick()</ID>
+    <ID>MaxLineLength:SetHomeNetworkViewModelTest.kt$SetHomeNetworkViewModelTest$fun</ID>
+    <ID>MaxLineLength:SetHomeNetworkViewModelTest.kt$SetHomeNetworkViewModelTest$val fakeConnectionInfo = ServerConnectionInfo("", internalSsids = initialSsids, internalVpn = initialVpn, internalEthernet = initialEthernet)</ID>
+    <ID>MaxLineLength:SetHomeNetworkViewModelTest.kt$SetHomeNetworkViewModelTest$val fakeServer = Server(_name = "", id = MOCK_SERVER_ID, connection = fakeConnectionInfo, session = mockk(), user = mockk())</ID>
+    <ID>MaxLineLength:SettingsWearRepositoryTest.kt$SettingsWearRepositoryTest$// Always override the handler so individual test can decide to override it or not without impacting the other tests</ID>
+    <ID>MaxLineLength:SettingsWearRepositoryTest.kt$SettingsWearRepositoryTest.RegisterRefreshTokenTest$fun</ID>
+    <ID>MaxLineLength:SettingsWearViewModelTest.kt$SettingsWearViewModelTest$fun</ID>
+    <ID>MaxLineLength:TLSWebViewClient.kt$TLSWebViewClient$// The whole operation is wrapped in the selectPrivateKey method but caution as it must occurs outside of the main thread</ID>
+    <ID>MaxLineLength:TodoGlanceAppWidget.kt$// The checkbox comes with an embedded padding that we cannot modify of 6.5.dp we add 9.5.dp to align with the rest of the screen at 16dp.</ID>
+    <ID>MaxLineLength:TodoGlanceAppWidgetTest.kt$TodoGlanceAppWidgetTest$fun</ID>
+    <ID>MaxLineLength:TodoWidgetActions.kt$RefreshAction$*</ID>
+    <ID>MaxLineLength:TodoWidgetActions.kt$ToggleTodoAction$*</ID>
+    <ID>MaxLineLength:TodoWidgetConfigureViewModel.kt$TodoWidgetConfigureViewModel$// We need a mutex since the update of the entities might happen concurrently with onSetup and the viewModel creation</ID>
+    <ID>MaxLineLength:TodoWidgetConfigureViewModel.kt$TodoWidgetConfigureViewModel$// We need the PendingIntent to be mutable so the system inject the EXTRA_APPWIDGET_ID of the created widget</ID>
+    <ID>MaxLineLength:TodoWidgetState.kt$TodoStateWithData.Companion$*</ID>
+    <ID>MaxLineLength:TodoWidgetStateTest.kt$TodoWidgetStateTest$fun</ID>
+    <ID>MaxLineLength:TodoWidgetStateTest.kt$TodoWidgetStateTest$todoItems = listOf(TodoItemState(uid = "Test", name = "Test", done = false), TodoItemState(uid = "Test", name = "Test", done = true))</ID>
+    <ID>MaxLineLength:TodoWidgetStateTest.kt$TodoWidgetStateTest$todoItems = listOf(TodoItemState(uid = "Test", name = "Test", done = true), TodoItemState(uid = "Test", name = "Test", done = true))</ID>
+    <ID>MaxLineLength:TodoWidgetStateUpdater.kt$TodoWidgetStateUpdater$*</ID>
+    <ID>MaxLineLength:TodoWidgetStateUpdater.kt$TodoWidgetStateUpdater$// Since we might be re-subscribing we might not have get the entity update when subscribing so we query it first</ID>
+    <ID>MaxLineLength:TodoWidgetStateUpdaterTest.kt$TodoWidgetStateUpdaterTest$daoFlowEmitter.send(todoWidgetEntity.copy(latestUpdateData = TodoWidgetEntity.LastUpdateData("hello", emptyList())))</ID>
+    <ID>MaxLineLength:TodoWidgetStateUpdaterTest.kt$TodoWidgetStateUpdaterTest$fun</ID>
+    <ID>MaxLineLength:TodoWidgetStateUpdaterTest.kt$TodoWidgetStateUpdaterTest$private</ID>
+    <ID>MaxLineLength:TodoWidgetToggleActionsTest.kt$TodoWidgetToggleActionsTest$fun</ID>
+    <ID>MaxLineLength:WakeWordAssistAudioStrategyTest.kt$WakeWordAssistAudioStrategyTest$fun</ID>
+    <ID>MaxLineLength:WakeWordListenerTest.kt$WakeWordListenerTest.ErrorHandlingTests$fun</ID>
+    <ID>MaxLineLength:WearDnsRequestListenerTest.kt$WearDnsRequestListenerTest$private val homeAssistantLocal: InetAddress = InetAddress.getByAddress(testHostname, byteArrayOf(192.toByte(), 168.toByte(), 0, 23))</ID>
+    <ID>MaxLineLength:WearMTLSScreenTest.kt$WearMTLSScreenTest$// We use an empty filename otherwise the perform clicks clicks onto the clear icon ... This is due to the</ID>
+    <ID>MaxLineLength:WearMTLSScreenTest.kt$WearMTLSScreenTest$fun</ID>
+    <ID>MaxLineLength:WearMTLSScreenTest.kt$WearMTLSScreenTest$onNodeWithText(stringResource(commonR.string.select_file)).performScrollTo().assertIsDisplayed().performClick()</ID>
+    <ID>MaxLineLength:WearMTLSScreenTest.kt$WearMTLSScreenTest$onNodeWithText(stringResource(commonR.string.wear_mtls_next)).performScrollTo().assertIsDisplayed().assertIsEnabled().performClick()</ID>
+    <ID>MaxLineLength:WearMTLSScreenTest.kt$WearMTLSScreenTest$onNodeWithText(stringResource(commonR.string.wear_mtls_next)).performScrollTo().assertIsDisplayed().assertIsNotEnabled()</ID>
+    <ID>MaxLineLength:WearMTLSScreenTest.kt$WearMTLSScreenTest$testScreen</ID>
+    <ID>MaxLineLength:WearMTLSScreenTest.kt$WearMTLSScreenTest.&lt;no name provided&gt;$override</ID>
+    <ID>MaxLineLength:WearMTLSScreenTest.kt$WearMTLSScreenTest.&lt;no name provided&gt;.&lt;no name provided&gt;$override</ID>
+    <ID>MaxLineLength:WearMTLSViewModelTest.kt$WearMTLSViewModelTest$every { mockContentResolver.query(mockUri, arrayOf(OpenableColumns.DISPLAY_NAME), null, null, null) }</ID>
+    <ID>MaxLineLength:WearMTLSViewModelTest.kt$WearMTLSViewModelTest$fun</ID>
+    <ID>MaxLineLength:WearOnboardingNavigationTest.kt$WearOnboardingNavigationTest$assertTrue(navController.currentBackStackEntry?.toRoute&lt;ServerDiscoveryRoute&gt;()?.discoveryMode == ServerDiscoveryMode.ADD_EXISTING)</ID>
+    <ID>MaxLineLength:WearOnboardingNavigationTest.kt$WearOnboardingNavigationTest$fun</ID>
+    <ID>MaxLineLength:WearOnboardingNavigationTest.kt$WearOnboardingNavigationTest$mainDispatcherRule.testDispatcher.scheduler.advanceTimeBy(DELAY_BEFORE_DISPLAY_DISCOVERY.inWholeMilliseconds)</ID>
+    <ID>MaxLineLength:WearOnboardingNavigationTest.kt$WearOnboardingNavigationTest$onNodeWithText(defaultDeviceName).performScrollTo().assertIsDisplayed().performTextReplacement(newDeviceName)</ID>
+    <ID>MaxLineLength:WearOnboardingNavigationTest.kt$WearOnboardingNavigationTest$onNodeWithText(stringResource(commonR.string.name_your_device_save)).performScrollTo().assertIsDisplayed().performClick()</ID>
+    <ID>MaxLineLength:WearOnboardingNavigationTest.kt$WearOnboardingNavigationTest$onNodeWithText(stringResource(commonR.string.wear_mtls_next)).performScrollTo().assertIsDisplayed().assertIsEnabled().performClick()</ID>
+    <ID>MaxLineLength:WearOnboardingNavigationTest.kt$WearOnboardingNavigationTest$private</ID>
+    <ID>MaxLineLength:WebViewActivity.kt$WebViewActivity$// /config/* as these are the settings of HA but NOT /config/dashboard. This is just the overview of the HA settings</ID>
+    <ID>MaxLineLength:WebViewActivity.kt$WebViewActivity$// Initially set status and navigation bar color to colorLaunchScreenBackground to match the launch screen until the web frontend is loaded</ID>
+    <ID>MaxLineLength:WebViewActivity.kt$WebViewActivity$// if the bottom value is not 0 we should take it it is a constraint from the frontend, otherwise we try to compute the</ID>
+    <ID>MaxLineLength:WebViewActivity.kt$WebViewActivity.&lt;no name provided&gt;$"document.querySelector(\"home-assistant\").dispatchEvent(new CustomEvent(\"hass-more-info\", { detail: { entityId: \"$moreInfoEntity\" }}))"</ID>
+    <ID>MaxLineLength:WebViewActivity.kt$WebViewActivity.&lt;no name provided&gt;$"onReceivedHttpError: ${errorResponse?.statusCode} : ${errorResponse?.reasonPhrase} for: ${request?.url}"</ID>
+    <ID>MaxLineLength:WebViewActivity.kt$WebViewActivity.&lt;no name provided&gt;$// If height is already set, it means the frontend has imposed a constraint; avoid overriding.</ID>
+    <ID>MaxLineLength:WebViewActivity.kt$WebViewActivity.&lt;no name provided&gt;$// We need to launch the getAndSetStatusBarNavigationBarColors in another thread, because otherwise the evaluateJavascript inside the method</ID>
+    <ID>MaxLineLength:WebViewPresenterImpl.kt$WebViewPresenterImpl$"Thread ${if (!sent.isNullOrBlank()) "sent credential for $sent" else "did not send credential"}"</ID>
+    <ID>MaxLineLength:WebViewPresenterImplTest.kt$WebViewPresenterImplTest$fun</ID>
+    <ID>MaxLineLength:WebViewPresenterImplTest.kt$WebViewPresenterImplTest$verify(exactly = 1) { webView.loadUrl(url = any(), keepHistory = false, openInApp = any(), serverHandleInsets = any()) }</ID>
+    <ID>MaxLineLength:WebViewPresenterImplTest.kt$WebViewPresenterImplTest$verify(exactly = 1) { webView.loadUrl(url = any(), keepHistory = true, openInApp = any(), serverHandleInsets = any()) }</ID>
+    <ID>MaxLineLength:WebsocketManagerTest.kt$WebsocketManagerTest$fun</ID>
+    <ID>MaxLineLength:WelcomeScreen.kt$// We use spacer to position the image where we want when there is remaining space in the column using percentage</ID>
+    <ID>MaxLineLength:WelcomeScreenTest.kt$WelcomeScreenTest$onNodeWithText(stringResource(commonR.string.welcome_learn_more)).performScrollTo().assertIsDisplayed().performClick()</ID>
+    <ID>MaxLineLength:WidgetIntent.kt$*</ID>
+    <ID>MayBeConst:PreviewData.kt$val wearDeviceName = "Device Name"</ID>
+    <ID>NestedBlockDepth:ButtonWidget.kt$ButtonWidget$private suspend fun callConfiguredAction(context: Context, appWidgetId: Int)</ID>
+    <ID>NestedBlockDepth:CameraWidget.kt$CameraWidget$private suspend fun getWidgetRemoteViews(context: Context, appWidgetId: Int): RemoteViews?</ID>
+    <ID>NestedBlockDepth:CarSensorManager.kt$CarSensorManager$override suspend fun requestSensorUpdate(context: Context)</ID>
+    <ID>NestedBlockDepth:EntityWidget.kt$EntityWidget$override suspend fun getWidgetRemoteViews( context: Context, appWidgetId: Int, suggestedEntity: Entity?, ): RemoteViews</ID>
+    <ID>NestedBlockDepth:MediaPlayerControlsWidget.kt$MediaPlayerControlsWidget$override suspend fun getWidgetRemoteViews( context: Context, appWidgetId: Int, suggestedEntity: Entity?, ): RemoteViews</ID>
+    <ID>NestedBlockDepth:MediaPlayerControlsWidget.kt$MediaPlayerControlsWidget$private suspend fun getEntity( context: Context, serverId: Int, entityIds: List&lt;String&gt;, suggestedEntity: Entity?, ): Entity?</ID>
+    <ID>NestedBlockDepth:MessagingManager.kt$MessagingManager$private fun handleActions( builder: NotificationCompat.Builder, tag: String?, messageId: Int, databaseId: Long?, data: Map&lt;String, String&gt;, )</ID>
+    <ID>NestedBlockDepth:MessagingManager.kt$MessagingManager$private fun notifyMissingPermission(type: String, serverId: String)</ID>
+    <ID>NestedBlockDepth:MessagingManager.kt$MessagingManager$private fun processMediaCommand(data: Map&lt;String, String&gt;)</ID>
+    <ID>NestedBlockDepth:MessagingManager.kt$MessagingManager$private suspend fun handleVideo(builder: NotificationCompat.Builder, data: Map&lt;String, String&gt;)</ID>
+    <ID>NestedBlockDepth:OnSwipeListener.kt$OnSwipeListener$override fun onTouch(v: View?, event: MotionEvent?): Boolean</ID>
+    <ID>NestedBlockDepth:SettingsFragment.kt$SettingsFragment$private fun removeSystemFromThemesIfNeeded()</ID>
+    <ID>NestedBlockDepth:TemplateWidget.kt$TemplateWidget$private suspend fun getWidgetRemoteViews( context: Context, appWidgetId: Int, suggestedTemplate: String? = null, ): RemoteViews</ID>
+    <ID>NestedBlockDepth:TileExtensions.kt$TileExtensions$private suspend fun setTileData(tileId: String, tile: Tile): Boolean</ID>
+    <ID>NestedBlockDepth:TilePreferenceActivity.kt$TilePreferenceActivity$override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>NestedBlockDepth:WebViewActivity.kt$WebViewActivity$@SuppressLint("SetJavaScriptEnabled") override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>NestedBlockDepth:WebViewActivity.kt$WebViewActivity$private suspend fun checkAndWarnForDisabledLocation()</ID>
+    <ID>NestedBlockDepth:WidgetDynamicFieldAdapter.kt$WidgetDynamicFieldAdapter$override fun onBindViewHolder(holder: ViewHolder, position: Int)</ID>
+    <ID>NestedBlockDepth:WidgetDynamicFieldAdapter.kt$WidgetDynamicFieldAdapter$private fun String.toJsonType(): Any?</ID>
+    <ID>ReturnCount:DefaultAssistantManager.kt$DefaultAssistantManagerImpl$override suspend fun shouldSuggestAssistantSetup(): Boolean</ID>
+    <ID>ReturnCount:EntityPickerFilter.kt$internal fun fuzzyMatch(text: String, pattern: String): Double</ID>
+    <ID>ReturnCount:EntityWidget.kt$EntityWidget$private suspend fun resolveTextToShow( context: Context, serverId: Int, entityId: String?, suggestedEntity: Entity?, attributeIds: String?, stateSeparator: String, attributeSeparator: String, appWidgetId: Int, ): ResolvedText</ID>
+    <ID>ReturnCount:FrontendUrlManager.kt$FrontendUrlManager$private suspend fun buildUrl(baseUrl: URL?, serverId: Int, path: String?): UrlLoadResult</ID>
+    <ID>ReturnCount:FrontendUrlManager.kt$FrontendUrlManager$private suspend fun shouldSetSecurityLevel(serverId: Int): Boolean</ID>
+    <ID>ReturnCount:GeocodeSensorManager.kt$GeocodeSensorManager$private suspend fun updateGeocodedLocation(context: Context)</ID>
+    <ID>ReturnCount:HomeAssistantSearcher.kt$private fun NsdServiceInfo.toHomeAssistantInstance(): HomeAssistantInstance?</ID>
+    <ID>ReturnCount:LinkHandler.kt$LinkHandlerImpl$private suspend fun handleRedirectLink(uri: Uri): LinkDestination</ID>
+    <ID>ReturnCount:MediaPlayerControlsWidget.kt$MediaPlayerControlsWidget$private suspend fun callFastForwardAction(context: Context, appWidgetId: Int)</ID>
+    <ID>ReturnCount:MediaPlayerControlsWidget.kt$MediaPlayerControlsWidget$private suspend fun callRewindAction(context: Context, appWidgetId: Int)</ID>
+    <ID>ReturnCount:MediaPlayerControlsWidget.kt$MediaPlayerControlsWidget$private suspend fun getEntity( context: Context, serverId: Int, entityIds: List&lt;String&gt;, suggestedEntity: Entity?, ): Entity?</ID>
+    <ID>ReturnCount:MicroWakeWord.kt$MicroWakeWord$private fun processFeatureFrame(frame: FloatArray): Boolean</ID>
+    <ID>ReturnCount:SsidViewModel.kt$SsidViewModel$fun addHomeWifiSsid(ssid: String): Boolean</ID>
+    <ID>ReturnCount:TLSWebViewClient.kt$TLSWebViewClient$private fun getActivity(context: Context?): Activity?</ID>
+    <ID>ReturnCount:TileExtensions.kt$TileExtensions$private fun getTileIcon(tileIconName: String?, entity: Entity?, context: Context): Bitmap?</ID>
+    <ID>ReturnCount:TodoWidgetActions.kt$ToggleTodoAction$override suspend fun onAction(context: Context, glanceId: GlanceId, parameters: ActionParameters)</ID>
+    <ID>ReturnCount:WebViewActivity.kt$WebViewActivity.&lt;no name provided&gt;$@Suppress("DEPRECATION") override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean</ID>
+    <ID>ReturnCount:WebViewPresenterImpl.kt$WebViewPresenterImpl$private suspend fun shouldSetSecurityLevel(): Boolean</ID>
+    <ID>ReturnCount:WebsocketManager.kt$WebsocketManager$private suspend fun shouldRunForServer(serverId: Int): Boolean</ID>
+    <ID>ReturnCount:WidgetDynamicFieldAdapter.kt$WidgetDynamicFieldAdapter$private fun String.toJsonType(): Any?</ID>
+    <ID>SpreadOperator:EntityWidgetConfigureActivity.kt$EntityWidgetConfigureActivity$(*fetchedAttributes?.keys.orEmpty().toTypedArray())</ID>
+    <ID>SpreadOperator:SensorDetailViewModel.kt$SensorDetailViewModel$(stringId, *convertRawVarsToStringVars(rawVars))</ID>
+    <ID>SwallowedException:ButtonWidgetConfigureActivity.kt$ButtonWidgetConfigureActivity$e: Exception</ID>
+    <ID>SwallowedException:DeveloperSettingsPresenterImpl.kt$DeveloperSettingsPresenterImpl$e: Exception</ID>
+    <ID>SwallowedException:IIconKt.kt$e: IllegalArgumentException</ID>
+    <ID>SwallowedException:MediaPlayerControlsWidget.kt$MediaPlayerControlsWidget$e: Exception</ID>
+    <ID>SwallowedException:NotificationDetailView.kt$e: Exception</ID>
+    <ID>SwallowedException:SensorDetailView.kt$e: Exception</ID>
+    <ID>SwallowedException:SensorDetailViewModel.kt$SensorDetailViewModel$e: NameNotFoundException</ID>
+    <ID>SwallowedException:SensorListView.kt$e: Exception</ID>
+    <ID>SwallowedException:TLSWebViewClient.kt$TLSWebViewClient$ex: CertificateException</ID>
+    <ID>SwallowedException:WebViewActivity.kt$WebViewActivity$e: Exception</ID>
+    <ID>SwallowedException:WidgetDynamicFieldAdapter.kt$WidgetDynamicFieldAdapter$e: Exception</ID>
+    <ID>ThrowingExceptionsWithoutMessageOrCause:HaControlsProviderService.kt$HaControlsProviderService$Exception()</ID>
+    <ID>ThrowsCount:CameraWidget.kt$CameraWidget$private suspend fun getWidgetRemoteViews(context: Context, appWidgetId: Int): RemoteViews?</ID>
+    <ID>ThrowsCount:NFCUtil.kt$NFCUtil$@Throws(Exception::class) private fun writeMessageToTag(nfcMessage: NdefMessage, fallbackMessage: NdefMessage, tag: Tag?): Boolean</ID>
+    <ID>TooGenericExceptionCaught:AssistShortcutViewModel.kt$AssistShortcutViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:AssistViewModel.kt$AssistViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:BaseVehicleScreen.kt$BaseVehicleScreen$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:BlockInsecureViewModel.kt$BlockInsecureViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ButtonWidget.kt$ButtonWidget$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ButtonWidgetConfigureActivity.kt$ButtonWidgetConfigureActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:CameraControl.kt$CameraControl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:CameraWidget.kt$CameraWidget$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:CameraWidgetConfigureActivity.kt$CameraWidgetConfigureActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ConnectionViewModel.kt$ConnectionViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:CrashSaving.kt$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:DataUriDownloadManager.kt$DataUriDownloadManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:DeveloperSettingsPresenterImpl.kt$DeveloperSettingsPresenterImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:DeveloperSettingsPresenterImpl.kt$DeveloperSettingsPresenterImpl$e: RuntimeException</ID>
+    <ID>TooGenericExceptionCaught:EntityAddToHandler.kt$EntityAddToHandler$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:EntityGridVehicleScreen.kt$EntityGridVehicleScreen$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:EntityWidget.kt$EntityWidget$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:EntityWidgetConfigureActivity.kt$EntityWidgetConfigureActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:HAWebView.kt$t: Throwable</ID>
+    <ID>TooGenericExceptionCaught:HaCarAppService.kt$HaCarAppService$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:HaControlsProviderService.kt$HaControlsProviderService$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:HealthConnectSensorManager.kt$HealthConnectSensorManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:HealthConnectSensorManager.kt$HealthConnectSensorManager$e: RuntimeException</ID>
+    <ID>TooGenericExceptionCaught:HomeAssistantSearcher.kt$HomeAssistantSearcherImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ImprovRepositoryImpl.kt$ImprovRepositoryImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:LanguagesManager.kt$LanguagesManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:LastAppSensorManager.kt$LastAppSensorManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:LocationForSecureConnectionViewModel.kt$LocationForSecureConnectionViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:LocationSharingViewModel.kt$LocationSharingViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:MainVehicleScreen.kt$MainVehicleScreen$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ManageAndroidAutoViewModel.kt$ManageAndroidAutoViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ManageControlsViewModel.kt$ManageControlsViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ManageShortcutsViewModel.kt$ManageShortcutsViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ManageTilesViewModel.kt$ManageTilesViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:MapVehicleScreen.kt$MapVehicleScreen$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:MediaPlayerControlsWidget.kt$MediaPlayerControlsWidget$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:MediaPlayerControlsWidgetConfigureActivity.kt$MediaPlayerControlsWidgetConfigureActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:MessagingManager.kt$MessagingManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:MicroWakeWord.kt$MicroWakeWord$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NameYourDeviceViewModel.kt$NameYourDeviceViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NfcSetupActivity.kt$NfcSetupActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NfcViewModel.kt$NfcViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NotificationActionReceiver.kt$NotificationActionReceiver$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NotificationDetailView.kt$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:NotificationSensorManager.kt$NotificationSensorManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:SensorDetailView.kt$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:SensorDetailViewModel.kt$SensorDetailViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:SensorListView.kt$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ServerSessionManager.kt$ServerSessionManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ServerSettingsFragment.kt$ServerSettingsFragment$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ServerSettingsPresenterImpl.kt$ServerSettingsPresenterImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:SettingsFragment.kt$SettingsFragment$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:SettingsPresenterImpl.kt$SettingsPresenterImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ShareActivity.kt$ShareActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:SsidViewModel.kt$SsidViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:TagReaderActivity.kt$TagReaderActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:TemplateWidget.kt$TemplateWidget$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:TemplateWidgetConfigureActivity.kt$TemplateWidgetConfigureActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:TileExtensions.kt$TileExtensions$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:TilePreferenceActivity.kt$TilePreferenceActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:TodoWidgetConfigureViewModel.kt$TodoWidgetConfigureViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:WearMTLSViewModel.kt$WearMTLSViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:WebViewActivity.kt$WebViewActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:WebViewActivity.kt$WebViewActivity.&lt;no name provided&gt;$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:WebViewPresenterImpl.kt$WebViewPresenterImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:WebsocketManager.kt$WebsocketManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:WidgetDynamicFieldAdapter.kt$WidgetDynamicFieldAdapter$e: Exception</ID>
+    <ID>TooGenericExceptionThrown:NFCUtil.kt$NFCUtil$throw Exception("Failed to format tag", e)</ID>
+    <ID>TooGenericExceptionThrown:NFCUtil.kt$NFCUtil$throw Exception("Message is too large")</ID>
+    <ID>TooGenericExceptionThrown:NFCUtil.kt$NFCUtil$throw Exception("NFC tag is read-only")</ID>
+    <ID>TooGenericExceptionThrown:NameYourDeviceViewModelTest.kt$NameYourDeviceViewModelTest$throw RuntimeException("Failed to register")</ID>
+    <ID>TooManyFunctions:AssistViewModel.kt$AssistViewModel : AssistViewModelBase</ID>
+    <ID>TooManyFunctions:AssistVoiceInteractionService.kt$AssistVoiceInteractionService : VoiceInteractionService</ID>
+    <ID>TooManyFunctions:BaseGlanceEntityWidgetReceiver.kt$BaseGlanceEntityWidgetReceiver&lt;T : WidgetEntity&lt;T&gt;, DAO : WidgetDao&lt;T&gt;&gt; : GlanceAppWidgetReceiver</ID>
+    <ID>TooManyFunctions:BaseWidgetProvider.kt$BaseWidgetProvider&lt;T : WidgetEntity&lt;T&gt;, DAO : WidgetDao&lt;T&gt;&gt; : AppWidgetProvider</ID>
+    <ID>TooManyFunctions:ButtonWidget.kt$ButtonWidget : AppWidgetProvider</ID>
+    <ID>TooManyFunctions:CarSensorManager.kt$CarSensorManager : SensorManagerDefaultLifecycleObserver</ID>
+    <ID>TooManyFunctions:DeveloperSettingsPresenterImpl.kt$DeveloperSettingsPresenterImpl : PreferenceDataStoreDeveloperSettingsPresenter</ID>
+    <ID>TooManyFunctions:EntityPicker.kt$io.homeassistant.companion.android.util.compose.entity.EntityPicker.kt</ID>
+    <ID>TooManyFunctions:FakePlayer.kt$FakePlayer : Player</ID>
+    <ID>TooManyFunctions:FrontendScreen.kt$io.homeassistant.companion.android.frontend.FrontendScreen.kt</ID>
+    <ID>TooManyFunctions:FrontendViewModel.kt$FrontendViewModel : ViewModelFrontendConnectionErrorStateProvider</ID>
+    <ID>TooManyFunctions:HealthConnectSensorManager.kt$HealthConnectSensorManager : SensorManager</ID>
+    <ID>TooManyFunctions:ImprovRepository.kt$ImprovRepository</ID>
+    <ID>TooManyFunctions:ImprovRepositoryImpl.kt$ImprovRepositoryImpl : ImprovRepositoryImprovManagerCallback</ID>
+    <ID>TooManyFunctions:ManageTilesViewModel.kt$ManageTilesViewModel : AndroidViewModel</ID>
+    <ID>TooManyFunctions:MediaPlayerControlsWidget.kt$MediaPlayerControlsWidget : BaseWidgetProvider</ID>
+    <ID>TooManyFunctions:MessagingManager.kt$MessagingManager</ID>
+    <ID>TooManyFunctions:NfcViewModel.kt$NfcViewModel : AndroidViewModel</ID>
+    <ID>TooManyFunctions:NotificationSensorManager.kt$NotificationSensorManager : NotificationListenerServiceSensorManager</ID>
+    <ID>TooManyFunctions:SensorDetailViewModel.kt$SensorDetailViewModel : AndroidViewModel</ID>
+    <ID>TooManyFunctions:ServerDiscoveryScreen.kt$io.homeassistant.companion.android.onboarding.serverdiscovery.ServerDiscoveryScreen.kt</ID>
+    <ID>TooManyFunctions:ServerSettingsFragment.kt$ServerSettingsFragment : PreferenceFragmentCompatServerSettingsView</ID>
+    <ID>TooManyFunctions:ServerSettingsPresenter.kt$ServerSettingsPresenter</ID>
+    <ID>TooManyFunctions:ServerSettingsPresenterImpl.kt$ServerSettingsPresenterImpl : PreferenceDataStoreServerSettingsPresenter</ID>
+    <ID>TooManyFunctions:SettingsActivity.kt$SettingsActivity : BaseActivity</ID>
+    <ID>TooManyFunctions:SettingsFragment.kt$SettingsFragment : PreferenceFragmentCompatSettingsView</ID>
+    <ID>TooManyFunctions:SettingsPresenter.kt$SettingsPresenter</ID>
+    <ID>TooManyFunctions:SettingsPresenterImpl.kt$SettingsPresenterImpl : PreferenceDataStoreSettingsPresenter</ID>
+    <ID>TooManyFunctions:TileExtensions.kt$TileExtensions : TileService</ID>
+    <ID>TooManyFunctions:WebViewActivity.kt$WebViewActivity : BaseActivityWebView</ID>
+    <ID>TooManyFunctions:WebViewPresenter.kt$WebViewPresenter</ID>
+    <ID>TooManyFunctions:WebViewPresenterImpl.kt$WebViewPresenterImpl : WebViewPresenter</ID>
+    <ID>UnusedParameter:AssistSettingsScreen.kt$modifier: Modifier = Modifier</ID>
+    <ID>UnusedPrivateClass:ServerDiscoveryViewModelTest.kt$ServerDiscoveryViewModelTest</ID>
+    <ID>UnusedPrivateMember:BlockInsecureScreen.kt$@HAPreviews @Composable private fun BlockInsecureScreenPreview()</ID>
+    <ID>UnusedPrivateMember:ConnectionScreen.kt$@HAPreviews @Composable private fun ConnectionScreenPreview()</ID>
+    <ID>UnusedPrivateMember:FrontendConnectionErrorScreen.kt$@HAPreviews @Composable private fun FrontendErrorScreenPreview()</ID>
+    <ID>UnusedPrivateMember:FrontendScreen.kt$@HAPreviews @Composable private fun FrontendScreenErrorPreview()</ID>
+    <ID>UnusedPrivateMember:FrontendScreen.kt$@HAPreviews @Composable private fun FrontendScreenInsecurePreview()</ID>
+    <ID>UnusedPrivateMember:FrontendScreen.kt$@HAPreviews @Composable private fun FrontendScreenLoadingPreview()</ID>
+    <ID>UnusedPrivateMember:FrontendScreen.kt$@HAPreviews @Composable private fun FrontendScreenSecurityLevelRequiredPreview()</ID>
+    <ID>UnusedPrivateMember:LoadingScreen.kt$@HAPreviews @Composable private fun LoadingScreenPreview()</ID>
+    <ID>UnusedPrivateMember:LocalFirstScreen.kt$@HAPreviews @Composable private fun LocalFirstScreenPreview()</ID>
+    <ID>UnusedPrivateMember:LocationForSecureConnectionScreen.kt$@HAPreviews @Composable private fun LocationForSecureConnectionScreenPreview()</ID>
+    <ID>UnusedPrivateMember:LocationSharingScreen.kt$@HAPreviews @Composable private fun LocationSharingScreenPreview()</ID>
+    <ID>UnusedPrivateMember:ManualServerScreen.kt$@HAPreviews @Composable private fun ManualServerScreenPreview()</ID>
+    <ID>UnusedPrivateMember:NameYourDeviceScreen.kt$@HAPreviews @Composable private fun NameYourDeviceScreenPreview()</ID>
+    <ID>UnusedPrivateMember:ServerDiscoveryScreen.kt$@HAPreviews @Composable private fun ServerDiscoveryScreenPreview_no_server_found()</ID>
+    <ID>UnusedPrivateMember:ServerDiscoveryScreen.kt$@HAPreviews @Composable private fun ServerDiscoveryScreenPreview_scanning()</ID>
+    <ID>UnusedPrivateMember:ServerDiscoveryScreen.kt$@HAPreviews @Composable private fun ServerDiscoveryScreenPreview_with_multiple_servers()</ID>
+    <ID>UnusedPrivateMember:ServerDiscoveryScreen.kt$@HAPreviews @Composable private fun ServerDiscoveryScreenPreview_with_one_server()</ID>
+    <ID>UnusedPrivateMember:SetHomeNetworkScreen.kt$@HAPreviews @Composable private fun SetHomeNetworkScreenPreview()</ID>
+    <ID>UnusedPrivateMember:WearMTLSScreen.kt$@HAPreviews @Composable private fun WearMTLSScreenPreview()</ID>
+    <ID>UnusedPrivateMember:WelcomeScreen.kt$@HAPreviews @Composable private fun WelcomeScreenPreview()</ID>
+    <ID>UnusedPrivateProperty:SettingsPresenterImpl.kt$SettingsPresenterImpl$private val settingsDao: SettingsDao</ID>
+    <ID>UnusedPrivateProperty:WakeWordListenerTest.kt$WakeWordListenerTest.CooldownTests$i</ID>
+    <ID>UseCheckOrError:AssistVoiceInteractionService.kt$AssistVoiceInteractionService$throw IllegalStateException("No wake word models found in assets")</ID>
+    <ID>UseCheckOrError:CameraWidget.kt$CameraWidget$throw IllegalStateException("No URL available to retrieve picture")</ID>
+    <ID>UseCheckOrError:EntityWidgetConfigureActivity.kt$EntityWidgetConfigureActivity$throw IllegalStateException("Selected entity is unknown on server")</ID>
+    <ID>UseCheckOrError:MediaPlayerControlsWidgetConfigureActivity.kt$MediaPlayerControlsWidgetConfigureActivity$throw IllegalStateException("No valid entities selected")</ID>
+    <ID>UseRequire:WearDnsRequestListenerTest.kt$WearDnsRequestListenerTest$throw IllegalArgumentException("hostname not found")</ID>
+  </CurrentIssues>
+</SmellBaseline>
